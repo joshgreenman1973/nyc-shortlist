@@ -188,7 +188,7 @@
   },
   "eviction-lab-nyc": {
    "url": "https://evictionlab.org/eviction-tracking/new-york-ny/",
-   "code": 200,
+   "code": 403,
    "error": null,
    "ok": true,
    "fails": 0,
@@ -412,7 +412,7 @@
   },
   "tpl-parkscore-nyc": {
    "url": "https://www.tpl.org/city/new-york-new-york",
-   "code": 403,
+   "code": 200,
    "error": null,
    "ok": true,
    "fails": 0,
@@ -436,10 +436,10 @@
   },
   "nyc-tree-map": {
    "url": "https://www.nycgovparks.org/tree-map",
-   "code": 200,
+   "code": 405,
    "error": null,
-   "ok": true,
-   "fails": 0,
+   "ok": false,
+   "fails": 1,
    "last": "2026-09-28"
   },
   "plownyc": {
