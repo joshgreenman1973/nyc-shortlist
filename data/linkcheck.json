@@ -1,0 +1,926 @@
+{
+ "checked": "2026-09-28",
+ "count": 115,
+ "results": {
+  "crime-index-nyc": {
+   "url": "https://crimeindex.org/current?topic=crime&stat=violent&geo=NY0303000&size=all",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "fifty-a-org": {
+   "url": "https://www.50-a.org/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "legal-aid-lelu": {
+   "url": "https://legalaidnyc.org/law-enforcement-look-up/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "ccrb-data-transparency-initiative": {
+   "url": "https://www.nyc.gov/site/ccrb/policy/data-transparency-initiative.page",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "trace-gun-violence-atlas": {
+   "url": "https://projects.thetrace.org/gun-violence-map/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "nyclu-stop-and-frisk-data": {
+   "url": "https://www.nyclu.org/data/stop-and-frisk-data",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "nypd-compstat-2": {
+   "url": "https://compstat.nypdonline.org/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "nyc-911-end-to-end": {
+   "url": "https://www.nyc.gov/site/911reporting/reports/end-to-end-response-time.page",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "mta-metrics-major-felonies": {
+   "url": "https://metrics.mta.info/?security",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "nypd-hate-crimes-dashboard": {
+   "url": "https://www.nyc.gov/site/nypd/stats/reports-analysis/hate-crimes.page",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "dcj-nyc-jail-population-tracker": {
+   "url": "https://nyc-jail-population-tracker.datacollaborativeforjustice.org/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "comptroller-doc-dashboard": {
+   "url": "https://comptroller.nyc.gov/services/for-the-public/department-of-correction-doc/dashboard/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "cja-pretrial-data-dashboards": {
+   "url": "https://www.nycja.org/data/people-in-community",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "vera-nyc-jail-deaths": {
+   "url": "https://www.vera.org/news/nyc-jail-deaths",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "vera-ny-data-hub": {
+   "url": "https://www.vera.org/ny-data-hub/jail",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "boc-dashboards": {
+   "url": "https://www.nyc.gov/site/boc/dashboards/boc-dashboards.page",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "cany-data-portal": {
+   "url": "https://www.correctionalassociation.org/data",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "doc-data-insights": {
+   "url": "https://www.nyc.gov/site/doc/about/dashboard.page",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "nycourts-caseload-trends": {
+   "url": "https://www.nycourts.gov/division-technology-court-research/state-paid-trial-court-caseload-trends-dashboard",
+   "code": 403,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "oca-pretrial-release-dashboard": {
+   "url": "https://www.nycourts.gov/division-technology-court-research/pretrial-release-data",
+   "code": 403,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "acs-flash-indicators": {
+   "url": "https://www.nyc.gov/site/acs/about/flashindicators.page",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "justfix-who-owns-what": {
+   "url": "https://whoownswhat.justfix.org/en/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "city-limits-shelter-tracker": {
+   "url": "https://citylimits.org/homeless-shelter-tracker/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "eviction-lab-nyc": {
+   "url": "https://evictionlab.org/eviction-tracking/new-york-ny/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "nyhc-nyc-housing-tracker": {
+   "url": "https://tracker.thenyhc.org/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "furman-state-of-the-city": {
+   "url": "https://www.furmancenter.org/data-tool/state-of-the-city/",
+   "code": 403,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "anhd-dap-portal": {
+   "url": "https://portal.displacementalert.org/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "public-advocate-worst-landlord-watchlist": {
+   "url": "https://www.landlordwatchlist.com/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "city-limits-nycha-repair-needs-tracker": {
+   "url": "https://citylimits.org/resources-overview/nycha-repair-needs-tracker/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "good-cause-nyc": {
+   "url": "https://goodcausenyc.org/en",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "hpd-online": {
+   "url": "https://hpdonline.nyc.gov/hpdonline/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "zola": {
+   "url": "https://zola.planning.nyc.gov/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "dob-sidewalk-shed-map": {
+   "url": "https://www.nyc.gov/assets/buildings/html/sidewalk-shed-map.html",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "dcp-housing-production-snapshot": {
+   "url": "https://storymaps.arcgis.com/stories/1c9138dc24064b2e8142ff156345a719",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "subway-now-lite": {
+   "url": "https://lite.subwaynow.app/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "jehiah-bus-speeds": {
+   "url": "https://reports.jehiah.cz/bus_speeds/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "transit-access": {
+   "url": "https://www.transitaccess.org/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "transit-costs-project": {
+   "url": "https://transitcosts.com/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "comptroller-bus-report-card": {
+   "url": "https://comptroller.nyc.gov/reports/life-in-the-slow-lane/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "subwaydata-nyc": {
+   "url": "https://subwaydata.nyc/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "mta-performance-metrics": {
+   "url": "https://metrics.mta.info/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "nyc-crash-mapper": {
+   "url": "https://crashmapper.org/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "howsmydrivingny": {
+   "url": "https://howsmydrivingny.nyc/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "jehiah-bike-lane-tracker": {
+   "url": "https://reports.jehiah.cz/bike_lanes/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "crashcount": {
+   "url": "https://crashcount.nyc/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "ctbk-dev": {
+   "url": "https://ctbk.dev/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "turkcan-congestion-pricing-vision": {
+   "url": "https://mehmetkeremturkcan.com/congestionpricing/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "vision-zero-view": {
+   "url": "https://vzv.nyc/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "osc-nyc311-monitoring-tool": {
+   "url": "https://www.osc.ny.gov/reports/osdc/nyc311-monitoring-tool",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "track-nyc-trash": {
+   "url": "https://tracknyctrash.com/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "311-wrapped": {
+   "url": "https://311wrapped.com/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "tpl-parkscore-nyc": {
+   "url": "https://www.tpl.org/city/new-york-new-york",
+   "code": 403,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "council-park-equity-2026": {
+   "url": "https://council.nyc.gov/data/park-equity-2026/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "rat-information-portal": {
+   "url": "https://a816-dohbesp.nyc.gov/IndicatorPublic/rats/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "nyc-tree-map": {
+   "url": "https://www.nycgovparks.org/tree-map",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "plownyc": {
+   "url": "https://plownyc.nyc.gov/plownyc/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "floodnet": {
+   "url": "https://dataviz.floodnet.nyc/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "nyc-urban-heat-portal": {
+   "url": "https://urbanheat.nyc/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "nyc-water-check": {
+   "url": "https://nycwatercheck.com/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "urban-green-ll97-progress": {
+   "url": "https://www.urbangreencouncil.org/what-we-do/explore-nyc-building-data-hub/local-law-97-progress/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "riverkeeper-water-quality-portal": {
+   "url": "https://data.riverkeeper.org/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "floodhelpny": {
+   "url": "https://www.floodhelpny.org/en",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "insideschools": {
+   "url": "https://insideschools.org/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "nyc-sift": {
+   "url": "https://nycsift.com/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "keeping-track-online": {
+   "url": "https://data.cccnewyork.org/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "class-size-matters-utilization-map": {
+   "url": "https://classsizematters.github.io/CSM-2024-2025-Utilization-Map/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "educational-opportunity-project": {
+   "url": "https://edopportunity.org/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "betanyc-school-budget-dashboard": {
+   "url": "https://public.tableau.com/app/profile/betanyc/viz/NYCPublicSchoolAllocationsandBudgetDashboard_17225412389160/NYCPublicSchoolAllocationsandBudgetDashboard",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "watching-the-numbers-2026": {
+   "url": "https://www.centernyc.org/reports-briefs/watching-the-numbers-2026",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "school-quality-reports": {
+   "url": "https://tools.nycenet.edu/snapshot/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "nyc-child-care-hub": {
+   "url": "https://www.nyc.gov/content/childcarehub/pages/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "checkbook-nyc": {
+   "url": "https://www.checkbooknyc.com/",
+   "code": 302,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "ibo-nyc-budget-resources": {
+   "url": "https://www.ibo.nyc.gov/content/ibo-nyc-budget-resources",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "betanyc-nyc-budget-explorer": {
+   "url": "https://betanyc.github.io/nyc-budget-viz/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "sidewalk-chorus-property-tax-map": {
+   "url": "https://taxmap.sidewalkchorus.com/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "comptroller-agency-staffing-dashboard": {
+   "url": "https://comptroller.nyc.gov/services/for-the-public/nyc-agency-staffing-dashboard/dashboard/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "comptroller-late-contracts-dashboard": {
+   "url": "https://www.checkbooknyc.com/late-contracts",
+   "code": 302,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "betanyc-council-discretionary-explorer": {
+   "url": "https://betanyc.github.io/New-York-City-Budget/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "seethroughny-payrolls": {
+   "url": "https://www.seethroughny.net/payrolls",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "databook-nyc": {
+   "url": "https://databook.nyc/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "dof-property-information-portal": {
+   "url": "https://propertyinformationportal.nyc.gov/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "mocs-discretionary-award-tracker": {
+   "url": "https://www.nyc.gov/site/mocs/opportunities/discretionary-award-tracker.page",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "nyc-pulse-mmr": {
+   "url": "https://tedalcorn.org/nyc-mmr/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "comptroller-measuring-performance": {
+   "url": "https://comptroller.nyc.gov/services/for-the-public/measuring-nyc-government-performance/overview/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "nycuriosity-council-legislation-trackers": {
+   "url": "https://data.nycuriosity.com/civic_reference/nyc_council_legislation_trackers/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "comptroller-audit-recommendations-tracker": {
+   "url": "https://comptroller.nyc.gov/services/for-the-public/audit/audit-recommendations-tracker/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "muckrock-nyc": {
+   "url": "https://www.muckrock.com/place/united-states-of-america/new-york/new-york-city/",
+   "code": 403,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "mamdani-tracker": {
+   "url": "https://mamdanitracker.nyc/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "dynamic-mmr": {
+   "url": "https://dmmr.nyc.gov/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "nyc-openrecords": {
+   "url": "https://a860-openrecords.nyc.gov/request/view_all",
+   "code": 403,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "block-party": {
+   "url": "https://www.blockparty.studio/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "intro-nyc": {
+   "url": "https://intro.nyc/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "mygovnyc-who-represents-me": {
+   "url": "https://www.mygovnyc.org/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "cfb-follow-the-money": {
+   "url": "https://www.nyccfb.info/follow-the-money/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "nyc-election-atlas": {
+   "url": "https://www.electionatlas.nyc/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "nyc-civic-calendar": {
+   "url": "https://www.nycciviccalendar.com/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "betanyc-boundaries-map": {
+   "url": "https://boundaries.beta.nyc/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "nyc-lobbyist-search": {
+   "url": "https://lobbyistsearch.nyc.gov/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "boe-find-my-poll-site": {
+   "url": "https://findmypollsite.vote.nyc/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "data2go-nyc": {
+   "url": "https://data2go.nyc/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "census-reporter": {
+   "url": "https://censusreporter.org/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "1940s-nyc": {
+   "url": "https://1940s.nyc/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "80s-nyc": {
+   "url": "https://80s.nyc/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "languages-of-nyc": {
+   "url": "https://languagemap.nyc/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "nyc-environment-health-data-portal": {
+   "url": "https://a816-dohbesp.nyc.gov/IndicatorPublic/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "nyc-population-factfinder": {
+   "url": "https://popfactfinder.planning.nyc.gov/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "equitable-development-data-explorer": {
+   "url": "https://equitableexplorer.planning.nyc.gov/map/data/district",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "comptroller-ny-by-the-numbers": {
+   "url": "https://comptroller.nyc.gov/newsroom/newsletter/new-york-by-the-numbers-monthly-economic-and-fiscal-outlook-no-117-september-2026/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "osc-nyc-industry-sector-dashboards": {
+   "url": "https://www.osc.ny.gov/osdc/reports/nyc-sectors",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "poverty-tracker": {
+   "url": "https://robinhood.org/reports/poverty-tracker-annual-report-vol-8/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "mit-living-wage-calculator": {
+   "url": "https://livingwage.mit.edu/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "cuf-state-of-the-chains": {
+   "url": "https://nycfuture.org/research/state-of-the-chains-2025",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "council-emergency-food": {
+   "url": "https://council.nyc.gov/data/emergency-food-in-nyc/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "ny-fed-regional-employment-trends": {
+   "url": "https://www.newyorkfed.org/research/regional_economy/regional-employment",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  },
+  "nyc-poverty-atlas": {
+   "url": "https://povertyatlas.nyc.gov/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-28"
+  }
+ }
+}

@@ -1,0 +1,1662 @@
+{
+ "title": "The Shortlist",
+ "checked": "2026-09-28",
+ "reviewed": 273,
+ "mosaic": [
+  "justfix-who-owns-what",
+  "nyc-crash-mapper",
+  "subway-now-lite",
+  "floodnet",
+  "nyc-urban-heat-portal",
+  "block-party",
+  "dcj-nyc-jail-population-tracker",
+  "1940s-nyc",
+  "sidewalk-chorus-property-tax-map",
+  "transit-access",
+  "nyc-pulse-mmr",
+  "jehiah-bike-lane-tracker"
+ ],
+ "areas": [
+  {
+   "id": "crime",
+   "name": "Crime and policing",
+   "rail": "Policing",
+   "dek": "The Police Department posts crime numbers every week through CompStat, down to the precinct. The independent tools here add what CompStat leaves out: whether a trend is local or national, and what is on the record for an individual officer. The independent precinct-level crime maps we checked were stale, anonymous or misleading, so for neighborhood crime CompStat is still the place to go.",
+   "picks": [
+    {
+     "id": "crime-index-nyc",
+     "url": "https://crimeindex.org/current?topic=crime&stat=violent&geo=NY0303000&size=all",
+     "maker": "AH Datalytics (Jeff Asher)",
+     "maker_type": "commercial",
+     "name": "Crime Index",
+     "summary": "Monthly counts of murders, robberies, assaults, burglaries and thefts in New York City since 2018, charted next to a national sample of about 565 police agencies, with the change so far this year.",
+     "why": "It answers the first question most people have, whether crime is up or down, and shows whether New York is moving with the rest of the country or apart from it. No city tool makes that comparison.",
+     "questions": [
+      "Is crime in New York City going up or down this year?",
+      "Is the drop in murders here bigger than the national drop?"
+     ],
+     "caveat": "It uses FBI crime definitions, so its counts will not match CompStat, and it has no precinct detail. The data runs about six weeks behind.",
+     "data": "Police Department monthly crime counts, compiled with other agencies' and the FBI's",
+     "freshness": "Monthly; city data through July 2026",
+     "index": [
+      "Is crime going up or down?"
+     ]
+    },
+    {
+     "id": "fifty-a-org",
+     "url": "https://www.50-a.org/",
+     "maker": "Maker not named on the site",
+     "maker_type": "independent-developer",
+     "name": "50-a.org",
+     "summary": "Search any current or former police officer by name or badge number and get one page with the officer's civilian complaints, department discipline, lawsuits, rank history and pay.",
+     "why": "Those records sit in half a dozen city systems and advocacy databases. This puts them on one page, current to this month, and its about page lists every source.",
+     "questions": [
+      "Has the officer who stopped me drawn complaints before?",
+      "Has this officer been sued or disciplined?"
+     ],
+     "caveat": "The site does not name its maker and disclaims any warranty of accuracy. Complaints still under investigation are missing, and lawsuits list officers who were named even if claims against them were dropped.",
+     "data": "Civilian Complaint Review Board records, Police Department discipline and trial decisions, Law Department lawsuits, city payroll",
+     "freshness": "Updated continuously; complaints through September 2026",
+     "index": [
+      "What is on the record for a particular officer?"
+     ]
+    },
+    {
+     "id": "legal-aid-lelu",
+     "url": "https://legalaidnyc.org/law-enforcement-look-up/",
+     "maker": "The Legal Aid Society",
+     "maker_type": "advocacy",
+     "name": "Law Enforcement Look Up",
+     "summary": "A searchable archive of misconduct records on police officers and city correction officers: complaint allegations, internal discipline, lawsuits, findings by judges and prosecutors that an officer was not credible, and news coverage.",
+     "why": "It is the only public tool that also covers correction officers at Rikers and credibility findings by judges and prosecutors, and it publishes its raw data every week.",
+     "questions": [
+      "Has a judge ever found this officer not credible?",
+      "Has this correction officer been disciplined?"
+     ],
+     "caveat": "Built by a public defender's office for its own lawyers, so it is harder to use than 50-a.org. Records are not merged by officer; you confirm a match yourself.",
+     "data": "Complaint review board, police and correction discipline, lawsuits, court and prosecutor credibility records",
+     "freshness": "Updated weekly",
+     "index": [
+      "Has a correction officer at Rikers been disciplined?"
+     ]
+    }
+   ],
+   "bench": [
+    {
+     "id": "ccrb-data-transparency-initiative",
+     "url": "https://www.nyc.gov/site/ccrb/policy/data-transparency-initiative.page",
+     "maker": "Civilian Complaint Review Board",
+     "maker_type": "watchdog",
+     "name": "Data Transparency Initiative",
+     "summary": "Dashboards from the independent agency that investigates police misconduct, counting complaints and allegations by year, precinct, type and outcome.",
+     "why": "The authoritative current source on whether complaints against police are rising in a precinct, straight from the investigators."
+    },
+    {
+     "id": "trace-gun-violence-atlas",
+     "url": "https://projects.thetrace.org/gun-violence-map/",
+     "maker": "The Trace",
+     "maker_type": "newsroom",
+     "name": "Atlas of American Gun Violence",
+     "summary": "A national map of more than 450,000 shootings, searchable by address or neighborhood, with trends by month or year.",
+     "why": "The easiest way to see shootings near a particular block over time, from a nonprofit newsroom that covers gun violence full time.",
+     "caveat": "Counts come from the Gun Violence Archive, not the Police Department, so they will not match city figures."
+    },
+    {
+     "id": "nyclu-stop-and-frisk-data",
+     "url": "https://www.nyclu.org/data/stop-and-frisk-data",
+     "maker": "New York Civil Liberties Union",
+     "maker_type": "advocacy",
+     "name": "Stop-and-Frisk Data",
+     "summary": "Police stops year by year since 2002: how many, how many ended with no arrest or summons, and the race of the people stopped.",
+     "why": "The clearest long view of stop-and-frisk for a general reader.",
+     "caveat": "Tables end with 2024. The civil liberties union sued over stop-and-frisk; the figures are the Police Department's."
+    }
+   ],
+   "official": [
+    {
+     "id": "nypd-compstat-2",
+     "url": "https://compstat.nypdonline.org/",
+     "maker": "Police Department",
+     "maker_type": "official",
+     "name": "CompStat 2.0",
+     "summary": "The Police Department's weekly crime statistics for the city, each borough and each precinct, with this year against last and a map of incidents.",
+     "why": "The fastest and most detailed public crime numbers, down to the precinct. No independent tool has replaced it."
+    },
+    {
+     "id": "nyc-911-end-to-end",
+     "url": "https://www.nyc.gov/site/911reporting/reports/end-to-end-response-time.page",
+     "maker": "City of New York",
+     "maker_type": "official",
+     "name": "911 response times",
+     "summary": "Weekly dashboards that break every 911 response into stages, from answering the call to arrival, for police, fire and medical emergencies.",
+     "why": "The only current public measure of how long help takes to arrive. We found no independent alternative."
+    },
+    {
+     "id": "mta-metrics-major-felonies",
+     "url": "https://metrics.mta.info/?security",
+     "maker": "Metropolitan Transportation Authority",
+     "maker_type": "state",
+     "name": "Subway crime",
+     "summary": "Major felonies in the transit system by month and type, as raw counts or per million riders.",
+     "why": "The per-rider rate answers the question riders have, which raw counts in news stories do not."
+    },
+    {
+     "id": "nypd-hate-crimes-dashboard",
+     "url": "https://www.nyc.gov/site/nypd/stats/reports-analysis/hate-crimes.page",
+     "maker": "Police Department",
+     "maker_type": "official",
+     "name": "Hate Crimes Dashboard",
+     "summary": "Hate crime incidents by precinct, bias type and charge, with quarterly summaries of complaints and arrests.",
+     "why": "The only precinct-level hate crime source for the city."
+    }
+   ]
+  },
+  {
+   "id": "justice",
+   "name": "Jails and courts",
+   "rail": "Jails",
+   "dek": "About 6,600 people were in city jails on Sept. 27, 2026, and the city faces a legal deadline of Aug. 31, 2027, to close the jails on Rikers Island. These tools track the jail population, conditions inside and what happens to cases before trial. We found no working public data dashboard from any of the five district attorneys.",
+   "picks": [
+    {
+     "id": "dcj-nyc-jail-population-tracker",
+     "url": "https://nyc-jail-population-tracker.datacollaborativeforjustice.org/",
+     "maker": "Data Collaborative for Justice, John Jay College",
+     "maker_type": "academic",
+     "name": "New York City Jail Population Tracker",
+     "summary": "The daily jail population since 2016, broken down by case status, race, gender and mental health designation, with a one-year projection and a plain explainer on the plan to close Rikers.",
+     "why": "It is current to the day, publishes its method and data, and keeps the daily history that the Department of Correction's own open data overwrites.",
+     "questions": [
+      "How many people are in city jails right now?",
+      "Is the population low enough to close Rikers?",
+      "How many of them have not been convicted?"
+     ],
+     "caveat": "The app is slow to load and its tab menu is easy to miss. Its makers support closing Rikers, and the projection assumes no change in policy.",
+     "data": "Department of Correction daily custody, admission and discharge data; Police Department arrests",
+     "freshness": "Updated daily",
+     "index": [
+      "How many people are in jail right now?",
+      "Is the city on track to close Rikers?"
+     ]
+    },
+    {
+     "id": "comptroller-doc-dashboard",
+     "url": "https://comptroller.nyc.gov/services/for-the-public/department-of-correction-doc/dashboard/",
+     "maker": "New York City Comptroller's Office",
+     "maker_type": "watchdog",
+     "name": "Department of Correction Dashboard",
+     "summary": "One page on conditions in city jails: violence, use of force, officers out sick, deaths in custody, missed medical appointments, court appearances and length of stay, each marked as improving or worsening.",
+     "why": "It is the only place that sets violence, staffing, health care and deaths side by side, with a source note under every chart, from an office independent of the mayor.",
+     "questions": [
+      "How violent is Rikers right now?",
+      "How many people have died in city jails this year?",
+      "Are correction officers showing up to work?"
+     ],
+     "caveat": "Figures lag one to seven months depending on the measure. The page was last updated July 10, 2026.",
+     "data": "Department of Correction and Correctional Health Services reports, city payroll",
+     "freshness": "Periodic; last updated July 10, 2026",
+     "index": [
+      "How violent are the jails?"
+     ]
+    },
+    {
+     "id": "cja-pretrial-data-dashboards",
+     "url": "https://www.nycja.org/data",
+     "maker": "New York City Criminal Justice Agency",
+     "maker_type": "nonprofit",
+     "name": "Pretrial Data Dashboards",
+     "summary": "Six dashboards on what happens between arrest and verdict: how many people are prosecuted, how many await trial at home, how many are rearrested while released and how cases end.",
+     "why": "Each opens with a plain question and numbers through July 2026, which puts the argument over bail on data instead of anecdote.",
+     "questions": [
+      "Do people released before trial get arrested again?",
+      "How do criminal cases usually end?"
+     ],
+     "caveat": "The agency is city-funded and advises judges on release, so it is part of the system it measures. Its rearrest figures will not match the state court system's.",
+     "data": "The agency's own records on prosecuted arrests and case outcomes",
+     "freshness": "Monthly; data through July 2026",
+     "index": [
+      "Do people released before trial get rearrested?"
+     ],
+     "check_url": "https://www.nycja.org/data/people-in-community"
+    }
+   ],
+   "bench": [
+    {
+     "id": "vera-nyc-jail-deaths",
+     "url": "https://www.vera.org/news/nyc-jail-deaths",
+     "maker": "Vera Institute of Justice",
+     "maker_type": "advocacy",
+     "name": "Tracking Deaths in NYC Jails Since 2022",
+     "summary": "A running list of every person who has died in city jail custody since 2022, with name, age, date, facility and what happened.",
+     "why": "The only source that names each person, which the counts elsewhere do not.",
+     "caveat": "Relies on news reports and official statements, so it can lag a new death. Vera supports closing Rikers."
+    },
+    {
+     "id": "vera-ny-data-hub",
+     "url": "https://www.vera.org/ny-data-hub/jail",
+     "maker": "Vera Institute of Justice",
+     "maker_type": "nonprofit",
+     "name": "New York Criminal Justice System Data Hub",
+     "summary": "A daily snapshot of the jail population by race, charge, custody status and length of stay, plus statewide tabs on pretrial release and parole.",
+     "why": "The best way to see how long people have been held and on what charges, and how the city compares with the rest of the state.",
+     "caveat": "The pretrial and parole tabs run one to two years behind."
+    },
+    {
+     "id": "boc-dashboards",
+     "url": "https://www.nyc.gov/site/boc/dashboards/boc-dashboards.page",
+     "maker": "Board of Correction",
+     "maker_type": "watchdog",
+     "name": "Board of Correction dashboards",
+     "summary": "One-page reports on the daily jail census by facility and time in custody, overcrowded housing units and self-injury rates.",
+     "why": "Fresh numbers from the independent jail oversight board on things other tools skip, such as how many housing units exceed its crowding limits.",
+     "caveat": "Static PDFs full of unexplained facility codes."
+    },
+    {
+     "id": "cany-data-portal",
+     "url": "https://www.correctionalassociation.org/data",
+     "maker": "Correctional Association of New York",
+     "maker_type": "nonprofit",
+     "name": "CANY Data Portal",
+     "summary": "Eight dashboards on state prisons: population, releases, deaths, staffing and self-harm, with releases filterable to people sent from New York City.",
+     "why": "The best public window on state prisons and parole releases, where many city cases end up.",
+     "caveat": "Covers state prisons, not city jails."
+    }
+   ],
+   "official": [
+    {
+     "id": "doc-data-insights",
+     "url": "https://www.nyc.gov/site/doc/about/dashboard.page",
+     "maker": "Department of Correction",
+     "maker_type": "official",
+     "name": "Data Insights",
+     "summary": "The department's own daily dashboard of population, admissions, time in custody, charges and violence, compared with the same period last year.",
+     "why": "The freshest official numbers on jail violence."
+    },
+    {
+     "id": "nycourts-caseload-trends",
+     "url": "https://www.nycourts.gov/division-technology-court-research/state-paid-trial-court-caseload-trends-dashboard",
+     "maker": "New York State Unified Court System",
+     "maker_type": "state",
+     "name": "Caseload Trends Dashboard",
+     "summary": "Cases filed, resolved and pending, and trials started, in every state trial court since 2019, by court and county.",
+     "why": "The only regular public measure of court backlogs, which drive long jail stays."
+    },
+    {
+     "id": "oca-pretrial-release-dashboard",
+     "url": "https://www.nycourts.gov/division-technology-court-research/pretrial-release-data",
+     "maker": "New York State Unified Court System",
+     "maker_type": "state",
+     "name": "Pretrial Release Data",
+     "summary": "Every arraignment release decision in the state since 2020: release, bail or remand, and whether the person was rearrested.",
+     "why": "The official data researchers use to judge the 2019 bail law."
+    },
+    {
+     "id": "acs-flash-indicators",
+     "url": "https://www.nyc.gov/site/acs/about/flashindicators.page",
+     "maker": "Administration for Children's Services",
+     "maker_type": "official",
+     "name": "Monthly Flash Indicators",
+     "summary": "A monthly report on child welfare and youth justice, including admissions to juvenile detention and the detention population.",
+     "why": "The only current, regular source on youth detention in the city."
+    }
+   ]
+  },
+  {
+   "id": "housing",
+   "name": "Housing, homelessness and buildings",
+   "rail": "Housing",
+   "dek": "The city records every housing violation and the courts record every eviction case, but one building at a time. The tools here connect those records: a landlord's whole portfolio, eviction trends by ZIP code, where affordable housing is getting built and how many people sleep in shelters each night.",
+   "picks": [
+    {
+     "id": "justfix-who-owns-what",
+     "url": "https://whoownswhat.justfix.org/en/",
+     "maker": "JustFix",
+     "maker_type": "nonprofit",
+     "name": "Who Owns What",
+     "summary": "Type an address to find the landlord behind a building and every other building tied to the same owner, with violations, complaints, eviction filings, sales and estimated rent-stabilized apartments across the portfolio.",
+     "why": "It answers the question tenants ask most, with one search and no login, and nothing the city offers shows a landlord's full footprint. The method is documented and the code is open.",
+     "questions": [
+      "Who owns my building?",
+      "What else does my landlord own, and is it in bad shape?",
+      "Has my building lost rent-stabilized apartments?"
+     ],
+     "caveat": "Portfolios are inferred by matching the names and addresses owners report, so owners can be lumped together or split apart. Rent-stabilized counts are estimates from tax bills.",
+     "data": "Housing Preservation and Development registrations and violations, Buildings Department filings, court eviction records, property sales",
+     "freshness": "Daily to monthly, by dataset",
+     "index": [
+      "Who owns my building?",
+      "Is my landlord a bad landlord?"
+     ]
+    },
+    {
+     "id": "city-limits-shelter-tracker",
+     "url": "https://citylimits.org/homeless-shelter-tracker/",
+     "maker": "City Limits",
+     "maker_type": "newsroom",
+     "name": "NYC Shelter Tracker",
+     "summary": "The city's shelter population day by day, plus monthly totals across every shelter system, including domestic violence shelters and the emergency centers opened for migrants.",
+     "why": "The city reports these counts in scattered PDFs and separate reports. City Limits combines them, explains what each one includes and posts its data and code.",
+     "questions": [
+      "How many people are in city shelters right now?",
+      "How many are families with children?"
+     ],
+     "caveat": "The combined monthly total lags about two months.",
+     "data": "Department of Homeless Services daily reports; shelter reports required by local law",
+     "freshness": "Updated daily",
+     "index": [
+      "How many people are in shelters?"
+     ]
+    },
+    {
+     "id": "eviction-lab-nyc",
+     "url": "https://evictionlab.org/eviction-tracking/new-york-ny/",
+     "maker": "Eviction Lab, Princeton University",
+     "maker_type": "academic",
+     "name": "Eviction Tracking: New York City",
+     "summary": "Monthly eviction filings in the city against a 2023-24 baseline, a ZIP code map of filings, the typical amount landlords sue for and a breakdown by neighborhood demographics.",
+     "why": "A neutral academic presentation with a clear baseline, so you can tell whether filings are high or low, and it compares New York with other cities.",
+     "questions": [
+      "Are evictions rising?",
+      "Which ZIP codes see the most eviction cases?"
+     ],
+     "caveat": "Counts cases filed, not evictions carried out.",
+     "data": "State court eviction filings, via the Housing Data Coalition; Census data",
+     "freshness": "Monthly; updated Sept. 1, 2026",
+     "index": [
+      "Are evictions going up?"
+     ]
+    },
+    {
+     "id": "nyhc-nyc-housing-tracker",
+     "url": "https://tracker.thenyhc.org/",
+     "maker": "New York Housing Conference",
+     "maker_type": "advocacy",
+     "name": "New York City Housing Tracker",
+     "summary": "A card for each Council district that ranks how much affordable housing it produced from 2014 to 2025, alongside vacancy, rent burden, public housing repair needs and code violations.",
+     "why": "It turns citywide production data into a district ranking a voter can read in a minute. Nothing official does that.",
+     "questions": [
+      "How much affordable housing has my Council district built?",
+      "Is my district doing its share?"
+     ],
+     "caveat": "The conference advocates for affordable housing, and its members include developers and lenders. Rankings count units built, not need.",
+     "data": "Housing Preservation and Development production data and other city open data",
+     "freshness": "Annual; 2026 edition covers production through 2025",
+     "index": [
+      "Is my neighborhood building affordable housing?"
+     ]
+    }
+   ],
+   "bench": [
+    {
+     "id": "furman-state-of-the-city",
+     "url": "https://www.furmancenter.org/data-tool/state-of-the-city/",
+     "maker": "NYU Furman Center",
+     "maker_type": "academic",
+     "name": "State of New York City's Housing and Neighborhoods",
+     "summary": "An annual report with a profile of each of the 59 community districts on rents, prices, construction, demographics and conditions, plus a map of every subsidized building.",
+     "why": "The most authoritative neighborhood housing data in the city. The subsidized housing map shows when each building's affordability rules expire.",
+     "caveat": "Built for researchers. Its map tool, CoreData.nyc, was last updated in May 2025."
+    },
+    {
+     "id": "anhd-dap-portal",
+     "url": "https://portal.displacementalert.org/",
+     "maker": "Association for Neighborhood and Housing Development",
+     "maker_type": "advocacy",
+     "name": "DAP Portal",
+     "summary": "Every public record on a building on one page: sales, financing, violations, permits, lawsuits and evictions, with downloads.",
+     "why": "The deepest free building record anywhere, and the next click after Who Owns What.",
+     "caveat": "Dense, and court records require a sign-in. The association is a tenant and community development coalition."
+    },
+    {
+     "id": "public-advocate-worst-landlord-watchlist",
+     "url": "https://www.landlordwatchlist.com/",
+     "maker": "Public Advocate",
+     "maker_type": "watchdog",
+     "name": "Worst Landlord Watchlist",
+     "summary": "An annual ranking of the 100 private landlords with the most open housing code violations, with their buildings mapped.",
+     "why": "A quick, transparent check on the worst actors, with the scoring rules spelled out.",
+     "caveat": "Once a year, top 100 only."
+    },
+    {
+     "id": "city-limits-nycha-repair-needs-tracker",
+     "url": "https://citylimits.org/resources-overview/nycha-repair-needs-tracker/",
+     "maker": "City Limits",
+     "maker_type": "newsroom",
+     "name": "NYCHA Repair Needs Tracker",
+     "summary": "Estimated repair needs for each public housing development, from the Housing Authority's 2023 assessment, searchable by development.",
+     "why": "It makes a huge, hard-to-read Housing Authority document usable one development at a time.",
+     "caveat": "Long-term repair estimates, not daily conditions such as heat or elevator outages."
+    },
+    {
+     "id": "good-cause-nyc",
+     "url": "https://goodcausenyc.org/en",
+     "maker": "Housing Justice for All and JustFix",
+     "maker_type": "advocacy",
+     "name": "Good Cause NYC",
+     "summary": "Enter an address and answer a few questions to learn whether an apartment is likely covered by the 2024 Good Cause Eviction law, with a rent increase calculator.",
+     "why": "It answers a question the new law created that no city tool answers.",
+     "caveat": "Built by tenant advocates; not legal advice."
+    }
+   ],
+   "official": [
+    {
+     "id": "hpd-online",
+     "url": "https://hpdonline.nyc.gov/hpdonline/",
+     "maker": "Department of Housing Preservation and Development",
+     "maker_type": "official",
+     "name": "HPD Online",
+     "summary": "The city's record for any residential building: complaints, violations, court cases and registration.",
+     "why": "The official source every other building tool draws on."
+    },
+    {
+     "id": "zola",
+     "url": "https://zola.planning.nyc.gov/",
+     "maker": "Department of City Planning",
+     "maker_type": "official",
+     "name": "ZoLa",
+     "summary": "Click any lot to see its zoning, landmarks, flood zones and pending rezonings.",
+     "why": "The only complete zoning map; no independent tool beats it."
+    },
+    {
+     "id": "dob-sidewalk-shed-map",
+     "url": "https://www.nyc.gov/assets/buildings/html/sidewalk-shed-map.html",
+     "maker": "Department of Buildings",
+     "maker_type": "official",
+     "name": "Sidewalk Shed Map",
+     "summary": "Every permitted sidewalk shed in the city, filterable by how long it has stood, with counts by district.",
+     "why": "Current and simple. On Sept. 28, 2026, it showed 7,134 sheds, up an average of 564 days."
+    },
+    {
+     "id": "dcp-housing-production-snapshot",
+     "url": "https://storymaps.arcgis.com/stories/1c9138dc24064b2e8142ff156345a719",
+     "maker": "Department of City Planning",
+     "maker_type": "official",
+     "name": "Housing Production Snapshot",
+     "summary": "An annual map of homes completed and permitted, by borough and neighborhood.",
+     "why": "The clearest official count of all new housing, market-rate and affordable."
+    }
+   ]
+  },
+  {
+   "id": "transit",
+   "name": "Subways and buses",
+   "rail": "Transit",
+   "dek": "The MTA publishes monthly performance numbers and live train positions. Independent developers turn those feeds into answers to riders' questions: whether a train is running, how slow a bus is and whether the elevator works.",
+   "picks": [
+    {
+     "id": "subway-now-lite",
+     "url": "https://lite.subwaynow.app/",
+     "maker": "Sunny Ng",
+     "maker_type": "independent-developer",
+     "name": "Subway Now",
+     "summary": "One screen that grades every subway line from the trains' actual movements, with live maps, real waits against scheduled ones and arrival estimates.",
+     "why": "It catches slowdowns the MTA has not announced, because it measures the trains themselves instead of relaying posted alerts. Free, fast and open source.",
+     "questions": [
+      "Is my train running normally right now?",
+      "How long will I actually wait?"
+     ],
+     "caveat": "Live only, with no history. Its grades use the developer's own thresholds, not official MTA measures.",
+     "data": "MTA real-time train positions and schedules",
+     "freshness": "Live",
+     "index": [
+      "Is my train running right now?"
+     ]
+    },
+    {
+     "id": "jehiah-bus-speeds",
+     "url": "https://reports.jehiah.cz/bus_speeds/",
+     "maker": "Jehiah Czebotar",
+     "maker_type": "independent-developer",
+     "name": "Bus Speeds by Route",
+     "summary": "Every MTA bus route ranked by average speed, slowest first, and broken into segments so you can see where each one crawls. The M57 was slowest in June 2026, at 5.1 miles an hour.",
+     "why": "It turns a large MTA dataset into a list any rider can scan, down to the block where the bus stalls. The coalition report cards that once did this job are gone.",
+     "questions": [
+      "How slow is my bus?",
+      "Where on my route does it crawl?"
+     ],
+     "caveat": "Speeds only, with nothing on bunching or on-time performance, and a few months behind.",
+     "data": "MTA bus route segment speeds",
+     "freshness": "Monthly; data through June 2026",
+     "index": [
+      "How slow is my bus?"
+     ]
+    },
+    {
+     "id": "transit-access",
+     "url": "https://www.transitaccess.org/",
+     "maker": "Joel Chapman and Prachi Kulkarni",
+     "maker_type": "independent-developer",
+     "name": "Transit Access",
+     "summary": "A live map of every subway station colored by whether its elevators are working, with street elevator locations and planned outages.",
+     "why": "Far easier to read than the MTA's list of outages, and built by a wheelchair user for riders who depend on elevators.",
+     "questions": [
+      "Is the elevator at my station working?",
+      "Is an outage planned at my stop?"
+     ],
+     "caveat": "Live status only, so it does not show which elevators fail most. It is only as accurate as the MTA's feed.",
+     "data": "MTA elevator and escalator outage feeds",
+     "freshness": "Live",
+     "index": [
+      "Is the elevator at my station working?"
+     ]
+    }
+   ],
+   "bench": [
+    {
+     "id": "transit-costs-project",
+     "url": "https://transitcosts.com/",
+     "maker": "NYU Marron Institute",
+     "maker_type": "academic",
+     "name": "Transit Costs Project",
+     "summary": "A database of rail projects in more than 50 countries with cost per kilometer, and a case study of New York.",
+     "why": "The most thorough independent explanation of why building transit here costs so much more than elsewhere.",
+     "caveat": "Reports and a spreadsheet, not an interactive tool."
+    },
+    {
+     "id": "comptroller-bus-report-card",
+     "url": "https://comptroller.nyc.gov/reports/life-in-the-slow-lane/",
+     "maker": "New York City Comptroller's Office",
+     "maker_type": "watchdog",
+     "name": "Life in the Slow Lane",
+     "summary": "A letter grade for every city bus line based on speed, bunching and on-time performance.",
+     "why": "The plainest bus measure anywhere.",
+     "caveat": "A one-time report from September 2025."
+    },
+    {
+     "id": "subwaydata-nyc",
+     "url": "https://subwaydata.nyc/",
+     "maker": "James Fennell",
+     "maker_type": "independent-developer",
+     "name": "Subway Data NYC",
+     "summary": "A daily archive of when every subway train actually arrived at every station since April 2021.",
+     "why": "The MTA does not publish this history. Journalists and researchers rely on it.",
+     "caveat": "A dataset for people who work with data."
+    }
+   ],
+   "official": [
+    {
+     "id": "mta-performance-metrics",
+     "url": "https://metrics.mta.info/",
+     "maker": "Metropolitan Transportation Authority",
+     "maker_type": "state",
+     "name": "MTA Performance Metrics",
+     "summary": "The MTA's dashboards for ridership, subway and bus performance, paratransit, bridges and tunnels and the congestion pricing program.",
+     "why": "The authoritative long-run record, and the most current congestion pricing numbers. Independent congestion pricing trackers have mostly stopped updating."
+    }
+   ]
+  },
+  {
+   "id": "streets",
+   "name": "Traffic safety, cycling and driving",
+   "rail": "Streets",
+   "dek": "Crash records, bike lane data and camera tickets are all public. These tools use them to show whether streets are getting safer, whether the city is building what the law requires and which drivers keep breaking the rules. The city's open crash data has not updated since June 11, 2026, so independent crash maps are missing the summer.",
+   "picks": [
+    {
+     "id": "nyc-crash-mapper",
+     "url": "https://crashmapper.org/",
+     "maker": "CHEKPEDS",
+     "maker_type": "advocacy",
+     "name": "NYC Crash Mapper",
+     "summary": "Every police-reported crash since 2011, filterable by district, precinct, intersection or a shape you draw, and by who was hurt. Trend, compare and rank views show how an area has changed.",
+     "why": "The compare view is the easiest way for anyone to test whether a street redesign cut crashes, and the presentation is plain data.",
+     "questions": [
+      "How many people have been hurt in crashes in my neighborhood?",
+      "Did the redesign on my street work?"
+     ],
+     "caveat": "Its default view now shows no recent crashes because the city's crash feed stopped after June 11, 2026; pick earlier dates. Built by a pedestrian safety group.",
+     "data": "Police Department crash records (NYC Open Data)",
+     "freshness": "Daily when the city feed runs; stuck at June 11, 2026",
+     "index": [
+      "Are the streets in my neighborhood getting safer?"
+     ]
+    },
+    {
+     "id": "howsmydrivingny",
+     "url": "https://howsmydrivingny.nyc/",
+     "maker": "Brian Howald",
+     "maker_type": "independent-developer",
+     "name": "How's My Driving NY",
+     "summary": "Type a license plate to see every parking and camera ticket the city has on file for that vehicle, with fines paid and owed and school-zone speeding streaks.",
+     "why": "The city's own lookup is built for paying a ticket. This one shows a vehicle's whole record, which is what you want to know about a repeat offender.",
+     "questions": [
+      "How many speed camera tickets does that car have?",
+      "Is the car that keeps blocking the bike lane a repeat offender?"
+     ],
+     "caveat": "Only as complete as the city's ticket data, which updates on different schedules.",
+     "data": "Finance Department parking and camera violations",
+     "freshness": "Live lookups of city data",
+     "index": [
+      "How many tickets does that car have?"
+     ]
+    },
+    {
+     "id": "jehiah-bike-lane-tracker",
+     "url": "https://reports.jehiah.cz/bike_lanes/",
+     "maker": "Jehiah Czebotar",
+     "maker_type": "independent-developer",
+     "name": "NYC Bike Lane Tracker",
+     "summary": "Every bike lane segment in the city's data, tallied by year and type and measured against the Streets Plan's legal target of 250 miles of protected lanes from 2022 through 2026. It counted 148 miles as of June 2026.",
+     "why": "The clearest public scorecard on the city's biggest legally required street safety commitment, built from the city's own data, with each new segment dated and mapped.",
+     "questions": [
+      "Is the city building the bike lanes the law requires?",
+      "What bike lanes went in near me this year?"
+     ],
+     "caveat": "It counts lanes the city has logged as installed, so it can lag construction, and a two-way lane counts twice. The maker writes from a street safety point of view.",
+     "data": "Transportation Department bike route data",
+     "freshness": "Data through June 2026",
+     "index": [
+      "Is the city meeting its bike lane target?"
+     ]
+    }
+   ],
+   "bench": [
+    {
+     "id": "crashcount",
+     "url": "https://crashcount.nyc/",
+     "maker": "Michael Freedman",
+     "maker_type": "advocacy",
+     "name": "CrashCount",
+     "summary": "Crash, injury and death counts for more than 500 districts and neighborhoods, a lookup for any address, and fatal crashes confirmed by the press before police records arrive.",
+     "why": "The friendliest crash lookup, and its press-confirmed deaths partly fill the gap left by the frozen city feed.",
+     "caveat": "Openly advocacy in tone, and its death counts will not match the city's."
+    },
+    {
+     "id": "ctbk-dev",
+     "url": "https://ctbk.dev/",
+     "maker": "Ryan Williams",
+     "maker_type": "civic-tech",
+     "name": "ctbk.dev",
+     "summary": "Citi Bike rides per month since 2014, station maps with common destinations and a record of when each station sat empty or full.",
+     "why": "The empty-and-full history answers a common rider complaint that Citi Bike does not publish."
+    },
+    {
+     "id": "turkcan-congestion-pricing-vision",
+     "url": "https://mehmetkeremturkcan.com/congestionpricing/",
+     "maker": "Columbia University researchers",
+     "maker_type": "academic",
+     "name": "Congestion Pricing: A Vision-Based Analysis",
+     "summary": "Car counts from hundreds of city traffic cameras before and after congestion pricing, mapped inside and outside the toll zone.",
+     "why": "The only independent check on congestion pricing we found that is still maintained.",
+     "caveat": "A research project, and camera counts include parked cars."
+    }
+   ],
+   "official": [
+    {
+     "id": "vision-zero-view",
+     "url": "https://vzv.nyc/",
+     "maker": "Department of Transportation",
+     "maker_type": "official",
+     "name": "Vision Zero View",
+     "summary": "The city's map of traffic injuries and deaths, with street design changes and speed limits layered on.",
+     "why": "With the public crash feed frozen, it is the only source with crash totals through August 2026."
+    }
+   ]
+  },
+  {
+   "id": "block",
+   "name": "311, trash, rats and parks",
+   "rail": "Quality of life",
+   "dek": "311 takes millions of requests a year, and the city publishes every one. These tools show what a neighborhood complains about and whether composting is catching on. For rats, trees and snow, the city's own maps are the best available.",
+   "picks": [
+    {
+     "id": "osc-nyc311-monitoring-tool",
+     "url": "https://www.osc.ny.gov/reports/osdc/nyc311-monitoring-tool",
+     "maker": "New York State Comptroller's Office",
+     "maker_type": "watchdog",
+     "name": "NYC311 Monitoring Tool",
+     "summary": "311 complaints by neighborhood, ZIP code and borough: the top complaint types last month, the change from the month before and trends back to 2019.",
+     "why": "The clearest current answer to what a neighborhood complains about, from an office independent of the agencies being complained about. It filters out duplicate complaints, which the raw 311 data does not.",
+     "questions": [
+      "What do people in my neighborhood complain about most?",
+      "Are noise complaints going up where I live?"
+     ],
+     "caveat": "It counts complaints, not conditions, so it partly measures who calls 311. It does not show how fast the city responds.",
+     "data": "311 service requests (NYC Open Data)",
+     "freshness": "Monthly; data through August 2026",
+     "index": [
+      "What does my neighborhood complain about?"
+     ]
+    },
+    {
+     "id": "track-nyc-trash",
+     "url": "https://tracknyctrash.com/",
+     "maker": "Brooklyn and Manhattan Solid Waste Advisory Boards",
+     "maker_type": "civic-tech",
+     "name": "Track NYC Trash",
+     "summary": "Monthly estimates of how much compost and recycling each community district captures, and a second dashboard on where the city's garbage goes after pickup, by route, site and cost.",
+     "why": "It shows whether curbside composting is working, district by district, in a way the Sanitation Department does not, with definitions and sources spelled out.",
+     "questions": [
+      "Is composting catching on in my district?",
+      "Where does the city's garbage go?"
+     ],
+     "caveat": "Capture rates are estimates that lean on a 2023 waste study. The boards say they use the data for advocacy as well as education.",
+     "data": "Sanitation Department monthly tonnage and waste export data",
+     "freshness": "Monthly; data through August 2026",
+     "index": [
+      "Is composting working in my neighborhood?"
+     ]
+    }
+   ],
+   "bench": [
+    {
+     "id": "311-wrapped",
+     "url": "https://311wrapped.com/",
+     "maker": "Maker not named on the site",
+     "maker_type": "independent-developer",
+     "name": "311 Wrapped",
+     "summary": "Enter a ZIP code for a year in review of 311 reports: top complaints, busiest hours, how fast complaints close and how this year compares with last.",
+     "why": "A careful, published method in a format people will click through.",
+     "caveat": "The site does not name its maker, and its scores and grades are its own judgments."
+    },
+    {
+     "id": "tpl-parkscore-nyc",
+     "url": "https://www.tpl.org/city/new-york-new-york",
+     "maker": "Trust for Public Land",
+     "maker_type": "nonprofit",
+     "name": "ParkScore: New York",
+     "summary": "Scores the city's park system on acreage, access, spending, amenities and equity, and compares park space by neighborhood income and race.",
+     "why": "A current national yardstick with a clear equity lens.",
+     "caveat": "City-level scores with little neighborhood detail."
+    },
+    {
+     "id": "council-park-equity-2026",
+     "url": "https://council.nyc.gov/data/park-equity-2026/",
+     "maker": "City Council Data Team",
+     "maker_type": "watchdog",
+     "name": "Evaluating Park Equity Across New York City",
+     "summary": "Park acreage within a 10-minute walk in each Council district, mapped against income, race and age.",
+     "why": "The most local look at park access, with a documented method.",
+     "caveat": "A one-time analysis, and the page is slow to load."
+    }
+   ],
+   "official": [
+    {
+     "id": "rat-information-portal",
+     "url": "https://a816-dohbesp.nyc.gov/IndicatorPublic/rats/",
+     "maker": "Health Department",
+     "maker_type": "official",
+     "name": "Rat Information Portal",
+     "summary": "Every Health Department rat inspection, mapped building by building, with each property's history.",
+     "why": "The authoritative record, current to within days. We found no credible independent rat tool."
+    },
+    {
+     "id": "nyc-tree-map",
+     "url": "https://www.nycgovparks.org/tree-map",
+     "maker": "Parks Department",
+     "maker_type": "official",
+     "name": "NYC Tree Map",
+     "summary": "Nearly 893,000 trees managed by the Parks Department, each with species, size and care history.",
+     "why": "The definitive street tree map, current and tied to volunteer care."
+    },
+    {
+     "id": "plownyc",
+     "url": "https://plownyc.nyc.gov/plownyc/",
+     "maker": "Sanitation Department",
+     "maker_type": "official",
+     "name": "PlowNYC",
+     "summary": "During snowstorms, when a plow or salt spreader last passed each street.",
+     "why": "Street-by-street accountability for snow response. Idle outside storms."
+    }
+   ]
+  },
+  {
+   "id": "climate",
+   "name": "Flooding, heat and the water",
+   "rail": "Climate",
+   "dek": "Climate risk in New York City is block by block: one street floods and the next stays dry. Two of these tools run on their own sensors and water samples rather than agency records, which is why they can show conditions street by street. For air quality and heat vulnerability, see the Health Department's portal under Neighborhoods and people.",
+   "picks": [
+    {
+     "id": "floodnet",
+     "url": "https://dataviz.floodnet.nyc/",
+     "maker": "New York University and CUNY, with city agencies",
+     "maker_type": "academic",
+     "name": "FloodNet",
+     "summary": "A map of street flood sensors across the five boroughs showing current water depth and each sensor's record of past floods.",
+     "why": "The only live, block-level measure of street flooding in the city, and it shows which intersections flood again and again.",
+     "questions": [
+      "Is my street flooding right now?",
+      "How deep did the water get in the last storm?"
+     ],
+     "caveat": "It only sees where sensors are installed, so a quiet map does not mean a dry city.",
+     "data": "FloodNet street sensors, also shared on NYC Open Data",
+     "freshness": "Real time",
+     "index": [
+      "Is my street flooding?"
+     ]
+    },
+    {
+     "id": "nyc-urban-heat-portal",
+     "url": "https://urbanheat.nyc/",
+     "maker": "Hunter College and BetaNYC",
+     "maker_type": "academic",
+     "name": "NYC Urban Heat Portal",
+     "summary": "A neighborhood map of outdoor heat exposure built from surface temperature, tree canopy, cool roofs and pavement, with a profile scoring each factor and counts of extreme heat days.",
+     "why": "It shows why a neighborhood runs hot, factor by factor, in plain profiles with downloadable data.",
+     "questions": [
+      "How hot does my neighborhood get?",
+      "Why is my block hotter than others?"
+     ],
+     "caveat": "A snapshot of 2013 to 2023, not a live feed. For who is most at risk in a heat wave, use the Health Department's heat vulnerability index.",
+     "data": "Satellite temperature imagery, weather stations, tree canopy and roof data",
+     "freshness": "Snapshot, 2013-2023",
+     "index": [
+      "Why is my neighborhood so hot?"
+     ]
+    },
+    {
+     "id": "nyc-water-check",
+     "url": "https://nycwatercheck.com/",
+     "maker": "Gray Reinhard",
+     "maker_type": "independent-developer",
+     "name": "NYC Water Check",
+     "summary": "The latest sewage-bacteria reading at about 80 shoreline sites, how each compares with its usual level, and trends by borough.",
+     "why": "It answers whether the water is safe for swimming or kayaking this week, which no official page does for the whole shoreline, and it explains its method.",
+     "questions": [
+      "Is the water at my pier safe to kayak in this week?",
+      "Does it get dirtier after rain?"
+     ],
+     "caveat": "Built by one person on volunteer sampling rather than government data. It tracks bacteria only.",
+     "data": "Community water quality sampling; rainfall records",
+     "freshness": "Weekly in season; updated Sept. 24, 2026",
+     "index": [
+      "Is the harbor clean enough to swim in?"
+     ]
+    }
+   ],
+   "bench": [
+    {
+     "id": "urban-green-ll97-progress",
+     "url": "https://www.urbangreencouncil.org/what-we-do/explore-nyc-building-data-hub/local-law-97-progress/",
+     "maker": "Urban Green Council",
+     "maker_type": "nonprofit",
+     "name": "Local Law 97 Progress",
+     "summary": "What share of large buildings already meet the 2030 carbon limits under Local Law 97, by building type.",
+     "why": "The most credible plain-language read on whether the building emissions law is working.",
+     "caveat": "Citywide only; you cannot look up your own building."
+    },
+    {
+     "id": "riverkeeper-water-quality-portal",
+     "url": "https://data.riverkeeper.org/",
+     "maker": "Riverkeeper",
+     "maker_type": "advocacy",
+     "name": "Water Quality Portal",
+     "summary": "Pass-fail bacteria results at sampling sites since 2008, with nearby sources of pollution.",
+     "why": "A long record from an established watchdog group.",
+     "caveat": "Focused on the Hudson, and the latest sample dates were not shown."
+    },
+    {
+     "id": "floodhelpny",
+     "url": "https://www.floodhelpny.org/en",
+     "maker": "Center for NYC Neighborhoods",
+     "maker_type": "nonprofit",
+     "name": "FloodHelpNY",
+     "summary": "Look up a home's federal flood zone and get plain guidance on flood insurance, in nine languages.",
+     "why": "Practical help for homeowners facing coastal flood risk.",
+     "caveat": "Coastal flooding only, not rain-driven street flooding."
+    }
+   ],
+   "official": []
+  },
+  {
+   "id": "schools",
+   "name": "Schools and children",
+   "rail": "Schools",
+   "dek": "The Education Department publishes report cards and admissions data for every school, in forms built for administrators. These tools repackage the same numbers for families, and one adds admissions records obtained through public records requests.",
+   "picks": [
+    {
+     "id": "insideschools",
+     "url": "https://insideschools.org/",
+     "maker": "Center for New York City Affairs, The New School",
+     "maker_type": "academic",
+     "name": "InsideSchools",
+     "summary": "Profiles of public schools from pre-K through high school that pair city and state data, such as test scores, chronic absence and survey results, with reviews written after school visits, plus plain guides to admissions.",
+     "why": "It answers the question families have, whether a school is right for their child, by adding context to the same data the official report cards use.",
+     "questions": [
+      "Is my zoned school any good?",
+      "How many kids at this school are chronically absent?"
+     ],
+     "caveat": "Written reviews are not refreshed on a schedule; one we checked dated to 2019. Partly supported by advertising.",
+     "data": "Education Department school quality, survey and demographic data; state test results",
+     "freshness": "School data from 2024-25",
+     "index": [
+      "Is my zoned school any good?"
+     ]
+    },
+    {
+     "id": "nyc-sift",
+     "url": "https://nycsift.com/",
+     "maker": "A New York City parent, not named on the site",
+     "maker_type": "independent-developer",
+     "name": "NYC-SIFT",
+     "summary": "A free search of more than 400 high schools and 900 programs showing applicants per seat, admissions cutoffs and estimated odds, from more than 20 Education Department datasets and records obtained through public records requests.",
+     "why": "It publishes admissions numbers the city does not gather in one place and turns them into odds a parent can read.",
+     "questions": [
+      "How hard is it to get into this high school?",
+      "How many kids applied for each seat?"
+     ],
+     "caveat": "High school only. School pages carry AI-written summaries, and the maker is not named.",
+     "data": "Education Department admissions and school data; records obtained under the Freedom of Information Law",
+     "freshness": "Current for the fall 2026 admissions cycle",
+     "index": [
+      "What are my kid's odds at a high school?"
+     ]
+    },
+    {
+     "id": "keeping-track-online",
+     "url": "https://data.cccnewyork.org/",
+     "maker": "Citizens' Committee for Children of New York",
+     "maker_type": "advocacy",
+     "name": "Keeping Track Online",
+     "summary": "Hundreds of measures of how children and families are doing, including poverty, food stamps, early intervention and child welfare services, by community district, school district, precinct and ZIP code.",
+     "why": "The deepest neighborhood data on children in the city, kept current by a research staff. New food stamp figures went up in May 2026.",
+     "questions": [
+      "How many kids in my district live in poverty?",
+      "Where are families using child welfare services?"
+     ],
+     "caveat": "The interface is dated, and some figures are estimates converted from larger Census areas. The committee is a child advocacy group.",
+     "data": "Census, Education, Homeless Services and Health Department data; state benefit records",
+     "freshness": "Rolling updates; latest May 2026",
+     "index": [
+      "How are children doing in my neighborhood?"
+     ]
+    }
+   ],
+   "bench": [
+    {
+     "id": "class-size-matters-utilization-map",
+     "url": "https://classsizematters.github.io/CSM-2024-2025-Utilization-Map/",
+     "maker": "Class Size Matters",
+     "maker_type": "advocacy",
+     "name": "School Utilization Map",
+     "summary": "Every school's enrollment against its capacity on a map, with tables on whether each school meets the class size law.",
+     "why": "The only place that maps crowding school by school while the class size law is phased in.",
+     "caveat": "An advocacy group campaigning for smaller classes. The map shows 2024-25."
+    },
+    {
+     "id": "educational-opportunity-project",
+     "url": "https://edopportunity.org/",
+     "maker": "Stanford University",
+     "maker_type": "academic",
+     "name": "Educational Opportunity Project",
+     "summary": "Test results for every school district in the country, including the city's, on a common scale, with learning rates, pandemic recovery and segregation measures.",
+     "why": "The credible way to compare city districts with the rest of the country, updated September 2026.",
+     "caveat": "Built for researchers."
+    },
+    {
+     "id": "betanyc-school-budget-dashboard",
+     "url": "https://public.tableau.com/app/profile/betanyc/viz/NYCPublicSchoolAllocationsandBudgetDashboard_17225412389160/NYCPublicSchoolAllocationsandBudgetDashboard",
+     "maker": "BetaNYC",
+     "maker_type": "civic-tech",
+     "name": "School Allocations and Budget Dashboard",
+     "summary": "Enter a school's code to see its allocations and budget from 2018 to 2025.",
+     "why": "Seven years of school budgets in one view, useful for parent councils.",
+     "caveat": "Clumsy on phones; last republished July 2025."
+    },
+    {
+     "id": "watching-the-numbers-2026",
+     "url": "https://www.centernyc.org/reports-briefs/watching-the-numbers-2026",
+     "maker": "Center for New York City Affairs, The New School",
+     "maker_type": "academic",
+     "name": "Watching the Numbers",
+     "summary": "An annual report on the child protective system: investigations, services and foster care over six years.",
+     "why": "The clearest independent read on the Administration for Children's Services.",
+     "caveat": "A report, not a tool."
+    }
+   ],
+   "official": [
+    {
+     "id": "school-quality-reports",
+     "url": "https://tools.nycenet.edu/snapshot/",
+     "maker": "Education Department",
+     "maker_type": "official",
+     "name": "School Quality Reports",
+     "summary": "The official report card for every school, with test results, attendance, survey results and comparisons.",
+     "why": "The authoritative source the independent sites build on."
+    },
+    {
+     "id": "nyc-child-care-hub",
+     "url": "https://www.nyc.gov/content/childcarehub/pages/",
+     "maker": "City of New York",
+     "maker_type": "official",
+     "name": "NYC Child Care Hub",
+     "summary": "Search more than 10,000 child care programs by location, age, cost and schedule, with inspection records.",
+     "why": "Inspection records sit next to cost and location in one search."
+    }
+   ]
+  },
+  {
+   "id": "money",
+   "name": "Budget and spending",
+   "rail": "Money",
+   "dek": "The city spends well over $100 billion a year. Its spending, contracts and payroll are all public, mostly through the comptroller's Checkbook NYC. The tools here explain the budget in plain terms, track it over time and show whether your property tax is fair. We found no current independent tool on tax breaks, city debt or what the city pays into pensions.",
+   "picks": [
+    {
+     "id": "checkbook-nyc",
+     "url": "https://www.checkbooknyc.com/",
+     "maker": "New York City Comptroller's Office",
+     "maker_type": "watchdog",
+     "name": "Checkbook NYC",
+     "summary": "A searchable ledger of the city's day-to-day finances: budget, revenue, every check, registered contracts and payroll, by agency, vendor and year.",
+     "why": "Nothing independent comes close on the basic question of where the money goes, and it is close to real time. It showed $38.7 billion spent so far in fiscal 2027 on Sept. 28, 2026.",
+     "questions": [
+      "Which companies and nonprofits does the city pay, and how much?",
+      "Who holds the biggest contracts at an agency?"
+     ],
+     "caveat": "Built for depth, not ease, and full of budget jargon. Its bot protection turns away some privacy browsers and VPNs.",
+     "data": "Comptroller's Office budget, spending, contract and payroll records",
+     "freshness": "Near real time",
+     "index": [
+      "Who does the city pay, and how much?"
+     ],
+     "shot": false
+    },
+    {
+     "id": "ibo-nyc-budget-resources",
+     "url": "https://www.ibo.nyc.gov/content/ibo-nyc-budget-resources",
+     "maker": "Independent Budget Office",
+     "maker_type": "watchdog",
+     "name": "NYC Budget Resources",
+     "summary": "The Independent Budget Office's plain-language hub: Budget 101, a glossary, charts of spending and staffing by agency since 1980, a monthly snapshot of the budget and workforce, and a graphic that shrinks the budget to $100.",
+     "why": "The best starting point for someone who wants the budget explained rather than a database to search, from the city's nonpartisan budget analysts.",
+     "questions": [
+      "How big is the city budget and what does it pay for?",
+      "How has spending at an agency changed since 1980?"
+     ],
+     "caveat": "The charts load slowly and are hard to link to one at a time.",
+     "data": "City financial plans, adopted budgets and the city's financial management system",
+     "freshness": "Monthly snapshot; data as of Sept. 8, 2026",
+     "index": [
+      "How does the city budget work?"
+     ]
+    },
+    {
+     "id": "betanyc-nyc-budget-explorer",
+     "url": "https://betanyc.github.io/nyc-budget-viz/",
+     "maker": "BetaNYC",
+     "maker_type": "civic-tech",
+     "name": "NYC Budget Explorer",
+     "summary": "Every agency's budget from fiscal 2017 through 2027, comparing what was adopted with what was later changed, with drill-downs and a downloadable file.",
+     "why": "The clearest independent view of where the money goes and how that has shifted, with a documented method that matches the city's totals.",
+     "questions": [
+      "How much does the city spend on police, schools or sanitation?",
+      "Has an agency's budget grown since 2017?"
+     ],
+     "caveat": "New in July 2026 and coded with AI help, so how well it will be kept up is unknown. It shows budgeted dollars, not actual spending.",
+     "data": "City expense budget (NYC Open Data)",
+     "freshness": "Includes the fiscal 2027 adopted budget",
+     "index": [
+      "How much does each agency get?"
+     ]
+    },
+    {
+     "id": "sidewalk-chorus-property-tax-map",
+     "url": "https://taxmap.sidewalkchorus.com/",
+     "maker": "Sebastian Hallum Clarke (Sidewalk Chorus)",
+     "maker_type": "independent-developer",
+     "name": "NYC Property Tax Map",
+     "summary": "Every property in the city colored by its effective tax rate. Search an address to see its tax bill and compare it with the neighbors'.",
+     "why": "It answers whether your property tax is fair far better than the Finance Department's own portal, which shows one lot at a time with no comparison.",
+     "questions": [
+      "Is my property tax rate higher than my neighbors'?",
+      "Why do some expensive homes pay lower rates?"
+     ],
+     "caveat": "The maker argues for reform, though the numbers come straight from city data. It is one tax year behind.",
+     "data": "Finance Department assessment and tax data",
+     "freshness": "2025-26 tax year",
+     "index": [
+      "Is my property tax fair?"
+     ]
+    }
+   ],
+   "bench": [
+    {
+     "id": "comptroller-agency-staffing-dashboard",
+     "url": "https://comptroller.nyc.gov/services/for-the-public/nyc-agency-staffing-dashboard/dashboard/",
+     "maker": "New York City Comptroller's Office",
+     "maker_type": "watchdog",
+     "name": "NYC Agency Staffing Dashboard",
+     "summary": "Authorized positions against actual employees for every agency each month since 2012, with vacancy rates. It counted 292,808 employees and 14,391 vacancies as of Aug. 31, 2026.",
+     "why": "The best answer to which agencies are short-staffed, updated monthly."
+    },
+    {
+     "id": "comptroller-late-contracts-dashboard",
+     "url": "https://www.checkbooknyc.com/late-contracts",
+     "maker": "New York City Comptroller's Office",
+     "maker_type": "watchdog",
+     "name": "Late Contracts Dashboard",
+     "summary": "How late the city registers its contracts, by agency, vendor and industry, since 2011.",
+     "why": "The only tool on the delays that leave nonprofits working for months before they are paid.",
+     "caveat": "Measures registration, not payment, and the comptroller's office is part of the registration process."
+    },
+    {
+     "id": "betanyc-council-discretionary-explorer",
+     "url": "https://betanyc.github.io/New-York-City-Budget/",
+     "maker": "BetaNYC",
+     "maker_type": "civic-tech",
+     "name": "NYC Council Discretionary Funding",
+     "summary": "Where the City Council's discretionary money goes, fiscal 2015 through 2027, by category and initiative. The fiscal 2027 total is about $656 million.",
+     "why": "The only independent, reconciled view of the money Council members steer to local groups."
+    },
+    {
+     "id": "seethroughny-payrolls",
+     "url": "https://www.seethroughny.net/payrolls",
+     "maker": "Empire Center for Public Policy",
+     "maker_type": "nonprofit",
+     "name": "SeeThroughNY",
+     "summary": "Names, titles and pay of city employees, plus a database of retirees' pensions.",
+     "why": "The quickest way to answer what a city job pays or who earned the most overtime.",
+     "caveat": "Data runs through fiscal 2025. The Empire Center is a free-market think tank."
+    },
+    {
+     "id": "databook-nyc",
+     "url": "https://databook.nyc/",
+     "maker": "WeGov.NYC (Sarapis)",
+     "maker_type": "civic-tech",
+     "name": "Databook.NYC",
+     "summary": "Cross-linked profiles of city agencies, employees, job titles, capital projects, contracts and vendors, plus a daily digest of City Record notices.",
+     "why": "The best general-purpose explorer of city government data, updated daily.",
+     "caveat": "Dense; best for people who know what they are looking for."
+    }
+   ],
+   "official": [
+    {
+     "id": "dof-property-information-portal",
+     "url": "https://propertyinformationportal.nyc.gov/",
+     "maker": "Department of Finance",
+     "maker_type": "official",
+     "name": "Property Information Portal",
+     "summary": "The official lookup for any lot's assessed value, exemptions, abatements and tax map.",
+     "why": "Where every property tax question ends; pair it with the tax map above."
+    },
+    {
+     "id": "mocs-discretionary-award-tracker",
+     "url": "https://www.nyc.gov/site/mocs/opportunities/discretionary-award-tracker.page",
+     "maker": "Mayor's Office of Contract Services",
+     "maker_type": "official",
+     "name": "Discretionary Award Tracker",
+     "summary": "The status of every City Council discretionary award from the past three fiscal years.",
+     "why": "Shows whether Council money promised to a local group has made it through the contract process."
+    }
+   ]
+  },
+  {
+   "id": "performance",
+   "name": "How city government performs",
+   "rail": "Performance",
+   "dek": "Every September the mayor's office publishes the Mayor's Management Report, the measures agencies report about their own work. These tools follow those numbers over decades, flag which way they are moving and track what laws and audits require agencies to do.",
+   "picks": [
+    {
+     "id": "nyc-pulse-mmr",
+     "url": "https://tedalcorn.org/nyc-mmr/",
+     "maker": "Ted Alcorn",
+     "maker_type": "independent-developer",
+     "name": "NYC Pulse",
+     "summary": "Twenty-nine years of Mayor's Management Report measures, fiscal 1998 to 2026, in searchable charts by agency, measure and neighborhood, with dollar figures adjusted for inflation. Every value links to the page it came from.",
+     "why": "It shows long-run trends the official report does not, and it shows its work. The fiscal 2026 numbers went in within days of their release.",
+     "questions": [
+      "Are 911 response times getting better or worse?",
+      "How has this agency changed since the 2000s?"
+     ],
+     "caveat": "New this year and built by one journalist with AI coding help; the site warns that linking old reports to new data can introduce errors. The report measures what agencies choose to measure.",
+     "data": "Mayor's Management Report indicators, from NYC Open Data and printed reports since 1998",
+     "freshness": "Annual; fiscal 2026 data added Sept. 28, 2026",
+     "index": [
+      "Is the city getting better at its basic jobs?"
+     ]
+    },
+    {
+     "id": "comptroller-measuring-performance",
+     "url": "https://comptroller.nyc.gov/services/for-the-public/measuring-nyc-government-performance/overview/",
+     "maker": "New York City Comptroller's Office",
+     "maker_type": "watchdog",
+     "name": "Measuring NYC Government Performance",
+     "summary": "Color-coded cards for 17 agencies showing whether key measures improved or worsened over the past month, three months, year to date and against 2019.",
+     "why": "The quickest read on which way agencies are heading, from an independently elected office, and more current than the management report.",
+     "questions": [
+      "Is the city fixing things faster than last year?",
+      "Is this agency doing better than before Covid?"
+     ],
+     "caveat": "Covers a chosen subset of measures, and a few cards show missing or stale values.",
+     "data": "Mayor's Management Report indicators and other agency open data",
+     "freshness": "Updated as data posts; most measures refreshed Sept. 24-27, 2026",
+     "index": [
+      "Which agencies are improving and which are slipping?"
+     ]
+    },
+    {
+     "id": "nycuriosity-council-legislation-trackers",
+     "url": "https://data.nycuriosity.com/civic_reference/nyc_council_legislation_trackers/",
+     "maker": "Tal Roded (NYCuriosity)",
+     "maker_type": "independent-developer",
+     "name": "NYC Council Legislation Trackers",
+     "summary": "Every local law passed since 2014, read for each duty it places on a city agency: 8,261 obligations from 2,138 laws, with the agency, deadline and exact legal language. Companion trackers cover cost estimates and new agency powers.",
+     "why": "It turns the city's laws into a to-do list, so anyone can check what an agency was told to do and whether a required report is late. Quotes are checked against the law text.",
+     "questions": [
+      "What reports is this agency required to publish?",
+      "What did this local law actually require?"
+     ],
+     "caveat": "Extraction is AI-assisted, and about a quarter of obligations are not tied to a specific agency. Alerts and a question feature are for paying members.",
+     "data": "Enacted local laws and Council fiscal impact statements",
+     "freshness": "Monthly",
+     "index": [
+      "What does a law require an agency to do?"
+     ]
+    }
+   ],
+   "bench": [
+    {
+     "id": "comptroller-audit-recommendations-tracker",
+     "url": "https://comptroller.nyc.gov/services/for-the-public/audit/audit-recommendations-tracker/",
+     "maker": "New York City Comptroller's Office",
+     "maker_type": "watchdog",
+     "name": "Audit Recommendations Tracker",
+     "summary": "Every recommendation from comptroller audits since January 2022, whether the agency agreed and whether it says it followed through.",
+     "why": "It follows audits past the headline to whether anything changed, which almost no one else tracks.",
+     "caveat": "Status is as reported by the agencies."
+    },
+    {
+     "id": "muckrock-nyc",
+     "url": "https://www.muckrock.com/place/united-states-of-america/new-york/new-york-city/",
+     "maker": "MuckRock Foundation",
+     "maker_type": "nonprofit",
+     "name": "MuckRock: New York City",
+     "summary": "Response times, success rates and full correspondence for public records requests filed with city agencies through MuckRock: a 196-day average response across 2,679 requests.",
+     "why": "The only independent view of how well each agency answers Freedom of Information Law requests.",
+     "caveat": "Covers only requests filed through MuckRock.",
+     "shot": false
+    },
+    {
+     "id": "mamdani-tracker",
+     "url": "https://mamdanitracker.nyc/",
+     "maker": "Anthony Esguerra and Geli Juani",
+     "maker_type": "independent-developer",
+     "name": "Mamdani Tracker",
+     "summary": "100 of Mayor Mamdani's campaign pledges, each marked not started, in progress, completed or broken, checked against the budget, executive orders and press releases.",
+     "why": "The most credible of about 10 promise trackers we checked, with named editors and a stated method.",
+     "caveat": "Updates have slowed since spring, and parts of the site require a sign-up."
+    }
+   ],
+   "official": [
+    {
+     "id": "dynamic-mmr",
+     "url": "https://dmmr.nyc.gov/",
+     "maker": "Mayor's Office of Operations",
+     "maker_type": "official",
+     "name": "Dynamic Mayor's Management Report",
+     "summary": "The official management report in interactive form, with measures by agency and service, maps and comparisons.",
+     "why": "The source every performance tool builds on, with official definitions for each measure."
+    },
+    {
+     "id": "nyc-openrecords",
+     "url": "https://a860-openrecords.nyc.gov/request/view_all",
+     "maker": "Department of Records and Information Services",
+     "maker_type": "official",
+     "name": "NYC OpenRecords",
+     "summary": "The city's portal for records requests, with a public search of more than 645,000 past requests and many released records.",
+     "why": "Check whether someone already asked for the records you want, and read what the city handed over."
+    }
+   ]
+  },
+  {
+   "id": "civics",
+   "name": "Council, community boards and elections",
+   "rail": "Civics",
+   "dek": "Most decisions that shape a block pass through a community board, the City Council or the ballot box. The official records are scattered across Legistar, 59 board websites and YouTube. These tools gather them up and make them searchable.",
+   "picks": [
+    {
+     "id": "block-party",
+     "url": "https://www.blockparty.studio/",
+     "maker": "Block Party (volunteer team)",
+     "maker_type": "civic-tech",
+     "name": "Block Party",
+     "summary": "A searchable archive of about 12,000 community board meeting transcripts and nearly 40,000 board resolutions, each with a short summary of what was asked and how the board voted.",
+     "why": "Nothing else lets you search what community boards decide across boards. Summaries sit next to the full text so you can check them, and new meetings appear within days.",
+     "questions": [
+      "What did my community board decide about that liquor license?",
+      "Has my board ever voted on bike lanes on my street?"
+     ],
+     "caveat": "Coverage is uneven: resolutions come from 27 boards in Brooklyn and Manhattan, transcripts from about 40 boards that post video. Summaries are written by AI.",
+     "data": "Community board meeting videos and posted resolutions",
+     "freshness": "Continuous; newest items Sept. 25, 2026",
+     "index": [
+      "What did my community board decide?"
+     ],
+     "shot_url": "https://www.blockparty.studio/meetings",
+     "shot_wait": 7000
+    },
+    {
+     "id": "intro-nyc",
+     "url": "https://intro.nyc/",
+     "maker": "Jehiah Czebotar",
+     "maker_type": "independent-developer",
+     "name": "intro.nyc",
+     "summary": "Fast search of City Council bills since 2014, with sponsors, status, short shareable links and a feed of the past month's actions. Other pages list members, local laws by year and hearings.",
+     "why": "It is far quicker and easier to read than Legistar, the Council's official system, and its data updates daily and is open to anyone.",
+     "questions": [
+      "Is there a Council bill about e-bikes?",
+      "What has my Council member sponsored?"
+     ],
+     "caveat": "A one-person volunteer project. It covers bills, not what happens after a law passes.",
+     "data": "City Council legislative records (Legistar)",
+     "freshness": "Updated daily",
+     "index": [
+      "Is the Council working on a bill about something I care about?"
+     ]
+    },
+    {
+     "id": "mygovnyc-who-represents-me",
+     "url": "https://www.mygovnyc.org/",
+     "maker": "CUNY Center for Urban Research and League of Women Voters",
+     "maker_type": "academic",
+     "name": "Who Represents Me? NYC",
+     "summary": "Type an address and get every elected official who represents it, from Council member to members of Congress, plus the community board, with office phone numbers.",
+     "why": "One lookup covers every level of government, from a university mapping center and a nonpartisan civic group. It uses exact addresses rather than ZIP codes, which can straddle districts.",
+     "questions": [
+      "Who is my Council member?",
+      "Which community board am I in?"
+     ],
+     "caveat": "No as-of date is shown for the rosters, though they were current when we checked.",
+     "data": "League of Women Voters officeholder lists; city and state district boundaries",
+     "freshness": "Current as of a Sept. 28, 2026 check",
+     "index": [
+      "Who represents me?"
+     ]
+    }
+   ],
+   "bench": [
+    {
+     "id": "cfb-follow-the-money",
+     "url": "https://www.nyccfb.info/follow-the-money/",
+     "maker": "Campaign Finance Board",
+     "maker_type": "watchdog",
+     "name": "Follow the Money",
+     "summary": "Every contribution, expenditure and public matching payment for city candidates, plus spending by outside groups, searchable and mapped.",
+     "why": "The authoritative source on money in city races; no independent tool improves on it.",
+     "caveat": "Spread across several older interfaces."
+    },
+    {
+     "id": "nyc-election-atlas",
+     "url": "https://www.electionatlas.nyc/",
+     "maker": "CUNY Center for Urban Research",
+     "maker_type": "academic",
+     "name": "NYC Election Atlas",
+     "summary": "City election results mapped by election district, including the ranked-choice rounds of the 2025 mayoral primary and the 2025 general election against 2021.",
+     "why": "The clearest way to see how neighborhoods voted, from a university mapping center with a long record.",
+     "caveat": "Updated after major elections; no 2026 maps yet."
+    },
+    {
+     "id": "nyc-civic-calendar",
+     "url": "https://www.nycciviccalendar.com/",
+     "maker": "Laeo Crnkovic-Rubsamen",
+     "maker_type": "independent-developer",
+     "name": "NYC Civic Calendar",
+     "summary": "Pick community boards, Council committees and agency hearing bodies, and their meetings drop into your phone's calendar.",
+     "why": "It handles the hardest part of showing up, knowing when and where, for 347 public bodies.",
+     "caveat": "Depends on reading board websites, so gaps appear when a board changes its site."
+    },
+    {
+     "id": "betanyc-boundaries-map",
+     "url": "https://boundaries.beta.nyc/",
+     "maker": "BetaNYC",
+     "maker_type": "civic-tech",
+     "name": "NYC Boundaries Map",
+     "summary": "Click any spot to see every district that covers it, from Council and state legislature to police precinct, school district and sanitation, and how they overlap.",
+     "why": "The most complete answer to which districts a block sits in, from the city's main civic technology group."
+    }
+   ],
+   "official": [
+    {
+     "id": "nyc-lobbyist-search",
+     "url": "https://lobbyistsearch.nyc.gov/",
+     "maker": "City Clerk",
+     "maker_type": "official",
+     "name": "NYC Lobbyist Search",
+     "summary": "Lobbyist registrations and reports, searchable by lobbyist, client, subject and the officials targeted.",
+     "why": "The only place to see who is lobbying City Hall; we found no independent alternative."
+    },
+    {
+     "id": "boe-find-my-poll-site",
+     "url": "https://findmypollsite.vote.nyc/",
+     "maker": "Board of Elections",
+     "maker_type": "official",
+     "name": "Find My Poll Site",
+     "summary": "Enter an address for your early voting and Election Day poll sites and a sample ballot.",
+     "why": "The authoritative answer to where you vote and what is on the ballot."
+    }
+   ]
+  },
+  {
+   "id": "people",
+   "name": "Neighborhoods and people",
+   "rail": "Neighborhoods",
+   "dek": "Census and city data can describe any neighborhood in detail, and the city's archives hold photos of nearly every building. These tools make both usable without a data background.",
+   "picks": [
+    {
+     "id": "data2go-nyc",
+     "url": "https://data2go.nyc/",
+     "maker": "Measure of America, Social Science Research Council",
+     "maker_type": "nonprofit",
+     "name": "DATA2GO.NYC",
+     "summary": "More than 400 measures of well-being, from life expectancy to college degrees, mapped and ranked for boroughs, community districts, neighborhoods and census tracts.",
+     "why": "It answers how a neighborhood is doing across health, income, schools and housing in one place, which no single city tool does.",
+     "questions": [
+      "How does life expectancy in my neighborhood compare?",
+      "Where are poverty and poor health concentrated?"
+     ],
+     "caveat": "Most measures run two to four years behind, and it works best on a large screen.",
+     "data": "Census, Health Department vital statistics, state education data and more",
+     "freshness": "Relaunched 2025; data files updated June 2026",
+     "index": [
+      "How is my neighborhood doing?"
+     ]
+    },
+    {
+     "id": "census-reporter",
+     "url": "https://censusreporter.org/",
+     "maker": "Census Reporter",
+     "maker_type": "nonprofit",
+     "name": "Census Reporter",
+     "summary": "Readable profiles of the city, its boroughs, neighborhoods, ZIP codes and census tracts, with each figure compared in plain English to the region, state and nation.",
+     "why": "It answers who lives here faster and more clearly than the city's Population FactFinder, and it works on a phone.",
+     "questions": [
+      "Who lives in my neighborhood?",
+      "Is my ZIP code richer or poorer than the city?"
+     ],
+     "caveat": "Uses census geographies rather than neighborhood names, and small areas carry wide margins of error.",
+     "data": "Census Bureau American Community Survey and 2020 Census",
+     "freshness": "2024 survey data",
+     "index": [
+      "Who lives in my neighborhood?"
+     ]
+    },
+    {
+     "id": "1940s-nyc",
+     "url": "https://1940s.nyc/",
+     "maker": "Julian Boilen",
+     "maker_type": "independent-developer",
+     "name": "1940s.nyc",
+     "summary": "The Municipal Archives' 1939-41 tax photos of nearly every building in the five boroughs, placed on a street map. Zoom to any block and click a dot to see the photo.",
+     "why": "A model of turning a city record into something anyone can use, and it answers a question people ask about their own block.",
+     "questions": [
+      "What did my building look like around 1940?",
+      "What stood on my block before?"
+     ],
+     "caveat": "Photos were placed automatically, and some may be in the wrong spot.",
+     "data": "Municipal Archives tax photographs, 1939-41",
+     "freshness": "Historical collection",
+     "index": [
+      "What did my block look like in 1940?"
+     ]
+    }
+   ],
+   "bench": [
+    {
+     "id": "80s-nyc",
+     "url": "https://80s.nyc/",
+     "maker": "Brandon Liu and Jeremy Lechtzin",
+     "maker_type": "independent-developer",
+     "name": "80s.NYC",
+     "summary": "The Finance Department's mid-1980s photos of every property, viewable street by street.",
+     "why": "The companion to 1940s.nyc, and a vivid record of the city before its recent building booms.",
+     "caveat": "Low-resolution images captured from video discs."
+    },
+    {
+     "id": "languages-of-nyc",
+     "url": "https://languagemap.nyc/",
+     "maker": "Endangered Language Alliance",
+     "maker_type": "nonprofit",
+     "name": "Languages of New York City",
+     "summary": "A map of the languages spoken across the region, with an emphasis on Indigenous, minority and endangered languages, plus a census layer.",
+     "why": "The standout tool on immigrant communities and the languages they bring.",
+     "caveat": "Mostly the maker's own fieldwork, and the census layer is from 2016-20."
+    }
+   ],
+   "official": [
+    {
+     "id": "nyc-environment-health-data-portal",
+     "url": "https://a816-dohbesp.nyc.gov/IndicatorPublic/",
+     "maker": "Health Department",
+     "maker_type": "official",
+     "name": "Environment & Health Data Portal",
+     "summary": "Neighborhood reports and data on air quality, heat vulnerability, asthma, lead, housing conditions and health.",
+     "why": "The best official data site in the city: well explained, current and neighborhood-level."
+    },
+    {
+     "id": "nyc-population-factfinder",
+     "url": "https://popfactfinder.planning.nyc.gov/",
+     "maker": "Department of City Planning",
+     "maker_type": "official",
+     "name": "Population FactFinder",
+     "summary": "Census profiles for any neighborhood, community district or area you draw, with change over time.",
+     "why": "The official source on city demographics, with geographies built for New York City.",
+     "caveat": "Desktop only."
+    },
+    {
+     "id": "equitable-development-data-explorer",
+     "url": "https://equitableexplorer.planning.nyc.gov/map/data/district",
+     "maker": "Department of City Planning",
+     "maker_type": "official",
+     "name": "Equitable Development Data Explorer",
+     "summary": "Housing, demographic and quality-of-life measures by community district and race, 2000 to 2020, with a displacement risk map.",
+     "why": "The best official multi-dataset neighborhood profile, and the only public displacement risk map."
+    }
+   ]
+  },
+  {
+   "id": "economy",
+   "name": "Jobs, the economy and poverty",
+   "rail": "Economy",
+   "dek": "Independent interactive tools are scarce here. The most current and readable sources are the two comptrollers' offices, a long-running poverty survey and the city's own new poverty atlas.",
+   "picks": [
+    {
+     "id": "comptroller-ny-by-the-numbers",
+     "url": "https://comptroller.nyc.gov/newsroom/newsletter/new-york-by-the-numbers-monthly-economic-and-fiscal-outlook-no-117-september-2026/",
+     "maker": "New York City Comptroller's Office",
+     "maker_type": "watchdog",
+     "name": "New York by the Numbers",
+     "summary": "A monthly briefing on the city's economy and finances, with charts on jobs by industry, unemployment, inflation, the office market, housing construction and tax collections.",
+     "why": "The most current plain-language read on the local economy each month, from an office independent of the mayor. Every issue since 2020 is archived.",
+     "questions": [
+      "Is the city adding or losing jobs?",
+      "What is the unemployment rate here?"
+     ],
+     "caveat": "A newsletter, not an interactive tool, and each issue carries the comptroller's framing.",
+     "data": "Federal and state labor statistics; city tax and housing data",
+     "freshness": "Monthly; September 2026 issue",
+     "index": [
+      "Is the city gaining or losing jobs?"
+     ]
+    },
+    {
+     "id": "osc-nyc-industry-sector-dashboards",
+     "url": "https://www.osc.ny.gov/osdc/reports/nyc-sectors",
+     "maker": "New York State Comptroller's Office",
+     "maker_type": "watchdog",
+     "name": "New York City Industry Sector Dashboards",
+     "summary": "Employment, wages and other measures for eight industries, from restaurants and retail to tourism and securities, compared with the state and nation.",
+     "why": "The best interactive look at how specific industries are doing, from an independent state watchdog.",
+     "questions": [
+      "Are restaurant and retail jobs back?",
+      "What do jobs in each industry pay?"
+     ],
+     "caveat": "The text still frames everything around the pandemic recovery, and pages show no update date.",
+     "data": "State Labor Department employment and wage data; state taxable sales",
+     "freshness": "Retail data through June 2026",
+     "index": [
+      "How are restaurants and stores doing?"
+     ]
+    },
+    {
+     "id": "poverty-tracker",
+     "url": "https://robinhood.org/reports/poverty-tracker-annual-report-vol-8/",
+     "maker": "Robin Hood and Columbia University",
+     "maker_type": "nonprofit",
+     "name": "Poverty Tracker",
+     "summary": "An annual report from a survey that follows the same New Yorkers over time, measuring poverty and hardship. The March 2026 edition found 2.2 million New Yorkers in poverty in 2024.",
+     "why": "It captures hardship and movement in and out of poverty that one-time government snapshots miss, and it is the most-cited independent poverty figure in the city.",
+     "questions": [
+      "How many New Yorkers live in poverty?",
+      "How much do benefits keep people out of poverty?"
+     ],
+     "caveat": "Built on its own survey, not government data, and delivered as reports. Robin Hood funds and advocates on the issues it measures.",
+     "data": "Poverty Tracker survey of city residents",
+     "freshness": "Annual; 2024 data, published March 2026",
+     "index": [
+      "How many New Yorkers are poor?"
+     ]
+    }
+   ],
+   "bench": [
+    {
+     "id": "mit-living-wage-calculator",
+     "url": "https://livingwage.mit.edu/",
+     "maker": "Massachusetts Institute of Technology",
+     "maker_type": "academic",
+     "name": "Living Wage Calculator",
+     "summary": "The hourly wage needed to cover basic needs for 12 household types in each borough, with typical costs itemized.",
+     "why": "The freshest easy answer to what it costs to live here, updated February 2026.",
+     "caveat": "A national tool; borough averages hide big differences in rent."
+    },
+    {
+     "id": "cuf-state-of-the-chains",
+     "url": "https://nycfuture.org/research/state-of-the-chains-2025",
+     "maker": "Center for an Urban Future",
+     "maker_type": "nonprofit",
+     "name": "State of the Chains",
+     "summary": "An annual count of national chain stores in the city by borough and ZIP code. The 2025 edition found a net loss of 112 stores.",
+     "why": "The most reliable recurring measure of storefront change from an independent source.",
+     "caveat": "Counts chains only, from the center's own tally."
+    },
+    {
+     "id": "council-emergency-food",
+     "url": "https://council.nyc.gov/data/emergency-food-in-nyc/",
+     "maker": "City Council Data Team",
+     "maker_type": "watchdog",
+     "name": "Emergency Food in NYC",
+     "summary": "Food stamp use by community district, food insecurity by neighborhood and the locations of food pantries and soup kitchens.",
+     "why": "One of the few places food stamp use is mapped by neighborhood, with data and code posted.",
+     "caveat": "Mixes data from different years."
+    },
+    {
+     "id": "ny-fed-regional-employment-trends",
+     "url": "https://www.newyorkfed.org/research/regional_economy/regional-employment",
+     "maker": "Federal Reserve Bank of New York",
+     "maker_type": "federal",
+     "name": "Regional Employment Trends",
+     "summary": "Monthly payroll jobs since 2000 for the city and 20 other areas.",
+     "why": "The best single chart of city job counts over 25 years."
+    }
+   ],
+   "official": [
+    {
+     "id": "nyc-poverty-atlas",
+     "url": "https://povertyatlas.nyc.gov/",
+     "maker": "Mayor's Office for Economic Opportunity",
+     "maker_type": "official",
+     "name": "NYC Poverty Atlas",
+     "summary": "Charts, tables and maps of the city's own poverty measure through 2024, which uses a local poverty line and counts benefits.",
+     "why": "A new, plain-language home for the city's most rigorous poverty numbers."
+    }
+   ]
+  }
+ ]
+}
