@@ -38,6 +38,6 @@ With no ids it captures every entry that has no screenshot yet. It hides cookie 
 
 ## Link check
 
-`.github/workflows/check-links.yml` runs `scripts/check_links.py` every Monday and commits `data/linkcheck.json`. A tool that fails two runs in a row gets a "Not responding" note on the page, and the workflow shows red. A 403 or 429 counts as reachable, because it usually means a bot wall in front of a working site.
+`.github/workflows/check-links.yml` runs `scripts/check_links.py` every Monday and commits `data/linkcheck.json`. A tool that fails two runs in a row gets a "Not responding" note on the page, and the workflow shows red. A 401, 403, 405, 406 or 429 counts as reachable, because it usually means a bot wall in front of a working site.
 
 See `METHODOLOGY.md` for how the list was made.
