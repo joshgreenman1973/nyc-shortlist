@@ -2,7 +2,8 @@
 """Check every link in data/shortlist.json and write data/linkcheck.json.
 
 A link counts as failing on a 404/410, a 5xx, a DNS error or a timeout.
-403 and 429 usually mean a bot wall in front of a working site, so they
+401, 403, 405, 406 and 429 usually mean a bot wall in front of a working
+site (the Parks Department answers scripts with 405), so they
 count as reachable. The page flags a tool only after two failed runs in a
 row, so one bad night does not mark a working site as broken.
 
@@ -23,7 +24,7 @@ LIST = ROOT / "data" / "shortlist.json"
 OUT = ROOT / "data" / "linkcheck.json"
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")
-REACHABLE_BLOCKS = {401, 403, 406, 429}
+REACHABLE_BLOCKS = {401, 403, 405, 406, 429}
 
 
 def entries(data):
