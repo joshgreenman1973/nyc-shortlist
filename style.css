@@ -246,3 +246,23 @@ button { font: inherit; color: inherit; }
   .mosaic img, .mosaic .cap, .shot { transition: none; }
 }
 .mini .mind { font-size: 0.85rem; color: var(--mute); margin: 0.35rem 0 0; }
+
+/* Quality checks, disclosure and nomination */
+.checks { display: flex; flex-wrap: wrap; gap: 0.1rem 0.85rem; font-size: 0.8rem; line-height: 1.35; color: var(--ink); margin: -0.35rem 0 0.8rem; }
+.checks span:not(.vh)::before { content: "✓"; color: var(--orange); font-weight: 700; margin-right: 0.3rem; }
+.mini .checks { font-size: 0.74rem; margin: -0.25rem 0 0.55rem; gap: 0.05rem 0.7rem; }
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.own { font-size: 0.82rem; color: var(--mute); margin: -0.4rem 0 0.8rem; padding-left: 0.95rem; }
+.mini .own { font-size: 0.76rem; padding-left: 0.8rem; }
+.hero .nominate { font-size: 0.92rem; color: #d7d7dc; margin-top: 1.1rem; }
+.hero .nominate a { color: var(--white); text-decoration-color: var(--orange); text-decoration-thickness: 2px; }
+.foot a { color: var(--white); }
+.method p b { font-weight: 700; }
+
+.answers { font-size: 0.85rem; font-weight: 700; color: var(--black); background: var(--orange-20); padding: 0.25rem 0.5rem; margin: 0.1rem 0 0.7rem; display: inline-block; }
+.results .count { font-family: var(--serif); font-weight: 200; font-synthesis: none; font-size: 1.6rem; line-height: 1.2; }
+.results .none button { background: var(--periwinkle-20); border: 0; padding: 0.2rem 0.55rem; margin: 0 0.3rem 0.35rem 0; cursor: pointer; text-decoration: none; }
+.results .none button:hover { background: var(--orange-20); }
+.results .none + .none { margin-top: 0.8rem; }
+.results-lead { margin-bottom: 0.5rem; }
+.results .limits { font-size: 0.85rem; color: var(--mute); max-width: 46rem; margin: -0.8rem 0 1.5rem; }

@@ -9,7 +9,7 @@ const data = JSON.parse(fs.readFileSync(path.join(ROOT, "data/shortlist.json"), 
 const only = process.argv.slice(2);
 const items = [];
 for (const a of data.areas) for (const t of ["picks", "bench", "official"]) for (const e of (a[t] || [])) items.push(e);
-const todo = items.filter(e => only.length ? only.includes(e.id) : !fs.existsSync(path.join(ROOT, "shots", e.id + ".webp")));
+const todo = items.filter(e => only.length ? only.includes(e.id) : (e.shot !== false && !fs.existsSync(path.join(ROOT, "shots", e.id + ".webp"))));
 // Hide cookie and consent banners with CSS instead of clicking anything.
 const HIDE = `#onetrust-banner-sdk,#onetrust-consent-sdk,.cc-window,.cc-banner,#CybotCookiebotDialog,.cookie-banner,.cookie-notice,#cookie-notice,#cookie-banner,.cookies-banner,[aria-label*="cookie" i],[id*="cookie-consent" i],[class*="cookie-consent" i],[class*="CookieConsent" i],.fc-consent-root,#usercentrics-root,.truste_box_overlay,#truste-consent-track{display:none!important}`;
 (async () => {
@@ -45,7 +45,8 @@ const HIDE = `#onetrust-banner-sdk,#onetrust-consent-sdk,.cc-window,.cc-banner,#
         document.documentElement.style.overflow = ''; document.body.style.overflow = '';
       }).catch(() => {});
       await page.waitForTimeout(400);
-      await page.screenshot({ path: png, clip: { x: 0, y: 0, width: 1280, height: 800 } });
+      if (e.shot_scroll) { await page.evaluate(y => window.scrollTo(0, y), e.shot_scroll); await page.waitForTimeout(800); }
+      await page.screenshot({ path: png });
       execFileSync("python3", ["-c", `
 from PIL import Image
 im = Image.open(${JSON.stringify(png)}).convert("RGB").resize((800, 500), Image.LANCZOS)

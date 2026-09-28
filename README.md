@@ -1,6 +1,6 @@
 # The Shortlist
 
-The best independent tools for understanding New York City and how its government is doing: 115 tools in 13 areas, chosen from 273 reviewed on Sept. 28, 2026. Each entry says what is in the tool, why it made the list and what to watch out for.
+The best independent tools for understanding New York City and how its government is doing: 111 tools in 13 areas, chosen from 462 reviewed on Sept. 28, 2026. Every tool passed two tests, current and objectively well made (see METHODOLOGY.md). Each entry says what is in the tool, why it made the list, what to watch out for and which quality checks it passed.
 
 Live: https://joshgreenman1973.github.io/nyc-shortlist/
 
@@ -20,9 +20,11 @@ The page renders inside a shadow root, so the host site's styles cannot change i
 
 ## Edit the list
 
-Everything on the page comes from `data/shortlist.json`. Each area has `picks` (the two to four best), `bench` ("Also worth knowing") and `official` ("From the city itself"). Every entry needs `id`, `name`, `url`, `maker`, `maker_type`, `summary` (what is in it) and `why` (why it is on the list). Picks also need `questions`, `caveat`, `data`, `freshness` and `index` (the questions that appear in "Start with a question").
+Everything on the page comes from `data/shortlist.json`. Each area has `picks` (the two to four best), `bench` ("Also worth knowing") and `official` ("From the government," which includes watchdog offices). Every entry needs `id`, `name`, `url`, `maker`, `maker_type`, `summary` (what is in it) and `why` (why it is on the list). Picks also need `questions`, `caveat`, `data`, `freshness` and `index` (the questions that appear in "Start with a question").
 
 `maker_type` sets the colored square: `nonprofit`, `academic`, `newsroom`, `advocacy`, `independent-developer`, `civic-tech` and `commercial` are orange (independent); `watchdog` is blue; `official`, `state` and `federal` are gray.
+
+`quality` holds the card's checks: `cadence`, `updated` (YYYY-MM) and `signals` (any of `method`, `open`, `maintained`, `cited`). `own` adds a disclosure line (`vc`, `jg`, `tr`, `trt`, `ta`; texts in `shortlist.js`).
 
 Optional fields: `shot: false` shows a typeset placeholder when a site blocks screenshots; `shot_url` and `shot_wait` capture a different page or wait longer; `check_url` gives the link checker a page that returns a clean status when the linked page reports an error code but renders fine.
 
@@ -35,6 +37,10 @@ SHOT_CHANNEL=chrome node scripts/shoot.cjs <id> [<id> ...]
 ```
 
 With no ids it captures every entry that has no screenshot yet. It hides cookie banners and pop-ups with CSS; it does not click "accept" on anything.
+
+## Nominations
+
+The page links to info@vitalcitynyc.org with "Civic tech tool shortlist" in the subject line and a short form in the body.
 
 ## Link check
 

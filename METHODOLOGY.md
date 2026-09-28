@@ -1,35 +1,49 @@
-# How the first cut was made
+# How the list was made
 
-Sept. 28, 2026.
+Sept. 28, 2026. 111 tools listed, from 462 reviewed.
 
 ## Search
 
-The list was split into nine research areas: crime and policing; jails and courts; money; government and elections; housing; transportation; quality of life and environment; schools, health and services; and the economy and neighborhoods. For each, a researcher started from a seed list of known tools and then searched news coverage, the NYC Open Data project gallery, BetaNYC, Open Data Week and Data Through Design showcases, GitHub, university research centers, civic groups and watchdog offices.
+Two rounds. The first split the city into nine research areas (crime and policing; jails and courts; money; government and elections; housing; transportation; quality of life and environment; schools, health and services; the economy and neighborhoods) and started from seed lists, news coverage, civic tech showcases, university centers and watchdog offices.
 
-The shared web-search allowance ran out partway through several areas, so later candidates in those areas came from following links on sites already checked and from GitHub. Newsroom-built tools, Reddit threads and the older NYC Open Data gallery (which the city has replaced with a 10-item version) got less coverage than planned. A second pass on those sources is the most useful next step.
+Because independent developers were thin after that round, a second round searched where they publish: GitHub (repository and topic searches, keeping projects with a live site), Hacker News, Reddit and Bluesky, and civic tech showcases and the portfolios of known New York City civic developers. That round reviewed about 200 more tools. Fewer than one in 50 New York City repositories with a live site turned out to be a maintained public tool; most were class projects, hackathon entries or one-day demos.
 
-## Verification
+The same tests were then applied to tools by Vital City, its editor Josh Greenman and contributor Tal Roded.
 
-Every tool on the page was loaded on Sept. 28, 2026, by a script (`curl`) and, for JavaScript apps and sites that block scripts, in a browser. For each one the researcher read its about or methodology page, recorded the datasets it uses, looked for evidence of when its data was last updated (a "data through" date on the page, a data file's latest record, a code repository's last change) and copied a short quote from its own description. No tool was listed from memory.
+## The two tests
 
-In all, 273 tools were reviewed: the 115 on the page plus 158 that were left off. Tools were left off for being dead or moved, badly out of date, behind a login or paywall, anonymous with no stated method, built on data that could not be traced, or duplicating a better tool.
+Every tool on the page passed both on Sept. 28, 2026. The full rubric is `research/RUBRIC.md` in the working files.
 
-## Selection
+**Current.** One of:
+- Live or automated, with evidence of an update in the past 30 days.
+- Periodic: the newest edition came out in the past 12 months and uses the newest release of its source data. A tool one release behind still passes if the newest release came out less than three months ago.
+- Historical by nature (archival photographs), labeled that way.
 
-A pick had to be built mostly on public data about New York City, name its maker and sources, have current data or say plainly when its data stops, be free with no account, give a non-expert an answer in a few minutes, and do something the city's own version does not.
+**Quality, by objective signals.** Required: a named maker (person or organization) and named data sources. Plus at least two of: a published method; open code or downloadable data; an update to code, data or content in the past 90 days; and either the standards of a university, newsroom, watchdog office or established research nonprofit, or citation as a source by a news organization or government body. Each card lists the signals the tool showed.
 
-Picks lean toward independent makers: nonprofits, universities, newsrooms, civic technologists and independent developers. Tools from watchdog offices that are part of government but independent of the agencies they track (the city and state comptrollers, the Independent Budget Office, the City Council's data team, the public advocate, the Board of Correction, the Campaign Finance Board) could also be picks, and are marked. Agency-built tools appear only under "From the city itself."
+A tool also had to load and work. One tool that passed on paper, SweepTracker, was left off because its map tiles fail to load.
 
-Advocacy groups' tools were included when the data is presented straight, with the group's stance noted under "Keep in mind."
+## Who made what
+
+Picks and "Also worth knowing" are outside government. Government tools, including watchdog offices that are independent of the agencies they track (the city and state comptrollers, the Independent Budget Office, the City Council, the public advocate, the Board of Correction, the Campaign Finance Board), are listed under "From the government," with watchdogs marked in blue.
+
+Tools by Vital City, Josh Greenman, Tal Roded and Ted Alcorn (who worked at Vital City until September 2026) carry a disclosure. We reviewed more than 40 tools from these makers; nine are listed, and most of the rest failed because they do not name who made them. One more, Vital City's New York City calendar, passed but is left off until an internal staff menu is removed from its public page.
+
+## What failed, and why
+
+The most common reasons: no named maker (50-a.org, NYC-SIFT, 311 Wrapped, CrashCount and many of Josh Greenman's own projects), data a release or more behind the source (DATA2GO.NYC, the property tax map, the Urban Heat Portal, Jehiah Czebotar's bus speeds), one-time reports older than a year, and sources that are never named (the Criminal Justice Agency's pretrial dashboards, Vital City's Historical Crime Explorer). The research files keep every rejected tool with its reason.
+
+## The question box
+
+It matches the words in a question against each tool's questions, description and data sources, using BM25 ranking and a vocabulary of everyday words ("cops" finds police tools). It does not use AI, read the tools' data or answer questions itself, and nothing typed leaves the page.
 
 ## Known limits
 
-- Two picks (FloodNet and NYC Water Check) run on sensor readings and volunteer water sampling rather than agency records. They are included because they show conditions no agency tool shows.
-- Three tools do not name their makers: 50-a.org and NYC-SIFT (picks) and 311 Wrapped (bench). Each says so on the page.
-- The city's open crash data has not updated since June 11, 2026, so the independent crash tools are missing recent months. The page says so.
-- Several areas have no good independent tool: prosecution data from the district attorneys, 911 and ambulance response times, police overtime, tax breaks, city debt, pension costs, storefront vacancy, overdoses and mental health.
-- Checkbook NYC and MuckRock block automated browsers, so their entries show a placeholder instead of a screenshot.
+- Web search ran out partway through the first round, and Reddit and Bluesky blocked many automated searches in the second, so some tools will have been missed. Nominations go to info@vitalcitynyc.org with "Civic tech tool shortlist" in the subject line.
+- Several areas have no current independent tool: prosecution data from the district attorneys, 911 response times, police overtime, tax breaks, city debt, overdoses and mental health.
+- The city's open crash data has not updated since June 11, 2026, so the independent crash map is missing recent months.
+- Currency is a snapshot. The weekly link check catches dead links but not stale data; the rubric should be rerun every few months.
 
 ## Files
 
-`research/` (kept out of the public repository) holds the nine research files with every candidate, rejection, quote and source URL, and the script that assembled the first version of `data/shortlist.json`. Since then, `data/shortlist.json` has been edited directly and is the file of record.
+`data/shortlist.json` is the list. `research/` (kept out of the public repository) holds the research and audit files with every candidate, rejection, quote and source URL, `RUBRIC.md`, and `build_v2.py`, which assembles the list from the first cut plus the audit verdicts.
