@@ -1,7 +1,7 @@
 {
  "title": "The Shortlist",
  "checked": "2026-09-28",
- "reviewed": 462,
+ "reviewed": 514,
  "mosaic": [
   "justfix-who-owns-what",
   "vc-compstat-decoder",
@@ -152,6 +152,27 @@
       "Records"
      ],
      "repo": "MuckRock/muckrock"
+    },
+    {
+     "id": "city-and-state-mamdani-whos-who",
+     "url": "https://www.cityandstateny.com/politics/2026/09/whos-who-zohran-mamdanis-administration/409701/",
+     "maker": "City & State",
+     "maker_type": "newsroom",
+     "name": "Who's who in the Mamdani administration",
+     "summary": "A running, dated roster of Mayor Mamdani's senior hires, from the deputy mayors to the commissioners and agency heads, with a short background on each and the date City Hall announced the appointment.",
+     "why": "The only current, maintained roster of who runs the city's agencies; the independent appointee trackers have stalled.",
+     "caveat": "Compiled from City Hall announcements, so it has no method note, no download and no record of departures. About 40 top positions, not the full leadership of every agency.",
+     "quality": {
+      "cadence": "monthly",
+      "updated": "2026-09",
+      "signals": [
+       "maintained"
+      ]
+     },
+     "agencies": [
+      "Mayor's Office",
+      "Every agency"
+     ]
     }
    ],
    "official": [
@@ -429,6 +450,37 @@
      "repo": "AH-Datalytics/rtci"
     },
     {
+     "id": "fifty-a-org",
+     "url": "https://www.50-a.org/",
+     "maker": "Maker not named on the site",
+     "maker_type": "independent-developer",
+     "name": "50-a.org",
+     "summary": "Search any current or former police officer by name or badge number and get one page with the officer's civilian complaints, department discipline, lawsuits, rank history and pay.",
+     "why": "The simplest way to see an officer's full record on one page, current to this month, with every source listed.",
+     "questions": [
+      "Has the officer who stopped me drawn complaints before?",
+      "Has this officer been sued or disciplined?"
+     ],
+     "caveat": "Included by the editor's judgment: the site does not say who runs it, which is the one test it fails. Complaints still under investigation are missing, and lawsuits list officers who were named even if the claims were later dropped.",
+     "data": "Civilian Complaint Review Board records, Police Department discipline and trial decisions, Law Department lawsuits, city payroll",
+     "freshness": "Updated continuously; complaints through September 2026",
+     "index": [
+      "What is on the record for a particular officer?"
+     ],
+     "quality": {
+      "cadence": "live",
+      "updated": "2026-09",
+      "signals": [
+       "open",
+       "maintained"
+      ]
+     },
+     "agencies": [
+      "Police Department",
+      "Civilian Complaint Review Board"
+     ]
+    },
+    {
      "id": "trace-gun-violence-atlas",
      "url": "https://projects.thetrace.org/gun-violence-map/",
      "maker": "The Trace",
@@ -489,6 +541,30 @@
      "agencies": [
       "Police Department"
      ]
+    },
+    {
+     "id": "vc-historical-crime-explorer",
+     "url": "https://historical-crime-explorer.vercel.app/",
+     "maker": "Vital City",
+     "maker_type": "newsroom",
+     "name": "Crime Data Explorer",
+     "own": "vc",
+     "summary": "Every major crime category since 1993 for the city, any borough, precinct or neighborhood, with year-against-year comparisons and complaints or arrests.",
+     "why": "The longest view of crime by precinct anywhere, back to 1993, with 2025 the latest complete year.",
+     "caveat": "Included by the editor's judgment: the tool does not say which datasets its counts come from, the one test it fails.",
+     "quality": {
+      "cadence": "annual",
+      "updated": "2026-09",
+      "signals": [
+       "method",
+       "open",
+       "maintained"
+      ]
+     },
+     "agencies": [
+      "Police Department"
+     ],
+     "repo": "vital-city/Historical_Crime_Explorer"
     }
    ],
    "official": [
@@ -642,6 +718,38 @@
      ]
     },
     {
+     "id": "cja-pretrial-data-dashboards",
+     "url": "https://www.nycja.org/data",
+     "maker": "New York City Criminal Justice Agency",
+     "maker_type": "nonprofit",
+     "name": "Pretrial Data Dashboards",
+     "summary": "Six dashboards on what happens between arrest and verdict: how many people are prosecuted, how many await trial at home, how many are rearrested while released and how cases end.",
+     "why": "Each opens with a plain question and numbers through July 2026, which puts the argument over bail on data instead of anecdote.",
+     "questions": [
+      "Do people released before trial get arrested again?",
+      "How do criminal cases usually end?"
+     ],
+     "caveat": "Included by the editor's judgment: it names its sources only as court data, not the datasets. The agency is city-funded and advises judges on release, so it is part of the system it measures.",
+     "data": "The agency's own records on prosecuted arrests and case outcomes",
+     "freshness": "Monthly; data through July 2026",
+     "index": [
+      "Do people released before trial get rearrested?"
+     ],
+     "check_url": "https://www.nycja.org/data/people-in-community",
+     "quality": {
+      "cadence": "monthly",
+      "updated": "2026-07",
+      "signals": [
+       "method",
+       "maintained",
+       "cited"
+      ]
+     },
+     "agencies": [
+      "Courts"
+     ]
+    },
+    {
      "id": "vera-ny-data-hub",
      "url": "https://www.vera.org/ny-data-hub/jail",
      "maker": "Vera Institute of Justice",
@@ -706,8 +814,60 @@
      ]
     }
    ],
-   "bench": [],
+   "bench": [
+    {
+     "id": "vera-nyc-jail-deaths",
+     "url": "https://www.vera.org/news/nyc-jail-deaths",
+     "maker": "Vera Institute of Justice",
+     "maker_type": "advocacy",
+     "name": "Tracking Deaths in NYC Jails Since 2022",
+     "summary": "A running list of every person who has died in city jail custody since 2022, with name, age, date, facility and what happened.",
+     "why": "The only source that names each person, which the counts elsewhere do not.",
+     "caveat": "Included by the editor's judgment: when checked on Sept. 28, 2026, it was one death behind the news. It relies on news reports and official statements, and Vera supports closing Rikers.",
+     "quality": {
+      "cadence": "irregular",
+      "updated": "2026-08",
+      "signals": [
+       "maintained"
+      ]
+     },
+     "agencies": [
+      "Department of Correction"
+     ]
+    }
+   ],
    "official": [
+    {
+     "id": "comptroller-doc-dashboard",
+     "url": "https://comptroller.nyc.gov/services/for-the-public/department-of-correction-doc/dashboard/",
+     "maker": "New York City Comptroller's Office",
+     "maker_type": "watchdog",
+     "name": "Department of Correction Dashboard",
+     "summary": "One page on conditions in city jails: violence, use of force, officers out sick, deaths in custody, missed medical appointments, court appearances and length of stay, each marked as improving or worsening.",
+     "why": "It is the only place that sets violence, staffing, health care and deaths side by side, with a source note under every chart, from an office independent of the mayor.",
+     "questions": [
+      "How violent is Rikers right now?",
+      "How many people have died in city jails this year?",
+      "Are correction officers showing up to work?"
+     ],
+     "caveat": "Included by the editor's judgment: the page was last updated July 10, 2026, and its figures lag the department's own open data by months.",
+     "data": "Department of Correction and Correctional Health Services reports, city payroll",
+     "freshness": "Periodic; last updated July 10, 2026",
+     "index": [
+      "How violent are the jails?"
+     ],
+     "quality": {
+      "cadence": "irregular",
+      "updated": "2026-07",
+      "signals": [
+       "maintained"
+      ]
+     },
+     "agencies": [
+      "Department of Correction",
+      "Comptroller"
+     ]
+    },
     {
      "id": "boc-dashboards",
      "url": "https://www.nyc.gov/site/boc/dashboards/boc-dashboards.page",
@@ -952,28 +1112,6 @@
    ],
    "bench": [
     {
-     "id": "furman-state-of-the-city",
-     "url": "https://www.furmancenter.org/data-tool/state-of-the-city/",
-     "maker": "NYU Furman Center",
-     "maker_type": "academic",
-     "name": "State of New York City's Housing and Neighborhoods",
-     "summary": "An annual report with a profile of each of the 59 community districts on rents, prices, construction, demographics and conditions, plus a map of every subsidized building.",
-     "why": "The most authoritative neighborhood housing data in the city. The subsidized housing map shows when each building's affordability rules expire.",
-     "caveat": "Built for researchers. Its map tool, CoreData.nyc, was last updated in May 2025.",
-     "quality": {
-      "cadence": "annual",
-      "updated": "2026-06",
-      "signals": [
-       "method",
-       "open"
-      ]
-     },
-     "agencies": [
-      "Housing Preservation and Development",
-      "City Planning"
-     ]
-    },
-    {
      "id": "anhd-dap-portal",
      "url": "https://portal.displacementalert.org/",
      "maker": "Association for Neighborhood and Housing Development",
@@ -1060,6 +1198,51 @@
      "agencies": [
       "Department of Buildings",
       "Housing Preservation and Development"
+     ]
+    },
+    {
+     "id": "coredata-nyc",
+     "url": "https://app.coredata.nyc/",
+     "maker": "NYU Furman Center",
+     "maker_type": "academic",
+     "name": "CoreData.nyc",
+     "summary": "A map and table of every subsidized residential property in the city, from public housing and tax-credit buildings to 421-a, plus more than 100 neighborhood indicators, with a spreadsheet export.",
+     "why": "The only place to see whether a building is subsidized, under which program and when its affordability rules could expire.",
+     "caveat": "Built for researchers, so its menus take some learning. The Furman site's \"last update\" note reads May 2025, though the data behind the map carries 2025 values.",
+     "quality": {
+      "cadence": "annual",
+      "updated": null,
+      "signals": [
+       "method",
+       "open"
+      ]
+     },
+     "agencies": [
+      "Housing Preservation and Development",
+      "NYCHA",
+      "Department of Finance"
+     ]
+    },
+    {
+     "id": "coalition-homeless-facts",
+     "url": "https://www.coalitionforthehomeless.org/facts-about-homelessness/",
+     "maker": "Coalition for the Homeless",
+     "maker_type": "advocacy",
+     "name": "Facts About Homelessness",
+     "summary": "The monthly shelter census in plain figures, with charts of the current month by population and a monthly series back to January 1983.",
+     "why": "The longest chart of the shelter population anywhere, updated monthly from the city's own reports, with July 2026 figures matching the city's latest.",
+     "caveat": "An advocacy group with a right-to-shelter stance, and the page frames the numbers that way. No data download.",
+     "quality": {
+      "cadence": "monthly",
+      "updated": "2026-07",
+      "signals": [
+       "method",
+       "maintained",
+       "cited"
+      ]
+     },
+     "agencies": [
+      "Department of Homeless Services"
      ]
     }
    ],
@@ -1210,6 +1393,37 @@
       "MTA"
      ],
      "repo": "sunny-ng/subwaynow-server"
+    },
+    {
+     "id": "jehiah-bus-speeds",
+     "url": "https://reports.jehiah.cz/bus_speeds/",
+     "maker": "Jehiah Czebotar",
+     "maker_type": "independent-developer",
+     "name": "Bus Speeds by Route",
+     "summary": "Every MTA bus route ranked by average speed, slowest first, and broken into segments so you can see where each one crawls. The M57 was slowest in June 2026, at 5.1 miles an hour.",
+     "why": "It turns a large MTA dataset into a list any rider can scan, down to the block where the bus stalls. The coalition report cards that once did this job are gone.",
+     "questions": [
+      "How slow is my bus?",
+      "Where on my route does it crawl?"
+     ],
+     "caveat": "Included by the editor's judgment: its data runs through June 2026 while the MTA's runs through August. Speeds only, with nothing on bunching or on-time performance.",
+     "data": "MTA bus route segment speeds",
+     "freshness": "Monthly; data through June 2026",
+     "index": [
+      "How slow is my bus?"
+     ],
+     "quality": {
+      "cadence": "monthly",
+      "updated": "2026-08",
+      "signals": [
+       "method",
+       "open",
+       "maintained"
+      ]
+     },
+     "agencies": [
+      "MTA"
+     ]
     },
     {
      "id": "transit-access",
@@ -1466,6 +1680,28 @@
    ],
    "bench": [
     {
+     "id": "crashcount",
+     "url": "https://crashcount.nyc/",
+     "maker": "Michael Freedman",
+     "maker_type": "advocacy",
+     "name": "CrashCount",
+     "summary": "Crash, injury and death counts for more than 500 districts and neighborhoods, a lookup for any address, and fatal crashes confirmed by the press before police records arrive.",
+     "why": "The friendliest crash lookup, and its press-confirmed deaths partly fill the gap left by the frozen city feed.",
+     "caveat": "Included by the editor's judgment: its makers describe themselves only as \"a small team of New Yorkers.\" Openly advocacy in tone, and its death counts mix press reports with police data.",
+     "quality": {
+      "cadence": "daily",
+      "updated": "2026-09",
+      "signals": [
+       "method",
+       "maintained"
+      ]
+     },
+     "agencies": [
+      "Police Department",
+      "Department of Transportation"
+     ]
+    },
+    {
      "id": "ctbk-dev",
      "url": "https://ctbk.dev/",
      "maker": "Ryan Williams",
@@ -1643,6 +1879,27 @@
     }
    ],
    "bench": [
+    {
+     "id": "311-wrapped",
+     "url": "https://311wrapped.com/",
+     "maker": "Maker not named on the site",
+     "maker_type": "independent-developer",
+     "name": "311 Wrapped",
+     "summary": "Enter a ZIP code for a year in review of 311 reports: top complaints, busiest hours, how fast complaints close and how this year compares with last.",
+     "why": "A careful, published method in a format people will click through.",
+     "caveat": "Included by the editor's judgment: the site does not name its maker. Its scores and grades are its own judgments.",
+     "quality": {
+      "cadence": "periodic",
+      "updated": "2026-09",
+      "signals": [
+       "method",
+       "maintained"
+      ]
+     },
+     "agencies": [
+      "311"
+     ]
+    },
     {
      "id": "tpl-parkscore-nyc",
      "url": "https://www.tpl.org/city/new-york-new-york",
@@ -1825,6 +2082,35 @@
      ]
     },
     {
+     "id": "nyc-urban-heat-portal",
+     "url": "https://urbanheat.nyc/",
+     "maker": "Hunter College and BetaNYC",
+     "maker_type": "academic",
+     "name": "NYC Urban Heat Portal",
+     "summary": "A neighborhood map of outdoor heat exposure built from surface temperature, tree canopy, cool roofs and pavement, with a profile scoring each factor and counts of extreme heat days.",
+     "why": "It shows why a neighborhood runs hot, factor by factor, in plain profiles with downloadable data.",
+     "questions": [
+      "How hot does my neighborhood get?",
+      "Why is my block hotter than others?"
+     ],
+     "caveat": "Included by the editor's judgment: its data covers 2013 to 2023 and it was last updated in May 2025. For who is most at risk in a heat wave, use the Health Department's heat vulnerability index.",
+     "data": "Satellite temperature imagery, weather stations, tree canopy and roof data",
+     "freshness": "Snapshot, 2013-2023",
+     "index": [
+      "Why is my neighborhood so hot?"
+     ],
+     "quality": {
+      "cadence": "one-time",
+      "updated": "2025-05",
+      "signals": [
+       "method",
+       "open"
+      ]
+     },
+     "agencies": [],
+     "repo": "BetaNYC/nyc-urban-heat"
+    },
+    {
      "id": "nyc-water-check",
      "url": "https://nycwatercheck.com/",
      "maker": "Gray Reinhard",
@@ -1934,6 +2220,36 @@
       "updated": "2025-12",
       "signals": [
        "method"
+      ]
+     },
+     "agencies": [
+      "Education Department"
+     ]
+    },
+    {
+     "id": "nyc-sift",
+     "url": "https://nycsift.com/",
+     "maker": "A New York City parent, not named on the site",
+     "maker_type": "independent-developer",
+     "name": "NYC-SIFT",
+     "summary": "A free search of more than 400 high schools and 900 programs showing applicants per seat, admissions cutoffs and estimated odds, from more than 20 Education Department datasets and records obtained through public records requests.",
+     "why": "It publishes admissions numbers the city does not gather in one place and turns them into odds a parent can read.",
+     "questions": [
+      "How hard is it to get into this high school?",
+      "How many kids applied for each seat?"
+     ],
+     "caveat": "Included by the editor's judgment: the maker is named only as a New York City father. High school only, and school pages carry AI-written summaries.",
+     "data": "Education Department admissions and school data; records obtained under the Freedom of Information Law",
+     "freshness": "Current for the fall 2026 admissions cycle",
+     "index": [
+      "What are my kid's odds at a high school?"
+     ],
+     "quality": {
+      "cadence": "daily",
+      "updated": "2026-09",
+      "signals": [
+       "method",
+       "maintained"
       ]
      },
      "agencies": [
@@ -2134,6 +2450,37 @@
       "Every agency"
      ],
      "repo": "BetaNYC/nyc-budget-viz"
+    },
+    {
+     "id": "sidewalk-chorus-property-tax-map",
+     "url": "https://taxmap.sidewalkchorus.com/",
+     "maker": "Sebastian Hallum Clarke (Sidewalk Chorus)",
+     "maker_type": "independent-developer",
+     "name": "NYC Property Tax Map",
+     "summary": "Every property in the city colored by its effective tax rate. Search an address to see its tax bill and compare it with the neighbors'.",
+     "why": "It answers whether your property tax is fair far better than the Finance Department's own portal, which shows one lot at a time with no comparison.",
+     "questions": [
+      "Is my property tax rate higher than my neighbors'?",
+      "Why do some expensive homes pay lower rates?"
+     ],
+     "caveat": "Included by the editor's judgment: it still shows the 2025-26 tax year, and the 2026-27 roll is out. The maker argues for reform, though the numbers come straight from city data.",
+     "data": "Finance Department assessment and tax data",
+     "freshness": "2025-26 tax year",
+     "index": [
+      "Is my property tax fair?"
+     ],
+     "quality": {
+      "cadence": "annual",
+      "updated": "2025-10",
+      "signals": [
+       "method",
+       "open"
+      ]
+     },
+     "agencies": [
+      "Department of Finance"
+     ],
+     "repo": "sebthedev/NYC-Property-Tax-Map"
     },
     {
      "id": "jg-pension-dashboard",
@@ -2636,6 +2983,26 @@
       "Law Department"
      ],
      "repo": "digitalhen/911records-claude"
+    },
+    {
+     "id": "citymeetings-nyc",
+     "name": "citymeetings.nyc",
+     "url": "https://citymeetings.nyc/",
+     "maker": "Vikram Oberoi",
+     "maker_type": "independent-developer",
+     "summary": "City Council hearings from August 2023 to May 2025 broken into short, titled chapters with summaries, so you can jump to a single exchange in a 10-hour hearing. Also covers the 2025 Charter Revision Commission.",
+     "why": "The best-edited archive of Council hearings for 2024 and early 2025, with human review of the AI transcripts.",
+     "caveat": "Included by the editor's judgment: it has covered almost no hearings since May 2025, so it is an archive, not a current source.",
+     "quality": {
+      "cadence": "periodic",
+      "updated": "2025-05",
+      "signals": [
+       "method"
+      ]
+     },
+     "agencies": [
+      "City Council"
+     ]
     }
    ],
    "official": [
@@ -2707,8 +3074,69 @@
    "id": "people",
    "name": "Neighborhoods and people",
    "rail": "Neighborhoods",
-   "dek": "Census and city data can describe any neighborhood in detail, and the city's archives hold photos of nearly every building. These tools make both usable without a data background.",
+   "dek": "Census and city data can describe any neighborhood in detail, and the city's archives hold photos of nearly every building. These tools make both usable without a data background, from a district profile with 25 years of history to the tax photo of your own building.",
    "picks": [
+    {
+     "id": "furman-neighborhood-data-profiles",
+     "url": "https://www.furmancenter.org/neighborhoods",
+     "maker": "NYU Furman Center",
+     "maker_type": "academic",
+     "name": "NYC Neighborhood Data Profiles",
+     "summary": "One page per community district with tables and charts on population, income, rents, rent burden, code violations, home sales, permits, subsidized housing and serious crime, most back to 2000. Each chart's data downloads as a spreadsheet.",
+     "why": "The most authoritative single profile of a neighborhood in the city, from a university research center, with 2024 census figures and 2025 city records.",
+     "questions": [
+      "How much has rent gone up in my neighborhood since 2010?",
+      "How many apartments were built near me, and how many were income-restricted?"
+     ],
+     "caveat": "Census estimates at the community district scale carry real sampling error, and the page does not print margins of error.",
+     "data": "Census, Buildings, Housing Preservation and Development, Finance and Police Department records",
+     "freshness": "Annual; updated May 6, 2026",
+     "index": [
+      "How has my neighborhood changed since 2000?"
+     ],
+     "quality": {
+      "cadence": "annual",
+      "updated": "2026-05",
+      "signals": [
+       "method",
+       "open",
+       "cited"
+      ]
+     },
+     "agencies": [
+      "City Planning",
+      "Housing Preservation and Development",
+      "Police Department"
+     ]
+    },
+    {
+     "id": "data2go-nyc",
+     "url": "https://data2go.nyc/",
+     "maker": "Measure of America, Social Science Research Council",
+     "maker_type": "nonprofit",
+     "name": "DATA2GO.NYC",
+     "summary": "More than 400 measures of well-being, from life expectancy to college degrees, mapped and ranked for boroughs, community districts, neighborhoods and census tracts.",
+     "why": "It answers how a neighborhood is doing across health, income, schools and housing in one place, which no single city tool does.",
+     "questions": [
+      "How does life expectancy in my neighborhood compare?",
+      "Where are poverty and poor health concentrated?"
+     ],
+     "caveat": "Included by the editor's judgment: its census figures are one release behind (2019-23, with 2020-24 out). Most measures run two to four years behind, and it works best on a large screen.",
+     "data": "Census, Health Department vital statistics, state education data and more",
+     "freshness": "Relaunched 2025; data files updated June 2026",
+     "index": [
+      "How is my neighborhood doing?"
+     ],
+     "quality": {
+      "cadence": "annual",
+      "updated": "2026-06",
+      "signals": [
+       "method",
+       "open"
+      ]
+     },
+     "agencies": []
+    },
     {
      "id": "census-reporter",
      "url": "https://censusreporter.org/",
@@ -2796,6 +3224,28 @@
       "Records"
      ],
      "repo": "bdon/80s.nyc"
+    },
+    {
+     "id": "mapping-historical-new-york",
+     "url": "https://mappinghny.com/",
+     "maker": "Columbia University",
+     "maker_type": "academic",
+     "name": "Mapping Historical New York",
+     "summary": "Six and a half million census records from 1850, 1880 and 1910, each person placed at a home address in Manhattan and Brooklyn, with layers for birthplace, occupation and density.",
+     "why": "The only block-by-block picture of who lived where in the 19th-century city, with its method published.",
+     "caveat": "Manhattan and Brooklyn only, three census years, and federal rather than city records.",
+     "quality": {
+      "cadence": "historical",
+      "updated": null,
+      "signals": [
+       "method",
+       "open"
+      ]
+     },
+     "agencies": [
+      "Records"
+     ],
+     "repo": "CenterForSpatialResearch/hnyc_census"
     }
    ],
    "official": [
@@ -3124,7 +3574,7 @@
    "note": "The Board of Elections publishes results by election district, but no independent map has drawn the 2026 primary yet."
   }
  ],
- "held": [
+ "held_unused": [
   {
    "name": "50-a.org",
    "url": "https://www.50-a.org/",
@@ -3216,6 +3666,7 @@
    "fix": "Every crime since 1993 by precinct. The fix: say which datasets it uses."
   }
  ],
+ "held": [],
  "changelog": [
   {
    "date": "2026-09-28",
@@ -3227,7 +3678,7 @@
   },
   {
    "date": "2026-09-30",
-   "note": "Added Start here, browsing by agency, a list of questions no tool answers well and the tools held back for one fix. Third research round on newsrooms, research institutions and uncovered subjects."
+   "note": "Added Start here, browsing by agency and a list of questions no tool answers well. Fourteen tools that failed one test went on the list by the editor's judgment, each saying what it is missing. Third research round on newsrooms, research institutions and uncovered subjects."
   }
  ]
 }

@@ -12,7 +12,7 @@ The same tests were then applied to tools by Vital City, its editor Josh Greenma
 
 ## The two tests
 
-Every tool on the page passed both on Sept. 28, 2026. The full rubric is `research/RUBRIC.md` in the working files.
+Every tool on the page was tested against both on Sept. 28, 2026. The full rubric is `research/RUBRIC.md` in the working files. Fourteen tools failed one test and are listed anyway by the editor's decision (Sept. 30, 2026); each says what it is missing under "Keep in mind." One Vital City tool that failed, the Assault Tracker, stays off because Vital City has not published it.
 
 **Current.** One of:
 - Live or automated, with evidence of an update in the past 30 days.
@@ -37,9 +37,9 @@ The most common reasons: no named maker (50-a.org, NYC-SIFT, 311 Wrapped, CrashC
 
 Four ways in, all built from the same list: "Start here" (ten tools chosen to cover the questions people ask most), the question index, the thirteen areas, and "Browse by agency," where every tool is tagged with the parts of government it is about. Within an area, only the picks show in full; the "Also worth knowing" and "From the government" shelves open on request.
 
-## Gaps and held-back tools
+## Gaps
 
-"Where no good tool exists" lists questions nothing we found answers well, with a nomination link. "Held back" lists tools that failed one test and says which, so their makers can fix it. Neither is a recommendation.
+"Where no good tool exists" lists questions nothing we found answers well, with a nomination link. It is not a recommendation.
 
 ## The question box
 
