@@ -24,7 +24,7 @@ Everything on the page comes from `data/shortlist.json`. Each area has `picks` (
 
 `maker_type` sets the colored square: `nonprofit`, `academic`, `newsroom`, `advocacy`, `independent-developer`, `civic-tech` and `commercial` are orange (independent); `watchdog` is blue; `official`, `state` and `federal` are gray.
 
-`quality` holds the card's checks: `cadence`, `updated` (YYYY-MM) and `signals` (any of `method`, `open`, `maintained`, `cited`). `own` adds a disclosure line (`vc`, `jg`, `tr`, `trt`, `ta`; texts in `shortlist.js`).
+`agencies` lists the parts of government a tool is about (the "Browse by agency" chips are built from these). `repo` (GitHub owner/name) and `data_url` feed the weekly staleness check; leave them off when the code repository is not where the tool's data updates. `quality` holds the card's checks: `cadence`, `updated` (YYYY-MM) and `signals` (any of `method`, `open`, `maintained`, `cited`). `own` adds a disclosure line (`vc`, `jg`, `tr`, `trt`, `ta`; texts in `shortlist.js`).
 
 Optional fields: `shot: false` shows a typeset placeholder when a site blocks screenshots; `shot_url` and `shot_wait` capture a different page or wait longer; `check_url` gives the link checker a page that returns a clean status when the linked page reports an error code but renders fine.
 
@@ -38,12 +38,16 @@ SHOT_CHANNEL=chrome node scripts/shoot.cjs <id> [<id> ...]
 
 With no ids it captures every entry that has no screenshot yet. It hides cookie banners and pop-ups with CSS; it does not click "accept" on anything.
 
+## Page sections
+
+Besides the areas, the page has `start` (ten entries with a one-line `line` each), `gaps` (questions no tool answers well: `q` and `note`), `held` (tools that would make the list with one fix: `name`, `url`, `maker`, `fix`) and `changelog` (`date`, `note`). All live in `data/shortlist.json` and are assembled by `research/build_v2.py`.
+
 ## Nominations
 
 The page links to info@vitalcitynyc.org with "Civic tech tool shortlist" in the subject line and a short form in the body.
 
-## Link check
+## Weekly checks
 
-`.github/workflows/check-links.yml` runs `scripts/check_links.py` every Monday and commits `data/linkcheck.json`. A tool that fails two runs in a row gets a "Not responding" note on the page, and the workflow shows red. A 401, 403, 405, 406 or 429 counts as reachable, because it usually means a bot wall in front of a working site.
+`.github/workflows/check-links.yml` runs every Monday. `scripts/check_links.py` checks every link and commits `data/linkcheck.json`. `scripts/check_freshness.py` reads each tool's GitHub repository push date or data file's Last-Modified header and writes `data/freshness.json`; a tool with no sign of an update in 180 days turns the workflow red so the editor can look. That is a review queue, not a public flag, because a tool can pull live data without any push. A tool that fails two runs in a row gets a "Not responding" note on the page, and the workflow shows red. A 401, 403, 405, 406 or 429 counts as reachable, because it usually means a bot wall in front of a working site.
 
 See `METHODOLOGY.md` for how the list was made.

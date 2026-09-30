@@ -243,12 +243,12 @@
     return '<link rel="stylesheet" href="' + BASE + 'style.css">' +
       '<div class="sl">' +
       '<div class="hero"><div class="wrap">' +
-        '<p class="stamp">First cut &middot; every tool checked <span data-date></span></p>' +
+        '<p class="stamp">Updated <span data-date></span> &middot; every tool checked against the same two tests</p>' +
         '<div class="grid"><div>' +
           '<h1>The Shortlist</h1>' +
           '<p class="finding">We reviewed <span data-count="reviewed"></span> tools and dashboards about New York City. These <span data-count="picks"></span> are the ones to start with.</p>' +
           '<p class="lede">The city posts more than 2,400 datasets on its open data portal, and nonprofits, universities, newsrooms and independent developers have built dashboards, maps and trackers on top of them. Many are good. Few are seen outside the small world of people who build such things, and there are often five versions of the same idea.</p>' +
-          '<p class="lede">This page picks the best two to four in each of <span data-count="areas"></span> areas of city life, then lists a few more worth knowing and the best tools the government itself publishes. Each entry says what is in the tool, why it made the list and what to watch out for.</p>' +
+          '<p class="lede">This page picks the best two to four in each of <span data-count="areas"></span> areas of city life, then lists a few more worth knowing and the best tools the government itself publishes. Each entry says what is in the tool, why it made the list and what to watch out for. Start with the ten below, ask a question, or browse by area or by agency.</p>' +
           '<p class="key"><span><i class="sw indie"></i>Built independently: nonprofits, universities, newsrooms, developers</span>' +
           '<span><i class="sw watch"></i>Government watchdog offices, such as the comptroller</span>' +
           '<span><i class="sw city"></i>Government agencies</span></p>' +
@@ -262,9 +262,17 @@
       '</div></div>' +
       '<div class="wrap"><section class="results" id="results" hidden aria-live="polite"></section></div>' +
       '<div id="browse">' +
+        '<div class="wrap"><section class="start" id="start"><h2>Start here</h2>' +
+          '<p class="sub">Ten tools that between them cover most of what people ask about the city. Each is the best on the list at its job.</p><ol class="startlist" id="startlist"></ol></section></div>' +
+        '<div class="wrap"><section class="agencies" id="agencies"><h2>Browse by agency</h2>' +
+          '<p class="sub">Every tool is tagged with the parts of government it tells you about. Pick one to see its tools.</p><div class="chips" id="chips"></div></section></div>' +
         '<div class="wrap"><section class="questions"><h2>Start with a question</h2>' +
           '<p class="sub">Each question leads to the tool on the list that answers it best.</p><div class="qgrid" id="qgrid"></div></section></div>' +
         '<div class="wrap" id="areas"><p class="loading">Loading the list&hellip;</p></div>' +
+        '<div class="wrap"><section class="gaps" id="gaps"><h2>Where no good tool exists</h2>' +
+          '<p class="sub">Questions about the city that nothing we found answers well. If you know a tool that does, or you build one, <a href="' + NOMINATE + '">tell us</a>.</p><ul class="gaplist" id="gaplist"></ul></section></div>' +
+        '<div class="wrap"><section class="held" id="held"><h2>Held back</h2>' +
+          '<p class="sub">Tools that would make the list with one fix. We say what it is, so their makers can make it and readers can decide for themselves.</p><ul class="heldlist" id="heldlist"></ul></section></div>' +
         '<section class="method"><div class="wrap"><h2>How we chose</h2><div class="cols"><div>' +
           '<h3>Two tests, for every tool</h3>' +
           "<p><b>It has to be current.</b> Its data updates automatically, or its latest edition came out in the past year and uses the newest release of its source data. A tool one release behind still counts if the newest release came out less than three months ago. Collections that are historical by nature, such as archival photographs, are marked that way.</p>" +
@@ -277,9 +285,11 @@
           "<h3>How the question box works</h3><p>It compares the words in your question with each tool's description, the questions it answers and the data it uses, and ranks the closest matches. It knows everyday words (\"cops\" finds police tools, \"scaffolding\" finds sidewalk sheds). It does not use AI, read the tools' data or answer questions itself, and it can miss a tool described in different words. Nothing you type is sent anywhere.</p>" +
           "<h3>What this is not</h3><p>A place on the list is a recommendation, not an audit. We do not vouch for every number in these tools. Where we know of a limit, it is under \"Keep in mind.\"</p>" +
           '<h3>Nominate a tool</h3><p>If you know a tool that belongs here, or one that has broken or gone stale, email <a href="' + NOMINATE + '">info@vitalcitynyc.org</a> with "Civic tech tool shortlist" in the subject line. Tell us what it is, who made it and what data it uses.</p>' +
+          '<h3>What has changed</h3><ul class="changes" id="changes"></ul>' +
+          '<h3>Reuse the list</h3><p>The list is a public data file, <a href="' + BASE + 'data/shortlist.json">shortlist.json</a>, and the page can be embedded on any site with two lines of code (see the <a href="https://github.com/joshgreenman1973/nyc-shortlist" target="_blank" rel="noopener">code repository</a>).</p>' +
         "</div></div></div></section>" +
       "</div>" +
-      '<div class="foot"><div class="wrap">The Shortlist, a first cut. <span data-count="total"></span> tools listed, <span data-count="reviewed"></span> reviewed. <a href="' + NOMINATE + '">Nominate a tool</a>.</div></div>' +
+      '<div class="foot"><div class="wrap">The Shortlist. <span data-count="total"></span> tools listed, <span data-count="reviewed"></span> reviewed. <a href="' + NOMINATE + '">Nominate a tool</a>.</div></div>' +
       "</div>";
   };
 
@@ -287,10 +297,8 @@
     var self = this, d = this.data;
     this.$("#areas").innerHTML = d.areas.map(function (a) {
       var picks = a.picks.map(function (e) { return self.pickHTML(e); }).join("");
-      var bench = (a.bench || []).length
-        ? '<div class="shelfhead"><h3>Also worth knowing</h3><p>Narrower, or a close second</p></div><ul class="minis">' + a.bench.map(function (e) { return self.miniHTML(e); }).join("") + "</ul>" : "";
-      var off = (a.official || []).length
-        ? '<div class="shelfhead"><h3>From the government</h3><p>Built by public agencies and government watchdog offices</p></div><ul class="minis">' + a.official.map(function (e) { return self.miniHTML(e); }).join("") + "</ul>" : "";
+      var bench = self.shelfHTML(a.bench, "Also worth knowing", "Narrower, or a close second", a.id + "-bench");
+      var off = self.shelfHTML(a.official, "From the government", "Built by public agencies and government watchdog offices", a.id + "-gov");
       return '<section class="area" id="area-' + esc(a.id) + '" aria-labelledby="h-' + esc(a.id) + '">' +
         '<div class="rail" aria-hidden="true"><span>' + esc(a.rail) + "</span></div>" +
         '<div class="abody"><h2 id="h-' + esc(a.id) + '">' + esc(a.name) + "</h2>" +
@@ -301,6 +309,76 @@
     this.$("#jump").innerHTML = d.areas.map(function (a) {
       return '<a href="#area-' + esc(a.id) + '" data-area="' + esc(a.id) + '">' + esc(a.rail) + "</a>";
     }).join("");
+  };
+
+  // A shelf shows its heading and a count; the cards open on request, so an
+  // area reads as its picks first.
+  App.prototype.shelfHTML = function (list, title, sub, key) {
+    if (!list || !list.length) return "";
+    var names = list.slice(0, 3).map(function (e) { return e.name; }).join(", ") + (list.length > 3 ? " and " + (list.length - 3) + " more" : "");
+    return '<div class="shelf" id="shelf-' + esc(key) + '"><div class="shelfhead"><h3>' + esc(title) + ' <span class="n">(' + list.length + ")</span></h3><p>" + esc(sub) + "</p>" +
+      '<button type="button" class="open" data-shelf="' + esc(key) + '" aria-expanded="false">Show</button></div>' +
+      '<p class="shelfnames">' + esc(names) + "</p>" +
+      '<ul class="minis" hidden>' + list.map(function (e) { return this.miniHTML(e); }, this).join("") + "</ul></div>";
+  };
+
+  App.prototype.toggleShelf = function (key, open) {
+    var sh = this.$("#shelf-" + key);
+    if (!sh) return;
+    var ul = sh.querySelector(".minis"), btn = sh.querySelector(".open"), names = sh.querySelector(".shelfnames");
+    var on = open == null ? ul.hidden : open;
+    ul.hidden = !on; names.hidden = on;
+    btn.textContent = on ? "Hide" : "Show";
+    btn.setAttribute("aria-expanded", on ? "true" : "false");
+  };
+
+  App.prototype.renderStart = function () {
+    var byId = this.byId();
+    this.$("#startlist").innerHTML = (this.data.start || []).map(function (it) {
+      var e = byId[it.id];
+      if (!e) return "";
+      var t = typeOf(e.maker_type);
+      var img = e.shot === false ? '<span class="noshot"><span class="d">' + esc(host(e.url)) + "</span></span>"
+        : '<img src="' + BASE + "shots/" + esc(e.id) + '.webp" alt="" loading="lazy" decoding="async" width="800" height="500">';
+      return '<li><a class="shot" href="' + esc(e.url) + '" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">' + img + "</a>" +
+        '<div><h3><a href="' + esc(e.url) + '" target="_blank" rel="noopener">' + esc(e.name) + '&nbsp;<span class="arrow" aria-hidden="true">&#8599;</span></a></h3>' +
+        '<p class="by"><span class="sw ' + t[0] + '" aria-hidden="true"></span><span>' + esc(e.maker) + "</span></p>" +
+        "<p>" + esc(it.line) + ' <button type="button" class="more" data-go="' + esc(e.id) + '">More</button></p></div></li>';
+    }).join("");
+  };
+
+  App.prototype.renderAgencies = function () {
+    var counts = {};
+    this.data.areas.forEach(function (a) {
+      ["picks", "bench", "official"].forEach(function (t) {
+        (a[t] || []).forEach(function (e) { (e.agencies || []).forEach(function (g) { counts[g] = (counts[g] || 0) + 1; }); });
+      });
+    });
+    var names = Object.keys(counts).sort(function (x, y) { return counts[y] - counts[x] || x.localeCompare(y); });
+    this.$("#chips").innerHTML = names.map(function (g) {
+      return '<button type="button" class="chip" data-agency="' + esc(g) + '">' + esc(g) + ' <span>' + counts[g] + "</span></button>";
+    }).join("");
+  };
+
+  App.prototype.renderGapsHeld = function () {
+    var d = this.data;
+    this.$("#gaplist").innerHTML = (d.gaps || []).map(function (g) {
+      return "<li><b>" + esc(g.q) + "</b> " + esc(g.note) + "</li>";
+    }).join("");
+    var held = d.held || [];
+    this.$("#heldlist").innerHTML = held.map(function (h) {
+      return '<li><a href="' + esc(h.url) + '" target="_blank" rel="noopener">' + esc(h.name) + "</a> <span class=\"m\">" + esc(h.maker) + "</span><span class=\"fix\">" + esc(h.fix) + "</span></li>";
+    }).join("");
+    if (!held.length) this.$("#held").hidden = true;
+    this.$("#changes").innerHTML = (d.changelog || []).map(function (c) {
+      return "<li><b>" + esc(fmtDate(c.date)) + ".</b> " + esc(c.note) + "</li>";
+    }).join("");
+  };
+
+  App.prototype.byId = function () {
+    var m = {};
+    this.data.areas.forEach(function (a) { ["picks", "bench", "official"].forEach(function (t) { (a[t] || []).forEach(function (e) { m[e.id] = e; }); }); });
+    return m;
   };
 
   App.prototype.renderQuestions = function () {
@@ -338,7 +416,7 @@
 
   // ---------- Search ----------
   // BM25 over each tool's fields, weighted toward the questions it answers.
-  var FIELDS = [["questions", 3], ["index", 3], ["name", 2.5], ["subtopic", 2], ["area", 1.5],
+  var FIELDS = [["questions", 3], ["index", 3], ["name", 2.5], ["agencies", 2], ["subtopic", 2], ["area", 1.5],
     ["summary", 1.2], ["why", 0.8], ["data", 0.8], ["maker", 0.6], ["caveat", 0.3]];
 
   App.prototype.buildIndex = function () {
@@ -422,6 +500,22 @@
     return bestScore >= 1 ? best : null;
   }
 
+  App.prototype.showAgency = function (g) {
+    var self = this, box = this.$("#results"), hits = [];
+    this.docs.forEach(function (d) { if ((d.e.agencies || []).indexOf(g) >= 0) hits.push(d); });
+    var tier = { pick: 0, bench: 1, official: 2 };
+    hits.sort(function (a, b) { return tier[a.tier] - tier[b.tier]; });
+    var picks = hits.filter(function (h) { return h.tier === "pick"; }), rest = hits.filter(function (h) { return h.tier !== "pick"; });
+    this.$("#q").value = "";
+    box.hidden = false; this.$("#browse").hidden = true; this.$("#clear").hidden = false;
+    box.innerHTML = '<p class="count">' + esc(g) + "</p>" +
+      '<p class="limits">' + hits.length + (hits.length === 1 ? " tool on the list is" : " tools on the list are") + " about this part of government. Picks first, then the rest.</p>" +
+      (picks.length ? '<ol class="picks results-lead">' + picks.map(function (h) { return self.pickHTML(h.e, h.area.name); }).join("") + "</ol>" : "") +
+      (rest.length ? '<div class="shelfhead"><h3>' + (picks.length ? "Also" : "Tools") + '</h3></div><ul class="minis">' + rest.map(function (h) { return self.miniHTML(h.e, h.area.name); }).join("") + "</ul>" : "");
+    window.scrollTo({ top: 0 });
+    if (this.standalone) history.replaceState(null, "", "?agency=" + encodeURIComponent(g));
+  };
+
   App.prototype.renderResults = function (q) {
     var self = this, box = this.$("#results"), hits = this.search(q);
     if (!hits.length) {
@@ -466,6 +560,8 @@
     if (this.$("#q").value) this.setQuery("");
     var el = this.root.getElementById ? this.root.getElementById("t-" + id) : this.$("#t-" + id);
     if (!el) return;
+    var shelf = el.closest(".shelf");
+    if (shelf) this.toggleShelf(shelf.id.replace("shelf-", ""), true);
     this.scrollToEl(el);
     el.classList.remove("hit"); void el.offsetWidth; el.classList.add("hit");
     setTimeout(function () { el.classList.remove("hit"); }, 2600);
@@ -507,6 +603,10 @@
       if (b) { ev.preventDefault(); self.setQuery(b.getAttribute("data-q")); return; }
       var g = ev.target.closest("[data-go]");
       if (g) { ev.preventDefault(); self.go(g.getAttribute("data-go")); return; }
+      var ch = ev.target.closest("[data-agency]");
+      if (ch) { ev.preventDefault(); self.showAgency(ch.getAttribute("data-agency")); return; }
+      var sb = ev.target.closest("[data-shelf]");
+      if (sb) { ev.preventDefault(); self.toggleShelf(sb.getAttribute("data-shelf")); return; }
       var j = ev.target.closest(".jump a");
       if (j) {
         ev.preventDefault();
@@ -558,15 +658,19 @@
       self.checks = (res[1] && res[1].results) || {};
       if (res[1] && res[1].checked) self.data.checked = res[1].checked;
       self.renderAreas();
+      self.renderStart();
+      self.renderAgencies();
       self.renderQuestions();
+      self.renderGapsHeld();
       self.renderMosaic();
       self.fillCounts();
       self.buildIndex();
       self.wire();
       self.watchAreas();
       if (self.standalone) {
-        var q = new URLSearchParams(location.search).get("q");
+        var q = new URLSearchParams(location.search).get("q"), ag = new URLSearchParams(location.search).get("agency");
         if (q) self.setQuery(q);
+        else if (ag) self.showAgency(ag);
         else if (location.hash.indexOf("#t-") === 0) setTimeout(function () { self.go(location.hash.slice(3)); }, 60);
         else if (location.hash.indexOf("#area-") === 0) { var s = self.$(location.hash); if (s) setTimeout(function () { self.scrollToEl(s); }, 60); }
       }

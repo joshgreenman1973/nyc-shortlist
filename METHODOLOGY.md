@@ -33,6 +33,14 @@ Tools by Vital City, Josh Greenman, Tal Roded and Ted Alcorn (who worked at Vita
 
 The most common reasons: no named maker (50-a.org, NYC-SIFT, 311 Wrapped, CrashCount and many of Josh Greenman's own projects), data a release or more behind the source (DATA2GO.NYC, the property tax map, the Urban Heat Portal, Jehiah Czebotar's bus speeds), one-time reports older than a year, and sources that are never named (the Criminal Justice Agency's pretrial dashboards, Vital City's Historical Crime Explorer). The research files keep every rejected tool with its reason.
 
+## Finding tools
+
+Four ways in, all built from the same list: "Start here" (ten tools chosen to cover the questions people ask most), the question index, the thirteen areas, and "Browse by agency," where every tool is tagged with the parts of government it is about. Within an area, only the picks show in full; the "Also worth knowing" and "From the government" shelves open on request.
+
+## Gaps and held-back tools
+
+"Where no good tool exists" lists questions nothing we found answers well, with a nomination link. "Held back" lists tools that failed one test and says which, so their makers can fix it. Neither is a recommendation.
+
 ## The question box
 
 It matches the words in a question against each tool's questions, description and data sources, using BM25 ranking and a vocabulary of everyday words ("cops" finds police tools). It does not use AI, read the tools' data or answer questions itself, and nothing typed leaves the page.
@@ -42,7 +50,7 @@ It matches the words in a question against each tool's questions, description an
 - Web search ran out partway through the first round, and Reddit and Bluesky blocked many automated searches in the second, so some tools will have been missed. Nominations go to info@vitalcitynyc.org with "Civic tech tool shortlist" in the subject line.
 - Several areas have no current independent tool: prosecution data from the district attorneys, 911 response times, police overtime, tax breaks, city debt, overdoses and mental health.
 - The city's open crash data has not updated since June 11, 2026, so the independent crash map is missing recent months.
-- Currency is a snapshot. The weekly link check catches dead links but not stale data; the rubric should be rerun every few months.
+- Currency is a snapshot. The weekly check catches dead links and, for tools with a public code repository or data file, long silences (180 days), but not every kind of staleness; the rubric should be rerun every few months.
 
 ## Files
 

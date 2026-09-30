@@ -1,0 +1,176 @@
+{
+ "checked": "2026-09-30",
+ "stale_after_days": 180,
+ "results": {
+  "nyc-pulse-mmr": {
+   "newest": "2026-09-28",
+   "age_days": 2,
+   "repo_pushed": "2026-09-28T16:12:14Z"
+  },
+  "nycuriosity-council-legislation-trackers": {
+   "newest": "2026-09-30",
+   "age_days": 0,
+   "repo_pushed": "2026-09-30T18:46:28Z"
+  },
+  "jg-audit-tracker": {
+   "newest": "2026-09-29",
+   "age_days": 1,
+   "repo_pushed": "2026-09-29T16:13:07Z"
+  },
+  "muckrock-nyc": {
+   "newest": "2026-09-25",
+   "age_days": 4,
+   "repo_pushed": "2026-09-25T21:46:36Z"
+  },
+  "nyc-openrecords": {
+   "newest": "2026-08-25",
+   "age_days": 36,
+   "repo_pushed": "2026-08-25T16:38:52Z"
+  },
+  "vc-compstat-decoder": {
+   "newest": "2026-09-30",
+   "age_days": 0,
+   "repo_pushed": "2026-09-30T00:33:51Z"
+  },
+  "vc-quarterly-crime-dashboard": {
+   "newest": "2026-08-14",
+   "age_days": 46,
+   "repo_pushed": "2026-08-14T21:39:23Z"
+  },
+  "tedalcorn-nyc-shootings": {
+   "newest": "2026-08-26",
+   "age_days": 35,
+   "repo_pushed": "2026-08-26T16:16:18Z"
+  },
+  "crime-index-nyc": {
+   "newest": "2026-08-21",
+   "age_days": 40,
+   "repo_pushed": "2026-08-21T14:33:41Z"
+  },
+  "justfix-who-owns-what": {
+   "newest": "2026-09-25",
+   "age_days": 5,
+   "repo_pushed": "2026-09-25T16:38:19Z"
+  },
+  "city-limits-shelter-tracker": {
+   "newest": "2026-09-30",
+   "age_days": 0,
+   "repo_pushed": "2026-09-30T08:55:49Z"
+  },
+  "anhd-dap-portal": {
+   "newest": "2026-09-11",
+   "age_days": 19,
+   "repo_pushed": "2026-09-11T13:23:04Z"
+  },
+  "good-cause-nyc": {
+   "newest": "2026-09-21",
+   "age_days": 9,
+   "repo_pushed": "2026-09-21T17:20:20Z"
+  },
+  "dob-sidewalk-shed-map": {
+   "newest": "2026-09-30",
+   "age_days": 0,
+   "repo_pushed": "2026-09-30T13:47:38Z"
+  },
+  "subway-now-lite": {
+   "newest": "2026-08-23",
+   "age_days": 38,
+   "repo_pushed": "2026-08-23T18:42:17Z"
+  },
+  "nyc-crash-mapper": {
+   "newest": "2026-09-01",
+   "age_days": 28,
+   "repo_pushed": "2026-09-01T20:53:09Z"
+  },
+  "howsmydrivingny": {
+   "newest": "2026-07-09",
+   "age_days": 83,
+   "repo_pushed": "2026-07-09T17:33:34Z"
+  },
+  "ctbk-dev": {
+   "newest": "2026-09-29",
+   "age_days": 1,
+   "repo_pushed": "2026-09-29T12:23:35Z"
+  },
+  "hows-my-enforcement": {
+   "newest": "2026-09-28",
+   "age_days": 2,
+   "repo_pushed": "2026-09-28T00:01:13Z"
+  },
+  "nyc-public-space-whong": {
+   "newest": "2026-09-22",
+   "age_days": 8,
+   "repo_pushed": "2026-09-22T05:00:53Z"
+  },
+  "schools-finder-publicworks": {
+   "newest": "2026-09-30",
+   "age_days": 0,
+   "repo_pushed": "2026-09-30T16:09:15Z"
+  },
+  "class-size-matters-utilization-map": {
+   "newest": "2026-03-26",
+   "age_days": 188,
+   "repo_pushed": "2026-03-26T17:14:21Z"
+  },
+  "betanyc-nyc-budget-explorer": {
+   "newest": "2026-07-16",
+   "age_days": 76,
+   "repo_pushed": "2026-07-16T01:29:49Z"
+  },
+  "jg-pension-dashboard": {
+   "newest": "2026-07-29",
+   "age_days": 63,
+   "repo_pushed": "2026-07-29T16:54:55Z"
+  },
+  "the-pay-gap": {
+   "newest": "2026-09-27",
+   "age_days": 2,
+   "repo_pushed": "2026-09-27T20:27:34Z"
+  },
+  "betanyc-council-discretionary-explorer": {
+   "newest": "2026-08-30",
+   "age_days": 31,
+   "repo_pushed": "2026-08-30T03:47:54Z"
+  },
+  "databook-nyc": {
+   "newest": "2026-09-24",
+   "age_days": 6,
+   "repo_pushed": "2026-09-24T14:59:56Z"
+  },
+  "intro-nyc": {
+   "newest": "2026-09-28",
+   "age_days": 2,
+   "repo_pushed": "2026-09-28T12:48:37Z"
+  },
+  "nyc-civic-calendar": {
+   "newest": "2026-08-10",
+   "age_days": 50,
+   "repo_pushed": "2026-08-10T20:47:07Z"
+  },
+  "tr-cb-member-tracker": {
+   "newest": "2026-09-30",
+   "age_days": 0,
+   "repo_pushed": "2026-09-30T18:46:28Z"
+  },
+  "cityscroll": {
+   "newest": "2026-09-30",
+   "age_days": 0,
+   "repo_pushed": "2026-09-30T19:04:26Z"
+  },
+  "cleartext-911-city-records": {
+   "newest": "2026-09-17",
+   "age_days": 13,
+   "repo_pushed": "2026-09-17T13:42:49Z"
+  },
+  "census-reporter": {
+   "newest": "2026-09-30",
+   "age_days": 0,
+   "repo_pushed": "2026-09-30T02:54:03Z"
+  },
+  "nyc-civil-service-exams-publicworks": {
+   "newest": "2026-09-30",
+   "age_days": 0,
+   "repo_pushed": "2026-09-30T13:49:59Z"
+  }
+ }
+}

@@ -22,13 +22,21 @@ jobs:
           set +e
           python3 scripts/check_links.py
           echo "status=$?" >> "$GITHUB_OUTPUT"
+      - name: Look for tools that have stopped updating
+        id: fresh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set +e
+          python3 scripts/check_freshness.py
+          echo "status=$?" >> "$GITHUB_OUTPUT"
       - name: Commit results
         run: |
           git config user.name "shortlist-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/linkcheck.json
+          git add data/linkcheck.json data/freshness.json
           git diff --cached --quiet || git commit -m "Link check $(date -u +%F) [skip ci]"
           git push
-      - name: Fail if a link has been down twice in a row
-        if: steps.check.outputs.status != '0'
+      - name: Fail if a link has been down twice in a row, or a tool looks stale
+        if: steps.check.outputs.status != '0' || steps.fresh.outputs.status != '0'
         run: exit 1

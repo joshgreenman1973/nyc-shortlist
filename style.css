@@ -266,3 +266,51 @@ button { font: inherit; color: inherit; }
 .results .none + .none { margin-top: 0.8rem; }
 .results-lead { margin-bottom: 0.5rem; }
 .results .limits { font-size: 0.85rem; color: var(--mute); max-width: 46rem; margin: -0.8rem 0 1.5rem; }
+
+/* ---------- Start here, agencies, shelves, gaps, held back ---------- */
+.start, .agencies { padding: 2.25rem 0 0.5rem; }
+.start h2, .agencies h2, .gaps h2, .held h2 { font-family: var(--serif); font-weight: 200; font-synthesis: none; font-size: clamp(1.9rem, 3.2cqi, 2.5rem); line-height: 1.1; margin: 0 0 0.45rem; }
+.start .sub, .agencies .sub, .gaps .sub, .held .sub { margin: 0 0 1.4rem; max-width: 44rem; color: var(--mute); }
+.startlist { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem 2.5rem; counter-reset: start; }
+.startlist li { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: 0 1rem; align-items: start; border-top: 1px solid var(--cloud); padding-top: 0.9rem; counter-increment: start; }
+.startlist .shot { aspect-ratio: 16 / 10; margin: 0; border-width: 1px; }
+.startlist h3 { font-size: 1.1rem; font-weight: 900; line-height: 1.2; margin: 0 0 0.15rem; }
+.startlist h3::before { content: counter(start) ". "; font-weight: 300; color: var(--mute); }
+.startlist .by { font-size: 0.8rem; margin-bottom: 0.35rem; }
+.startlist p { font-size: 0.95rem; line-height: 1.45; }
+.startlist .more { font: inherit; font-size: 0.85rem; font-weight: 700; background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 0.18em; text-decoration-color: var(--orange); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.chip { font: inherit; font-size: 0.92rem; font-weight: 300; background: var(--white); border: 1px solid var(--black); border-radius: 0; padding: 0.35rem 0.7rem; cursor: pointer; }
+.chip span { color: var(--mute); font-size: 0.8rem; margin-left: 0.2rem; }
+.chip:hover { background: var(--orange-20); border-color: var(--orange); }
+
+.shelf .shelfhead { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: baseline; gap: 0.75rem; }
+.shelf .shelfhead h3 .n { font-weight: 300; color: var(--mute); }
+.shelf .open { font: inherit; font-size: 0.85rem; font-weight: 700; background: var(--black); color: var(--white); border: 0; border-radius: 0; padding: 0.3rem 0.8rem; cursor: pointer; }
+.shelf .open:hover { background: var(--orange); color: var(--black); }
+.shelfnames { font-size: 0.92rem; color: var(--mute); margin: -0.5rem 0 0.5rem; }
+.shelfnames[hidden], .minis[hidden] { display: none; }
+
+.gaps { padding: 2.5rem 0 0.5rem; border-top: 2px solid var(--black); }
+.gaplist { columns: 2 20rem; column-gap: 3rem; }
+.gaplist li { break-inside: avoid; margin: 0 0 0.9rem; padding-left: 0.95rem; position: relative; max-width: 34rem; }
+.gaplist li::before { content: ""; position: absolute; left: 0; top: 0.72em; width: 0.45rem; height: 2px; background: var(--orange); }
+.gaplist b { font-weight: 700; }
+.held { padding: 2.25rem 0 2.5rem; }
+.heldlist li { display: grid; grid-template-columns: minmax(0, 14rem) minmax(0, 12rem) minmax(0, 1fr); gap: 0 1.25rem; padding: 0.5rem 0; border-bottom: 1px solid var(--cloud); font-size: 0.95rem; }
+.heldlist a { font-weight: 700; text-decoration: none; }
+.heldlist a:hover { text-decoration: underline; text-decoration-color: var(--orange); }
+.heldlist .m { color: var(--mute); }
+.heldlist .fix { color: var(--ink); }
+.changes { margin: 0 0 1rem; }
+.changes li { max-width: 40rem; margin: 0 0 0.4rem; }
+.changes b { font-weight: 700; }
+
+@container (max-width: 760px) {
+  .startlist { grid-template-columns: minmax(0, 1fr); gap: 0.9rem; }
+  .startlist li { grid-template-columns: 6.5rem minmax(0, 1fr); }
+  .heldlist li { grid-template-columns: minmax(0, 1fr); gap: 0.1rem; padding: 0.6rem 0; }
+  .shelf .shelfhead { grid-template-columns: auto auto; }
+  .shelf .shelfhead p { grid-column: 1 / -1; }
+}

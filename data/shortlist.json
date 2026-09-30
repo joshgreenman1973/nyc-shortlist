@@ -50,7 +50,12 @@
        "maintained"
       ]
      },
-     "own": "ta"
+     "own": "ta",
+     "agencies": [
+      "Mayor's Office",
+      "Every agency"
+     ],
+     "repo": "tedalcorn/nyc-mmr"
     },
     {
      "id": "nycuriosity-council-legislation-trackers",
@@ -80,7 +85,12 @@
        "cited"
       ]
      },
-     "own": "tr"
+     "own": "tr",
+     "agencies": [
+      "City Council",
+      "Every agency"
+     ],
+     "repo": "TalR24/nycur-data-website"
     },
     {
      "id": "jg-audit-tracker",
@@ -109,7 +119,13 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Comptroller",
+      "Department of Investigation",
+      "Every agency"
+     ],
+     "repo": "joshgreenman1973/nyc-audit-tracker"
     }
    ],
    "bench": [
@@ -130,7 +146,12 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Every agency",
+      "Records"
+     ],
+     "repo": "MuckRock/muckrock"
     }
    ],
    "official": [
@@ -160,7 +181,11 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Every agency",
+      "Comptroller"
+     ]
     },
     {
      "id": "comptroller-audit-recommendations-tracker",
@@ -177,7 +202,11 @@
       "signals": [
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Comptroller",
+      "Every agency"
+     ]
     },
     {
      "id": "dynamic-mmr",
@@ -195,7 +224,11 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Mayor's Office",
+      "Every agency"
+     ]
     },
     {
      "id": "nyc-openrecords",
@@ -212,7 +245,12 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Records",
+      "Every agency"
+     ],
+     "repo": "CityOfNewYork/NYCOpenRecords"
     }
    ]
   },
@@ -249,7 +287,11 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Police Department"
+     ],
+     "repo": "vital-city-nyc/compstat-decoder"
     },
     {
      "id": "vc-quarterly-crime-dashboard",
@@ -278,7 +320,11 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Police Department"
+     ],
+     "repo": "vital-city/quarterly_crime_dashboard"
     },
     {
      "id": "tedalcorn-nyc-shootings",
@@ -307,7 +353,11 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Police Department"
+     ],
+     "repo": "tedalcorn/nyc-shootings"
     },
     {
      "id": "legal-aid-lelu",
@@ -336,7 +386,12 @@
        "maintained",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "Police Department",
+      "Department of Correction",
+      "District attorneys"
+     ]
     }
    ],
    "bench": [
@@ -367,7 +422,11 @@
        "maintained",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "Police Department"
+     ],
+     "repo": "AH-Datalytics/rtci"
     },
     {
      "id": "trace-gun-violence-atlas",
@@ -385,7 +444,8 @@
        "method",
        "maintained"
       ]
-     }
+     },
+     "agencies": []
     },
     {
      "id": "nyclu-stop-and-frisk-data",
@@ -403,7 +463,10 @@
        "method",
        "open"
       ]
-     }
+     },
+     "agencies": [
+      "Police Department"
+     ]
     },
     {
      "id": "jehiah-nypd-vehicle-stops",
@@ -422,7 +485,10 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Police Department"
+     ]
     }
    ],
    "official": [
@@ -442,7 +508,11 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Police Department",
+      "Civilian Complaint Review Board"
+     ]
     },
     {
      "id": "nypd-compstat-2",
@@ -459,7 +529,10 @@
        "method",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Police Department"
+     ]
     },
     {
      "id": "nyc-911-end-to-end",
@@ -477,7 +550,11 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Police Department",
+      "Fire Department and EMS"
+     ]
     },
     {
      "id": "mta-metrics-major-felonies",
@@ -497,7 +574,11 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "MTA",
+      "Police Department"
+     ]
     },
     {
      "id": "nypd-hate-crimes-dashboard",
@@ -514,7 +595,10 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Police Department"
+     ]
     }
    ]
   },
@@ -552,7 +636,10 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Department of Correction"
+     ]
     },
     {
      "id": "vera-ny-data-hub",
@@ -580,6 +667,11 @@
      "freshness": "Jail tab updated daily",
      "index": [
       "How long do people stay in jail?"
+     ],
+     "agencies": [
+      "Department of Correction",
+      "Courts",
+      "State prisons and parole"
      ]
     },
     {
@@ -608,6 +700,9 @@
      "freshness": "About every three months; releases through May 2026",
      "index": [
       "How many New Yorkers are in state prison?"
+     ],
+     "agencies": [
+      "State prisons and parole"
      ]
     }
    ],
@@ -629,7 +724,11 @@
        "method",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Department of Correction",
+      "Board of Correction"
+     ]
     },
     {
      "id": "doc-data-insights",
@@ -646,7 +745,10 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Department of Correction"
+     ]
     },
     {
      "id": "nycourts-caseload-trends",
@@ -663,7 +765,10 @@
        "method",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Courts"
+     ]
     },
     {
      "id": "oca-pretrial-release-dashboard",
@@ -680,7 +785,10 @@
        "method",
        "open"
       ]
-     }
+     },
+     "agencies": [
+      "Courts"
+     ]
     },
     {
      "id": "acs-flash-indicators",
@@ -697,7 +805,10 @@
        "method",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Administration for Children's Services"
+     ]
     }
    ]
   },
@@ -735,7 +846,13 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Housing Preservation and Development",
+      "Department of Buildings",
+      "Courts"
+     ],
+     "repo": "JustFixNYC/who-owns-what"
     },
     {
      "id": "city-limits-shelter-tracker",
@@ -763,7 +880,11 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Department of Homeless Services"
+     ],
+     "repo": "anesta95/nyc_shelter_count"
     },
     {
      "id": "eviction-lab-nyc",
@@ -791,7 +912,10 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Courts"
+     ]
     },
     {
      "id": "nyhc-nyc-housing-tracker",
@@ -819,7 +943,11 @@
        "maintained",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "Housing Preservation and Development",
+      "City Council"
+     ]
     }
    ],
    "bench": [
@@ -839,7 +967,11 @@
        "method",
        "open"
       ]
-     }
+     },
+     "agencies": [
+      "Housing Preservation and Development",
+      "City Planning"
+     ]
     },
     {
      "id": "anhd-dap-portal",
@@ -857,7 +989,13 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Housing Preservation and Development",
+      "Department of Buildings",
+      "Department of Finance"
+     ],
+     "repo": "ANHD-NYC-CODE/anhd-council-backend"
     },
     {
      "id": "city-limits-nycha-repair-needs-tracker",
@@ -874,7 +1012,10 @@
       "signals": [
        "open"
       ]
-     }
+     },
+     "agencies": [
+      "NYCHA"
+     ]
     },
     {
      "id": "good-cause-nyc",
@@ -893,7 +1034,11 @@
        "maintained",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "Housing Preservation and Development"
+     ],
+     "repo": "JustFixNYC/gce-screener"
     },
     {
      "id": "elevator-advocate",
@@ -911,7 +1056,11 @@
        "method",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Department of Buildings",
+      "Housing Preservation and Development"
+     ]
     }
    ],
    "official": [
@@ -931,7 +1080,11 @@
        "method",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "Housing Preservation and Development",
+      "Public Advocate"
+     ]
     },
     {
      "id": "hpd-online",
@@ -949,7 +1102,10 @@
        "maintained",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "Housing Preservation and Development"
+     ]
     },
     {
      "id": "zola",
@@ -967,7 +1123,10 @@
        "maintained",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "City Planning"
+     ]
     },
     {
      "id": "dob-sidewalk-shed-map",
@@ -985,7 +1144,11 @@
        "maintained",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "Department of Buildings"
+     ],
+     "repo": "NYCDOB/ActiveShedPermits"
     },
     {
      "id": "dcp-housing-production-snapshot",
@@ -1003,7 +1166,10 @@
        "open",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "City Planning"
+     ]
     }
    ]
   },
@@ -1039,7 +1205,11 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "MTA"
+     ],
+     "repo": "sunny-ng/subwaynow-server"
     },
     {
      "id": "transit-access",
@@ -1066,7 +1236,10 @@
        "maintained",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "MTA"
+     ]
     }
    ],
    "bench": [
@@ -1087,7 +1260,10 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "MTA"
+     ]
     },
     {
      "id": "subwaydata-nyc",
@@ -1105,7 +1281,10 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "MTA"
+     ]
     },
     {
      "id": "subway-fyi",
@@ -1123,7 +1302,10 @@
        "method",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "MTA"
+     ]
     },
     {
      "id": "jehiah-bus-lanes",
@@ -1141,7 +1323,11 @@
        "method",
        "open"
       ]
-     }
+     },
+     "agencies": [
+      "Department of Transportation",
+      "MTA"
+     ]
     }
    ],
    "official": [
@@ -1164,7 +1350,10 @@
        "maintained",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "MTA"
+     ]
     }
    ]
   },
@@ -1201,7 +1390,12 @@
        "maintained",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "Police Department",
+      "Department of Transportation"
+     ],
+     "repo": "GreenInfo-Network/nyc-crash-mapper"
     },
     {
      "id": "howsmydrivingny",
@@ -1230,7 +1424,12 @@
        "maintained",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "Department of Finance",
+      "Department of Transportation"
+     ],
+     "repo": "bdhowald/hows_my_driving_ny_api"
     },
     {
      "id": "jehiah-bike-lane-tracker",
@@ -1259,7 +1458,10 @@
        "maintained",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "Department of Transportation"
+     ]
     }
    ],
    "bench": [
@@ -1279,7 +1481,11 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Department of Transportation"
+     ],
+     "repo": "hudcostreets/ctbk.dev"
     },
     {
      "id": "hows-my-enforcement",
@@ -1297,7 +1503,13 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Police Department",
+      "Department of Finance",
+      "Sanitation Department"
+     ],
+     "repo": "jehiah/hows-my-enforcement.nyc"
     }
    ],
    "official": [
@@ -1318,7 +1530,11 @@
        "maintained",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "Department of Transportation",
+      "Police Department"
+     ]
     }
    ]
   },
@@ -1355,7 +1571,11 @@
        "maintained",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "311",
+      "Every agency"
+     ]
     },
     {
      "id": "nyc-public-space-whong",
@@ -1383,7 +1603,13 @@
        "maintained",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "Parks Department",
+      "Department of Transportation",
+      "City Planning"
+     ],
+     "repo": "chriswhong/nyc-public-space-flutter"
     },
     {
      "id": "track-nyc-trash",
@@ -1410,7 +1636,10 @@
        "method",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Sanitation Department"
+     ]
     }
    ],
    "bench": [
@@ -1430,7 +1659,10 @@
        "method",
        "open"
       ]
-     }
+     },
+     "agencies": [
+      "Parks Department"
+     ]
     },
     {
      "id": "jehiah-311-summons-issued",
@@ -1450,7 +1682,11 @@
        "maintained",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "Police Department",
+      "311"
+     ]
     }
    ],
    "official": [
@@ -1480,7 +1716,10 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "311"
+     ]
     },
     {
      "id": "rat-information-portal",
@@ -1499,7 +1738,10 @@
        "maintained",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "Health Department"
+     ]
     },
     {
      "id": "nyc-tree-map",
@@ -1518,7 +1760,10 @@
        "maintained",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "Parks Department"
+     ]
     },
     {
      "id": "plownyc",
@@ -1535,7 +1780,10 @@
        "maintained",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "Sanitation Department"
+     ]
     }
    ]
   },
@@ -1571,7 +1819,10 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Environmental Protection"
+     ]
     },
     {
      "id": "nyc-water-check",
@@ -1598,7 +1849,10 @@
        "method",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Environmental Protection"
+     ]
     }
    ],
    "bench": [
@@ -1620,7 +1874,10 @@
        "maintained",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "Environmental Protection"
+     ]
     }
    ],
    "official": [
@@ -1641,7 +1898,10 @@
        "maintained",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "Health Department"
+     ]
     }
    ]
   },
@@ -1675,7 +1935,10 @@
       "signals": [
        "method"
       ]
-     }
+     },
+     "agencies": [
+      "Education Department"
+     ]
     },
     {
      "id": "schools-finder-publicworks",
@@ -1703,7 +1966,11 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Education Department"
+     ],
+     "repo": "jaramana/schools.publicworks.nyc"
     },
     {
      "id": "keeping-track-online",
@@ -1731,7 +1998,12 @@
        "open",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "Administration for Children's Services",
+      "Social Services",
+      "Education Department"
+     ]
     }
    ],
    "bench": [
@@ -1750,7 +2022,12 @@
       "signals": [
        "open"
       ]
-     }
+     },
+     "agencies": [
+      "Education Department",
+      "School Construction Authority"
+     ],
+     "repo": "ClassSizeMatters/CSM-2024-2025-Utilization-Map"
     },
     {
      "id": "educational-opportunity-project",
@@ -1770,7 +2047,10 @@
        "maintained",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "Education Department"
+     ]
     },
     {
      "id": "watching-the-numbers-2026",
@@ -1787,7 +2067,10 @@
       "signals": [
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Administration for Children's Services"
+     ]
     }
    ],
    "official": [
@@ -1806,7 +2089,10 @@
        "method",
        "open"
       ]
-     }
+     },
+     "agencies": [
+      "Education Department"
+     ]
     }
    ]
   },
@@ -1842,7 +2128,12 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Mayor's Office",
+      "Every agency"
+     ],
+     "repo": "BetaNYC/nyc-budget-viz"
     },
     {
      "id": "jg-pension-dashboard",
@@ -1871,7 +2162,12 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Pension funds",
+      "Comptroller"
+     ],
+     "repo": "joshgreenman1973/nyc-pension-dashboard"
     },
     {
      "id": "the-pay-gap",
@@ -1899,7 +2195,12 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Every agency",
+      "Payroll"
+     ],
+     "repo": "jaramana/paygap.publicworks.nyc"
     }
    ],
    "bench": [
@@ -1919,7 +2220,11 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "City Council"
+     ],
+     "repo": "BetaNYC/New-York-City-Budget"
     },
     {
      "id": "seethroughny-payrolls",
@@ -1936,7 +2241,11 @@
       "signals": [
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Every agency",
+      "Payroll"
+     ]
     },
     {
      "id": "databook-nyc",
@@ -1954,7 +2263,12 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Every agency",
+      "Contract Services"
+     ],
+     "repo": "wegovnyc/databook"
     }
    ],
    "official": [
@@ -1984,7 +2298,11 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Comptroller",
+      "Every agency"
+     ]
     },
     {
      "id": "ibo-nyc-budget-resources",
@@ -2012,7 +2330,10 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Mayor's Office"
+     ]
     },
     {
      "id": "comptroller-agency-staffing-dashboard",
@@ -2029,7 +2350,10 @@
        "method",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Every agency"
+     ]
     },
     {
      "id": "comptroller-late-contracts-dashboard",
@@ -2048,7 +2372,11 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Contract Services",
+      "Comptroller"
+     ]
     },
     {
      "id": "dof-property-information-portal",
@@ -2065,7 +2393,10 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Department of Finance"
+     ]
     },
     {
      "id": "mocs-discretionary-award-tracker",
@@ -2082,7 +2413,11 @@
        "method",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Contract Services",
+      "City Council"
+     ]
     }
    ]
   },
@@ -2120,7 +2455,10 @@
        "cited"
       ]
      },
-     "own": "trt"
+     "own": "trt",
+     "agencies": [
+      "Community boards"
+     ]
     },
     {
      "id": "intro-nyc",
@@ -2148,7 +2486,11 @@
        "maintained",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "City Council"
+     ],
+     "repo": "jehiah/intro.nyc"
     },
     {
      "id": "mygovnyc-who-represents-me",
@@ -2174,7 +2516,11 @@
       "signals": [
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "City Council",
+      "Community boards"
+     ]
     }
    ],
    "bench": [
@@ -2193,7 +2539,8 @@
       "signals": [
        "method"
       ]
-     }
+     },
+     "agencies": []
     },
     {
      "id": "nyc-civic-calendar",
@@ -2211,7 +2558,12 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Community boards",
+      "City Council"
+     ],
+     "repo": "FlashOfInsight/nyc-civic-calendar"
     },
     {
      "id": "tr-cb-member-tracker",
@@ -2230,7 +2582,11 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Community boards"
+     ],
+     "repo": "TalR24/nycur-data-website"
     },
     {
      "id": "cityscroll",
@@ -2249,7 +2605,13 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Every agency",
+      "Community boards",
+      "City Council"
+     ],
+     "repo": "cityscroll/cityscroll-app"
     },
     {
      "id": "cleartext-911-city-records",
@@ -2269,7 +2631,11 @@
        "maintained",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "Law Department"
+     ],
+     "repo": "digitalhen/911records-claude"
     }
    ],
    "official": [
@@ -2290,7 +2656,10 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Campaign Finance Board"
+     ]
     },
     {
      "id": "nyc-lobbyist-search",
@@ -2307,7 +2676,10 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "City Clerk"
+     ]
     },
     {
      "id": "boe-find-my-poll-site",
@@ -2324,7 +2696,10 @@
        "maintained",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "Board of Elections"
+     ]
     }
    ]
   },
@@ -2361,7 +2736,9 @@
        "maintained",
        "cited"
       ]
-     }
+     },
+     "agencies": [],
+     "repo": "censusreporter/censusreporter"
     },
     {
      "id": "1940s-nyc",
@@ -2389,7 +2766,11 @@
        "maintained",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "Records"
+     ],
+     "repo": "jboolean/1940s.nyc"
     }
    ],
    "bench": [
@@ -2410,7 +2791,11 @@
        "open",
        "cited"
       ]
-     }
+     },
+     "agencies": [
+      "Records"
+     ],
+     "repo": "bdon/80s.nyc"
     }
    ],
    "official": [
@@ -2431,7 +2816,10 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "City Planning"
+     ]
     }
    ]
   },
@@ -2467,7 +2855,11 @@
        "open",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Citywide Administrative Services"
+     ],
+     "repo": "jaramana/civilservice.publicworks.nyc"
     },
     {
      "id": "poverty-tracker",
@@ -2493,7 +2885,8 @@
       "signals": [
        "method"
       ]
-     }
+     },
+     "agencies": []
     },
     {
      "id": "mit-living-wage-calculator",
@@ -2519,7 +2912,8 @@
      "freshness": "Updated Feb. 15, 2026",
      "index": [
       "What does it cost to live here?"
-     ]
+     ],
+     "agencies": []
     }
    ],
    "bench": [
@@ -2538,7 +2932,8 @@
       "signals": [
        "method"
       ]
-     }
+     },
+     "agencies": []
     }
    ],
    "official": [
@@ -2566,7 +2961,10 @@
       "signals": [
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Comptroller"
+     ]
     },
     {
      "id": "osc-nyc-industry-sector-dashboards",
@@ -2592,7 +2990,8 @@
       "signals": [
        "maintained"
       ]
-     }
+     },
+     "agencies": []
     },
     {
      "id": "ny-fed-regional-employment-trends",
@@ -2611,7 +3010,8 @@
        "maintained",
        "cited"
       ]
-     }
+     },
+     "agencies": []
     },
     {
      "id": "nyc-poverty-atlas",
@@ -2628,9 +3028,206 @@
        "method",
        "maintained"
       ]
-     }
+     },
+     "agencies": [
+      "Mayor's Office"
+     ]
     }
    ]
+  }
+ ],
+ "start": [
+  {
+   "id": "nyc-pulse-mmr",
+   "line": "Whether the city is getting better or worse at each of its jobs, over 29 years."
+  },
+  {
+   "id": "vc-compstat-decoder",
+   "line": "This week's crime numbers for your precinct or Council district, in plain sentences."
+  },
+  {
+   "id": "justfix-who-owns-what",
+   "line": "Who owns your building, what else they own and how it is kept."
+  },
+  {
+   "id": "dcj-nyc-jail-population-tracker",
+   "line": "How many people are in city jails today and whether Rikers can close on time."
+  },
+  {
+   "id": "jehiah-311-report-card",
+   "line": "What people who called 311 think of the city's response, agency by agency."
+  },
+  {
+   "id": "subway-now-lite",
+   "line": "Whether your train is running right now, from the trains themselves."
+  },
+  {
+   "id": "nyc-crash-mapper",
+   "line": "Crashes and injuries on any street since 2011, and whether a redesign helped."
+  },
+  {
+   "id": "block-party",
+   "line": "What your community board decided, searchable across boards."
+  },
+  {
+   "id": "betanyc-nyc-budget-explorer",
+   "line": "Where the city's money goes, agency by agency, since 2017."
+  },
+  {
+   "id": "census-reporter",
+   "line": "Who lives in your neighborhood, in plain English with the numbers in context."
+  }
+ ],
+ "gaps": [
+  {
+   "q": "What do the district attorneys do with cases?",
+   "note": "Manhattan's data dashboard has been \"under construction\" since 2024, the Bronx's will not load and the other three boroughs have none."
+  },
+  {
+   "q": "How long does an ambulance take in my neighborhood?",
+   "note": "The city's 911 dashboard gives citywide averages only. No independent tool breaks response times down by neighborhood."
+  },
+  {
+   "q": "How much overtime are police officers working?",
+   "note": "The Police Department posts quarterly spreadsheets; nothing turns them into a lookup or a trend."
+  },
+  {
+   "q": "Which buildings get tax breaks, and what do they cost?",
+   "note": "No current tool tracks 421-a, J-51 and other tax expenditures building by building."
+  },
+  {
+   "q": "How much does the city owe, and what does its debt cost?",
+   "note": "Only the comptroller's financial report tables and the Independent Budget Office's history cover city debt."
+  },
+  {
+   "q": "Are overdose deaths rising in my neighborhood?",
+   "note": "The Health Department publishes reports; no independent tool tracks overdoses or mental health services by neighborhood."
+  },
+  {
+   "q": "Are storefronts near me empty?",
+   "note": "The Council's analysis is from 2022, Vacant New York is gone and the Manhattan Chamber's tracker covers one borough on private data."
+  },
+  {
+   "q": "Does my public housing building have heat and hot water today?",
+   "note": "NYCHA's own outage page is the only source. No independent tool tracks daily conditions."
+  },
+  {
+   "q": "Did congestion pricing thin out traffic, and is it holding?",
+   "note": "Every independent tracker stopped updating in 2025. The MTA's own dashboard is the current source."
+  },
+  {
+   "q": "What was said at last week's Council hearing?",
+   "note": "citymeetings.nyc, which summarized hearings chapter by chapter, has covered almost nothing since May 2025."
+  },
+  {
+   "q": "How did my election district vote in June?",
+   "note": "The Board of Elections publishes results by election district, but no independent map has drawn the 2026 primary yet."
+  }
+ ],
+ "held": [
+  {
+   "name": "50-a.org",
+   "url": "https://www.50-a.org/",
+   "maker": "Maker not named",
+   "fix": "The most complete officer lookup, current to this month. The fix: say who runs it."
+  },
+  {
+   "name": "CrashCount",
+   "url": "https://crashcount.nyc/",
+   "maker": "\"A small team of New Yorkers\"",
+   "fix": "Friendly crash lookups by district. The fix: name the team."
+  },
+  {
+   "name": "311 Wrapped",
+   "url": "https://311wrapped.com/",
+   "maker": "Maker not named",
+   "fix": "A careful method and a format people click through. The fix: say who made it."
+  },
+  {
+   "name": "NYC-SIFT",
+   "url": "https://nycsift.com/",
+   "maker": "\"A New York City father\"",
+   "fix": "High school admissions odds from records obtained by public records requests. The fix: a name."
+  },
+  {
+   "name": "Tracking Deaths in NYC Jails",
+   "url": "https://www.vera.org/news/nyc-jail-deaths",
+   "maker": "Vera Institute of Justice",
+   "fix": "The only list that names each person. When checked it was one death behind the news. The fix: keep it current."
+  },
+  {
+   "name": "Department of Correction Dashboard",
+   "url": "https://comptroller.nyc.gov/services/for-the-public/department-of-correction-doc/dashboard/",
+   "maker": "New York City Comptroller's Office",
+   "fix": "Violence, staffing and deaths on one page, last updated July 10, 2026. The fix: update it."
+  },
+  {
+   "name": "NYC Election Atlas",
+   "url": "https://www.electionatlas.nyc/",
+   "maker": "CUNY Center for Urban Research",
+   "fix": "The best election maps in the city, without the June 2026 primary. The fix: add it."
+  },
+  {
+   "name": "DATA2GO.NYC",
+   "url": "https://data2go.nyc/",
+   "maker": "Measure of America",
+   "fix": "400 neighborhood measures, one census release behind. The fix: load the 2020-24 data."
+  },
+  {
+   "name": "NYC Property Tax Map",
+   "url": "https://taxmap.sidewalkchorus.com/",
+   "maker": "Sebastian Hallum Clarke",
+   "fix": "Every property's effective tax rate, still on the 2025-26 roll. The fix: load 2026-27."
+  },
+  {
+   "name": "NYC Urban Heat Portal",
+   "url": "https://urbanheat.nyc/",
+   "maker": "Hunter College and BetaNYC",
+   "fix": "Why each neighborhood runs hot, last updated May 2025. The fix: a refresh."
+  },
+  {
+   "name": "Pretrial Data Dashboards",
+   "url": "https://www.nycja.org/data",
+   "maker": "New York City Criminal Justice Agency",
+   "fix": "The clearest bail and pretrial numbers, sourced only to \"court data.\" The fix: name the datasets."
+  },
+  {
+   "name": "Bus Speeds by Route",
+   "url": "https://reports.jehiah.cz/bus_speeds/",
+   "maker": "Jehiah Czebotar",
+   "fix": "Every route ranked by speed, two months behind the MTA data. The fix: a refresh."
+  },
+  {
+   "name": "citymeetings.nyc",
+   "url": "https://citymeetings.nyc/",
+   "maker": "Vikram Oberoi",
+   "fix": "Council hearings in searchable chapters, stopped in May 2025. The fix: start again."
+  },
+  {
+   "name": "NYC Assault Tracker",
+   "url": "https://vital-city-nyc.github.io/nyc-assault-tracker/",
+   "maker": "Vital City (disclosure: the editor's organization)",
+   "fix": "Live assault complaints by borough and subway. The fix: a byline."
+  },
+  {
+   "name": "Crime Data Explorer",
+   "url": "https://historical-crime-explorer.vercel.app/",
+   "maker": "Vital City (disclosure: the editor's organization)",
+   "fix": "Every crime since 1993 by precinct. The fix: say which datasets it uses."
+  }
+ ],
+ "changelog": [
+  {
+   "date": "2026-09-28",
+   "note": "First cut: 115 tools from 273 reviewed."
+  },
+  {
+   "date": "2026-09-28",
+   "note": "Second cut: every tool re-checked against the two tests. 23 came off, 18 independent tools and Vital City's crime dashboards went on, and government tools moved to their own shelf."
+  },
+  {
+   "date": "2026-09-30",
+   "note": "Added Start here, browsing by agency, a list of questions no tool answers well and the tools held back for one fix. Third research round on newsrooms, research institutions and uncovered subjects."
   }
  ]
 }
