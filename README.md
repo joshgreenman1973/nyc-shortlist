@@ -1,6 +1,6 @@
 # The Shortlist
 
-The best independent tools for understanding New York City and how its government is doing: 141 tools in 15 areas, chosen from 542 reviewed on Sept. 28 to 30, 2026. Every tool passed two tests, current and objectively well made (see METHODOLOGY.md). Each entry says what is in the tool, why it made the list, what to watch out for and which quality checks it passed.
+The best independent tools for understanding New York City and how its government is doing: 150 tools in 15 areas, chosen from 542 reviewed on Sept. 28 to 30, 2026. Every tool passed two tests, current and objectively well made (see METHODOLOGY.md). Each entry says what is in the tool, why it made the list, what to watch out for and which quality checks it passed.
 
 Live: https://joshgreenman1973.github.io/nyc-shortlist/
 

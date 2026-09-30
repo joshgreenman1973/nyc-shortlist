@@ -1,6 +1,6 @@
 {
  "checked": "2026-09-30",
- "count": 141,
+ "count": 150,
  "results": {
   "nyc-pulse-mmr": {
    "url": "https://tedalcorn.org/nyc-mmr/",
@@ -26,6 +26,14 @@
    "fails": 0,
    "last": "2026-09-30"
   },
+  "jg-overdue-reports": {
+   "url": "https://joshgreenman1973.github.io/nyc-overdue-reports/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-30"
+  },
   "muckrock-nyc": {
    "url": "https://www.muckrock.com/place/united-states-of-america/new-york/new-york-city/",
    "code": 403,
@@ -36,6 +44,14 @@
   },
   "city-and-state-mamdani-whos-who": {
    "url": "https://www.cityandstateny.com/politics/2026/09/whos-who-zohran-mamdanis-administration/409701/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-30"
+  },
+  "jg-mamdani-transcripts": {
+   "url": "https://joshgreenman1973.github.io/nyc-mamdani-transcripts/",
    "code": 200,
    "error": null,
    "ok": true,
@@ -370,6 +386,14 @@
    "fails": 0,
    "last": "2026-09-30"
   },
+  "jg-rezoning-built": {
+   "url": "https://joshgreenman1973.github.io/nyc-rezoning-built/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-30"
+  },
   "public-advocate-worst-landlord-watchlist": {
    "url": "https://www.landlordwatchlist.com/",
    "code": 200,
@@ -476,6 +500,22 @@
   },
   "jehiah-bus-lanes": {
    "url": "https://reports.jehiah.cz/bus_lanes/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-30"
+  },
+  "jg-lifts": {
+   "url": "https://joshgreenman1973.github.io/nyc-lifts/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-30"
+  },
+  "jg-bus-tracker": {
+   "url": "https://joshgreenman1973.github.io/experiments/nyc-bus-tracker/",
    "code": 200,
    "error": null,
    "ok": true,
@@ -602,6 +642,14 @@
    "fails": 0,
    "last": "2026-09-30"
   },
+  "jg-noise-map": {
+   "url": "https://vitalcity-nyc.github.io/nyc-noise-complaints-map/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-30"
+  },
   "osc-nyc311-monitoring-tool": {
    "url": "https://www.osc.ny.gov/reports/osdc/nyc311-monitoring-tool",
    "code": 200,
@@ -620,7 +668,7 @@
   },
   "nyc-tree-map": {
    "url": "https://www.nycgovparks.org/tree-map",
-   "code": 200,
+   "code": 202,
    "error": null,
    "ok": true,
    "fails": 0,
@@ -826,6 +874,22 @@
    "fails": 0,
    "last": "2026-09-30"
   },
+  "jg-labor-contracts": {
+   "url": "https://vitalcity-nyc.github.io/nyc-labor-contracts/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-30"
+  },
+  "jg-fully-loaded-budget": {
+   "url": "https://joshgreenman1973.github.io/nyc-fully-loaded-budget/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-30"
+  },
   "checkbook-nyc": {
    "url": "https://www.checkbooknyc.com/",
    "code": 302,
@@ -940,6 +1004,14 @@
   },
   "citymeetings-nyc": {
    "url": "https://citymeetings.nyc/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-30"
+  },
+  "jg-green-book": {
+   "url": "https://joshgreenman1973.github.io/nyc-green-book/",
    "code": 200,
    "error": null,
    "ok": true,
