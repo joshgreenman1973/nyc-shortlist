@@ -1,6 +1,6 @@
 # How the list was made
 
-Sept. 28 to 30, 2026. 150 tools listed, from 542 reviewed.
+Sept. 28 to 30, 2026. 146 tools listed, from 542 reviewed.
 
 ## Search
 
@@ -27,7 +27,7 @@ A tool also had to load and work. One tool that passed on paper, SweepTracker, w
 
 Picks and "Also worth knowing" are outside government. Government tools, including watchdog offices that are independent of the agencies they track (the city and state comptrollers, the Independent Budget Office, the City Council, the public advocate, the Board of Correction, the Campaign Finance Board), are listed under "From the government," with watchdogs marked in blue.
 
-Tools by Vital City, Josh Greenman, Tal Roded and Ted Alcorn (who worked at Vital City until September 2026) carry a disclosure. We reviewed more than 40 tools from these makers. Nine of Josh Greenman's failed only for lacking a byline; he added one to each on Sept. 30, 2026, and they joined the list. Vital City's tools on Vital City's own site count as bylined. One more, Vital City's New York City calendar, passed but is left off until an internal staff menu is removed from its public page.
+Tools by Vital City, Josh Greenman, Tal Roded and Ted Alcorn (who worked at Vital City until September 2026) carry a disclosure. We reviewed more than 40 tools from these makers. Five of Josh Greenman's are listed after he added a byline to each on Sept. 30, 2026 (Every Building by his judgment, since its building data is one release behind); six others that would qualify he keeps off as work in progress. Vital City's tools on Vital City's own site count as bylined. One more, Vital City's New York City calendar, passed but is left off until an internal staff menu is removed from its public page.
 
 ## What failed, and why
 

@@ -231,6 +231,29 @@
       "Mayor's Office"
      ],
      "repo": "joshgreenman1973/nyc-mamdani-transcripts"
+    },
+    {
+     "id": "jg-mamdani-org-chart",
+     "name": "The Mamdani administration",
+     "url": "https://joshgreenman1973.github.io/experiments/mamdani-org-chart/",
+     "maker": "Josh Greenman",
+     "maker_type": "journalist",
+     "own": "jg",
+     "summary": "An organizational chart of the administration: who reports to the mayor, the agencies and offices in each portfolio and who runs them, with 49 departments opening into their own charts. 183 appointees as of Sept. 18, 2026.",
+     "why": "The only chart that shows the whole administration's reporting lines, generated from a tracked list of appointments so names cannot drift from their sources.",
+     "caveat": "Deputy and assistant commissioners appear only where the city's directory publishes them.",
+     "quality": {
+      "cadence": "periodic",
+      "updated": "2026-09",
+      "signals": [
+       "method",
+       "open"
+      ]
+     },
+     "agencies": [
+      "Mayor's Office",
+      "Every agency"
+     ]
     }
    ],
    "official": [
@@ -623,6 +646,30 @@
       "Police Department"
      ],
      "repo": "vital-city/Historical_Crime_Explorer"
+    },
+    {
+     "id": "jg-precinct-day",
+     "name": "A day on the police radio",
+     "url": "https://joshgreenman1973.github.io/nyc-precinct-day/",
+     "maker": "Josh Greenman",
+     "maker_type": "journalist",
+     "own": "jg",
+     "summary": "Pick any of the 78 precincts and any day since 2018 to see every 911 call the police handled: a map of calls by type, an hour-by-hour chart, a replay of the day and how long each kind of call took to answer.",
+     "why": "It shows what a precinct's day is made of, call by call, from the Police Department's own dispatch records, which no official page presents this way.",
+     "caveat": "The source has no arrest or outcome data, so it cannot say how calls ended, and the city's feed runs months behind.",
+     "quality": {
+      "cadence": "live",
+      "updated": "2026-09",
+      "signals": [
+       "method",
+       "open"
+      ]
+     },
+     "repo": "joshgreenman1973/nyc-precinct-day",
+     "agencies": [
+      "Police Department"
+     ],
+     "shot_wait": 12000
     }
    ],
    "official": [
@@ -1323,30 +1370,6 @@
       "City Planning",
       "NYCHA"
      ]
-    },
-    {
-     "id": "jg-rezoning-built",
-     "url": "https://joshgreenman1973.github.io/nyc-rezoning-built/",
-     "maker": "Josh Greenman",
-     "maker_type": "journalist",
-     "name": "What rezoning built",
-     "own": "jg",
-     "summary": "Every adopted zoning map change since 1977, more than 1,200, joined to the housing completed inside it since 2010, on the city's own upzoned-or-downzoned classification.",
-     "why": "The only accounting of what rezonings produced: upzoned land yielded about 20 times the homes per acre of downzoned land.",
-     "caveat": "Classification of rezonings after 2016 is inferred from inclusionary housing areas, which the page discloses.",
-     "quality": {
-      "cadence": "monthly",
-      "updated": "2026-09",
-      "signals": [
-       "method",
-       "open",
-       "maintained"
-      ]
-     },
-     "agencies": [
-      "City Planning"
-     ],
-     "repo": "joshgreenman1973/nyc-rezoning-built"
     }
    ],
    "official": [
@@ -1689,55 +1712,6 @@
       "Department of Transportation",
       "MTA"
      ]
-    },
-    {
-     "id": "jg-lifts",
-     "url": "https://joshgreenman1973.github.io/nyc-lifts/",
-     "maker": "Josh Greenman",
-     "maker_type": "journalist",
-     "name": "Lifts",
-     "own": "jg",
-     "summary": "Every subway elevator and whether it is working right now, with each one's reliability over time, from six MTA feeds.",
-     "why": "It adds the history Transit Access lacks: which elevators fail most, not only which are out today.",
-     "caveat": "Live status depends on the MTA's own feeds.",
-     "quality": {
-      "cadence": "live",
-      "updated": "2026-09",
-      "signals": [
-       "method",
-       "open",
-       "maintained"
-      ]
-     },
-     "agencies": [
-      "MTA"
-     ],
-     "repo": "joshgreenman1973/nyc-lifts"
-    },
-    {
-     "id": "jg-bus-tracker",
-     "url": "https://joshgreenman1973.github.io/experiments/nyc-bus-tracker/",
-     "maker": "Josh Greenman",
-     "maker_type": "journalist",
-     "name": "All Through the Town",
-     "own": "jg",
-     "summary": "A live map of every bus in service, with route speeds computed from vehicle positions and rolled up by week and month since the tracker began.",
-     "why": "An independent measure of bus speed that keeps its own history, so changes can be checked against the MTA's figures.",
-     "caveat": "Speeds are estimates from positions, and read about 9% faster than the MTA's on local routes because stopped buses are dropped.",
-     "quality": {
-      "cadence": "live",
-      "updated": "2026-09",
-      "signals": [
-       "method",
-       "open",
-       "maintained"
-      ]
-     },
-     "agencies": [
-      "MTA"
-     ],
-     "repo": "joshgreenman1973/experiments",
-     "shot_wait": 15000
     }
    ],
    "official": [
@@ -2162,31 +2136,6 @@
       "Police Department",
       "311"
      ]
-    },
-    {
-     "id": "jg-noise-map",
-     "url": "https://vitalcity-nyc.github.io/nyc-noise-complaints-map/",
-     "maker": "Josh Greenman",
-     "maker_type": "journalist",
-     "name": "Sound and the city",
-     "own": "jg",
-     "summary": "Every 311 noise complaint this year and last on a map, with the noise-code tickets the city actually wrote and a \"last Saturday night\" view, refreshed daily.",
-     "why": "It sets complaints beside enforcement, which no city page does.",
-     "caveat": "Complaints measure who calls 311, not noise.",
-     "quality": {
-      "cadence": "daily",
-      "updated": "2026-09",
-      "signals": [
-       "method",
-       "open",
-       "maintained"
-      ]
-     },
-     "agencies": [
-      "311",
-      "Environmental Protection"
-     ],
-     "repo": "vitalcity-nyc/nyc-noise-complaints-map"
     }
    ],
    "official": [
@@ -2952,56 +2901,6 @@
       "Contract Services"
      ],
      "repo": "wegovnyc/databook"
-    },
-    {
-     "id": "jg-labor-contracts",
-     "url": "https://vitalcity-nyc.github.io/nyc-labor-contracts/",
-     "maker": "Josh Greenman",
-     "maker_type": "journalist",
-     "name": "NYC municipal labor contracts",
-     "own": "jg",
-     "summary": "The full text of every collective bargaining agreement in force for city employees, scanned and searchable, with pages on bargaining units and the wage pattern.",
-     "why": "The contracts that set pay and rules for more than 300,000 city workers, searchable for the first time in one place.",
-     "caveat": "Many source PDFs are scans, so the text can carry recognition errors; check quotes against the linked originals.",
-     "quality": {
-      "cadence": "as",
-      "updated": "2026-09",
-      "signals": [
-       "method",
-       "open",
-       "maintained"
-      ]
-     },
-     "agencies": [
-      "Labor Relations",
-      "Every agency"
-     ],
-     "repo": "vitalcity-nyc/nyc-labor-contracts"
-    },
-    {
-     "id": "jg-fully-loaded-budget",
-     "url": "https://joshgreenman1973.github.io/nyc-fully-loaded-budget/",
-     "maker": "Josh Greenman",
-     "maker_type": "journalist",
-     "name": "The fully loaded budget",
-     "own": "jg",
-     "summary": "The fiscal 2027 adopted budget with pensions, benefits, debt service and legal settlements assigned to the agencies they belong to, so each agency's real cost shows.",
-     "why": "The city budgets those costs in central pools; this is the only view that puts them where the spending happens, and it reconciles to the printed total.",
-     "caveat": "Budgeted figures for a year not yet audited; actual spending will differ.",
-     "quality": {
-      "cadence": "annual",
-      "updated": "2026-09",
-      "signals": [
-       "method",
-       "open",
-       "maintained"
-      ]
-     },
-     "agencies": [
-      "Mayor's Office",
-      "Every agency"
-     ],
-     "repo": "joshgreenman1973/nyc-fully-loaded-budget"
     }
    ],
    "official": [
@@ -3389,31 +3288,6 @@
      "agencies": [
       "City Council"
      ]
-    },
-    {
-     "id": "jg-green-book",
-     "url": "https://joshgreenman1973.github.io/nyc-green-book/",
-     "maker": "Josh Greenman",
-     "maker_type": "journalist",
-     "name": "The Greener Book",
-     "own": "jg",
-     "summary": "The city's official directory of officials, agencies, addresses and press offices, about 3,000 records, rebuilt as one search box and kept current from the City Record.",
-     "why": "Faster than the city's own Green Book Online, with every phone number a tap away and a flag when the directory disagrees with the City Record.",
-     "caveat": "The listings are the city's; the disagreement flags are computed, not official findings.",
-     "quality": {
-      "cadence": "weekly",
-      "updated": "2026-09",
-      "signals": [
-       "method",
-       "open",
-       "maintained"
-      ]
-     },
-     "agencies": [
-      "Every agency",
-      "Records"
-     ],
-     "repo": "joshgreenman1973/nyc-green-book"
     }
    ],
    "official": [
@@ -3699,6 +3573,32 @@
       "Records"
      ],
      "repo": "CenterForSpatialResearch/hnyc_census"
+    },
+    {
+     "id": "jg-building-age",
+     "url": "https://nyc-building-age.vercel.app/",
+     "maker": "Josh Greenman",
+     "maker_type": "journalist",
+     "name": "Every Building",
+     "own": "jg",
+     "summary": "Every building in the five boroughs on one map, colored by the year it was built, with filters for height, use and borough, a city-owned-land overlay and outlines of buildings that have been demolished.",
+     "why": "The whole city's building stock in one picture, from the city's own tax-lot data, and the quickest way to see how any block was built up over time.",
+     "caveat": "Included by the editor's judgment: its building data was refreshed July 26, 2026, and City Planning has since issued a newer PLUTO release. Dates before about 1950 are unreliable in the source, as the page says.",
+     "quality": {
+      "cadence": "per",
+      "updated": "2026-07",
+      "signals": [
+       "method",
+       "open",
+       "maintained"
+      ]
+     },
+     "agencies": [
+      "City Planning",
+      "Department of Buildings"
+     ],
+     "repo": "joshgreenman1973/nyc-building-age",
+     "shot_wait": 12000
     }
    ],
    "official": [
@@ -4229,7 +4129,7 @@
   },
   {
    "date": "2026-09-30",
-   "note": "Nine of Josh Greenman's tools, which had failed only for lacking a byline, got one and joined the list."
+   "note": "Five of Josh Greenman's tools joined the list after getting bylines: Overdue, the Mamdani transcript search, Every Building, A day on the police radio and the Mamdani administration org chart. Six others he keeps off the list as work in progress."
   },
   {
    "date": "2026-09-30",
