@@ -1736,7 +1736,8 @@
      "agencies": [
       "MTA"
      ],
-     "repo": "joshgreenman1973/experiments"
+     "repo": "joshgreenman1973/experiments",
+     "shot_wait": 15000
     }
    ],
    "official": [
