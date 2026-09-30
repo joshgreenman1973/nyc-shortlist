@@ -1,12 +1,12 @@
 # How the list was made
 
-Sept. 28, 2026. 111 tools listed, from 462 reviewed.
+Sept. 28 to 30, 2026. 141 tools listed, from 542 reviewed.
 
 ## Search
 
 Two rounds. The first split the city into nine research areas (crime and policing; jails and courts; money; government and elections; housing; transportation; quality of life and environment; schools, health and services; the economy and neighborhoods) and started from seed lists, news coverage, civic tech showcases, university centers and watchdog offices.
 
-Because independent developers were thin after that round, a second round searched where they publish: GitHub (repository and topic searches, keeping projects with a live site), Hacker News, Reddit and Bluesky, and civic tech showcases and the portfolios of known New York City civic developers. That round reviewed about 200 more tools. Fewer than one in 50 New York City repositories with a live site turned out to be a maintained public tool; most were class projects, hackathon entries or one-day demos.
+Because independent developers were thin after that round, a second round searched where they publish: GitHub (repository and topic searches, keeping projects with a live site), Hacker News, Reddit and Bluesky, and civic tech showcases and the portfolios of known New York City civic developers. That round reviewed about 200 more tools. A third round on Sept. 30 covered newsroom data desks (nearly empty: newsrooms build story graphics, not standing tools), research institutions and advocacy groups, and subjects with no tools yet, which added two areas, immigration and health. Fewer than one in 50 New York City repositories with a live site turned out to be a maintained public tool; most were class projects, hackathon entries or one-day demos.
 
 The same tests were then applied to tools by Vital City, its editor Josh Greenman and contributor Tal Roded.
 
@@ -48,7 +48,7 @@ It matches the words in a question against each tool's questions, description an
 ## Known limits
 
 - Web search ran out partway through the first round, and Reddit and Bluesky blocked many automated searches in the second, so some tools will have been missed. Nominations go to info@vitalcitynyc.org with "Civic tech tool shortlist" in the subject line.
-- Several areas have no current independent tool: prosecution data from the district attorneys, 911 response times, police overtime, tax breaks, city debt, overdoses and mental health.
+- Several areas have no current independent tool: prosecution data from the district attorneys, 911 response times, police overtime, tax breaks, city debt, overdoses and mental health, building carbon compliance, transit beyond the subway and buses, and libraries and culture. The page lists these under "Where no good tool exists." Health has no independent pick at all and says so.
 - The city's open crash data has not updated since June 11, 2026, so the independent crash map is missing recent months.
 - Currency is a snapshot. The weekly check catches dead links and, for tools with a public code repository or data file, long silences (180 days), but not every kind of staleness; the rubric should be rerun every few months.
 

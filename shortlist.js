@@ -96,7 +96,14 @@
     job: "jobs employment economy", jobs: "jobs employment economy", economy: "economy jobs", unemployment: "unemployment jobs",
     cost: "cost living wage affordability", expensive: "cost living affordability", afford: "cost living affordability",
     store: "store retail chain", stores: "store retail", history: "historical photo archive", photo: "photo photographs",
-    health: "health hospital asthma", hospital: "hospital health", overdose: "overdose drug", "911": "911 emergency response",
+    health: "health hospital asthma", hospital: "hospital health safety", hospitals: "hospital health", overdose: "overdose drug", "911": "911 emergency response",
+    immigrant: "immigration immigrants newcomers", immigrants: "immigration newcomers", immigration: "immigration court deportation",
+    ice: "immigration enforcement arrests detention", deportation: "immigration removal enforcement", deported: "deportation immigration",
+    asylum: "asylum immigration shelter migrant", language: "language english spoken", languages: "language spoken",
+    covid: "covid respiratory illness", flu: "flu respiratory illness", rsv: "respiratory illness", sick: "illness health",
+    maternal: "maternal childbirth infant", pregnancy: "maternal childbirth", birth: "maternal infant childbirth", baby: "infant maternal",
+    mental: "mental health crisis", crisis: "mental health crisis 911", outage: "outage heat hot water elevator nycha", outages: "outage nycha",
+    ridership: "ridership subway station", turnout: "turnout election voted", vacant: "vacant land owned city", land: "land owned property city",
     ambulance: "911 ems emergency response", emergency: "911 emergency response", fire: "fire fdny 911"
   };
   var STOP = ("a an the and or but is are was were be been being am do does did has have had i me my mine we our you your it its " +

@@ -1,7 +1,7 @@
 {
  "title": "The Shortlist",
  "checked": "2026-09-28",
- "reviewed": 514,
+ "reviewed": 542,
  "mosaic": [
   "justfix-who-owns-what",
   "vc-compstat-decoder",
@@ -1244,6 +1244,27 @@
      "agencies": [
       "Department of Homeless Services"
      ]
+    },
+    {
+     "id": "furman-city-owned-leased-land-maps",
+     "url": "https://furmancenter.shinyapps.io/colp/",
+     "maker": "NYU Furman Center",
+     "maker_type": "academic",
+     "name": "City Owned and Leased Land Maps",
+     "summary": "Four maps of the city's roughly 15,000 owned or leased parcels: unused, undeveloped, residential (mostly public housing) and other, with details for each lot.",
+     "why": "An independent look at what the city owns and what is really vacant, alongside the mayor's own LIFT Tracker.",
+     "caveat": "No data date shown in the tool, and a lot can appear on more than one map.",
+     "quality": {
+      "cadence": "periodic",
+      "updated": "2026-04",
+      "signals": [
+       "method"
+      ]
+     },
+     "agencies": [
+      "City Planning",
+      "NYCHA"
+     ]
     }
    ],
    "official": [
@@ -1352,6 +1373,50 @@
      },
      "agencies": [
       "City Planning"
+     ]
+    },
+    {
+     "id": "nycha-service-interruptions",
+     "url": "https://my.nycha.info/Outages/Outages.aspx",
+     "maker": "New York City Housing Authority",
+     "maker_type": "official",
+     "name": "NYCHA Service Interruptions",
+     "summary": "A live list of heat, hot water, elevator, gas and electric outages at public housing developments, with buildings and residents affected and the status of each.",
+     "why": "The only current source on daily conditions in public housing; no independent tool tracks them.",
+     "caveat": "The authority reports on itself, with no download and a page that is hard to read on a phone.",
+     "quality": {
+      "cadence": "live",
+      "updated": "2026-09",
+      "signals": [
+       "method",
+       "maintained"
+      ]
+     },
+     "agencies": [
+      "NYCHA"
+     ]
+    },
+    {
+     "id": "lift-tracker",
+     "url": "https://storymaps.arcgis.com/stories/afce9e93d79847608fc846878e17db8e",
+     "maker": "Mayor's Office and Housing Preservation and Development",
+     "maker_type": "official",
+     "name": "LIFT Tracker",
+     "summary": "A map of every city-owned or leased property by use, and a pipeline of more than 100 city-owned sites slated for about 50,000 homes, with each project's stage and a method appendix.",
+     "why": "The first public accounting of where the city plans to build on land it already owns.",
+     "caveat": "A mayoral publication with promotional framing, no change log and self-reported project stages.",
+     "quality": {
+      "cadence": "periodic",
+      "updated": "2026-07",
+      "signals": [
+       "method",
+       "maintained",
+       "cited"
+      ]
+     },
+     "agencies": [
+      "Housing Preservation and Development",
+      "Mayor's Office"
      ]
     }
    ]
@@ -1563,6 +1628,28 @@
        "open",
        "maintained",
        "cited"
+      ]
+     },
+     "agencies": [
+      "MTA"
+     ]
+    },
+    {
+     "id": "osc-subway-recovery-tracker",
+     "url": "https://www.osc.ny.gov/osdc/subway-recovery-tracker",
+     "maker": "New York State Comptroller's Office",
+     "maker_type": "watchdog",
+     "name": "Subway Recovery Tracker",
+     "summary": "Monthly ridership at 424 subway stations against a 2017-19 baseline, on a map and in a downloadable spreadsheet through August 2026.",
+     "why": "The only station-by-station view of how ridership has come back since the pandemic.",
+     "caveat": "The written analysis runs months behind the data.",
+     "quality": {
+      "cadence": "monthly",
+      "updated": "2026-08",
+      "signals": [
+       "method",
+       "open",
+       "maintained"
       ]
      },
      "agencies": [
@@ -2413,6 +2500,99 @@
    ]
   },
   {
+   "id": "health",
+   "name": "Health",
+   "rail": "Health",
+   "dek": "No independent tool passed our tests here. The Health Department publishes reports and indicators, and hospitals answer to state and federal regulators, but nobody outside government has built a current tool on overdoses, mental health or hospital performance for the city. What follows is the government's own, plus one national hospital grader. The Health Department's Environment & Health Data Portal, under Climate, covers asthma, lead, life expectancy and heat.",
+   "picks": [],
+   "bench": [
+    {
+     "id": "leapfrog-hospital-safety-grade",
+     "url": "https://www.hospitalsafetygrade.org/",
+     "maker": "The Leapfrog Group",
+     "maker_type": "nonprofit",
+     "name": "Leapfrog Hospital Safety Grade",
+     "summary": "Letter grades for general hospitals nationwide, including the city's, from up to 32 patient-safety measures such as infections, falls and medication errors, reissued every spring and fall.",
+     "why": "The only current, plain-language grade for the safety of a specific hospital.",
+     "caveat": "A national tool, not built on city data, and hospitals can decline the survey behind it.",
+     "quality": {
+      "cadence": "semiannual",
+      "updated": "2026-05",
+      "signals": [
+       "method"
+      ]
+     },
+     "agencies": []
+    }
+   ],
+   "official": [
+    {
+     "id": "nyc-respiratory-illness-data",
+     "url": "https://www.nyc.gov/assets/doh/respiratory-illness-data/index.html",
+     "maker": "Health Department",
+     "maker_type": "official",
+     "name": "Respiratory Illness Data",
+     "summary": "Weekly charts of emergency room visits, hospitalizations, cases and deaths for COVID-19, flu and RSV, with the files posted on GitHub.",
+     "why": "The current answer to whether COVID, flu or RSV is going around, updated every Thursday.",
+     "caveat": "Preliminary counts that can change; emergency room data miss people who do not go to one.",
+     "quality": {
+      "cadence": "weekly",
+      "updated": "2026-09",
+      "signals": [
+       "method",
+       "open",
+       "maintained"
+      ]
+     },
+     "agencies": [
+      "Health Department"
+     ]
+    },
+    {
+     "id": "nys-maternal-child-health-dashboard",
+     "url": "https://apps.health.ny.gov/public/tabvis/PHIG_Public/mch/",
+     "maker": "New York State Health Department",
+     "maker_type": "state",
+     "name": "Maternal and Child Health Dashboard",
+     "summary": "Seventy-six maternal, infant and child health measures, including maternal mortality, for the state and each county, so each borough, with trend charts and downloads.",
+     "why": "The only current source on maternal and infant health by borough, with its methods explained.",
+     "caveat": "Counties, not neighborhoods, and some measures lag to 2022.",
+     "quality": {
+      "cadence": "annual",
+      "updated": "2026-04",
+      "signals": [
+       "method",
+       "open"
+      ]
+     },
+     "agencies": [
+      "Health Department"
+     ]
+    },
+    {
+     "id": "b-heard-data",
+     "url": "https://mentalhealth.cityofnewyork.us/bheard-data",
+     "maker": "Mayor's Office of Community Mental Health",
+     "maker_type": "official",
+     "name": "B-HEARD data",
+     "summary": "Charts and tables on the program that sends mental health teams instead of police to some 911 calls: calls eligible and routed, outcomes and satisfaction, by fiscal year.",
+     "why": "The only public numbers on the city's mental health crisis response.",
+     "caveat": "Self-reported by the program's own office, covers only the precincts it operates in, and runs a year behind.",
+     "quality": {
+      "cadence": "annual",
+      "updated": "2025-11",
+      "signals": [
+       "open"
+      ]
+     },
+     "agencies": [
+      "Health Department",
+      "Fire Department and EMS"
+     ]
+    }
+   ]
+  },
+  {
    "id": "money",
    "name": "Budget and spending",
    "rail": "Money",
@@ -3067,6 +3247,48 @@
      "agencies": [
       "Board of Elections"
      ]
+    },
+    {
+     "id": "boe-election-results-summary",
+     "url": "https://vote.nyc/page/election-results-summary",
+     "maker": "Board of Elections",
+     "maker_type": "official",
+     "name": "Election Results",
+     "summary": "Certified results for every contest, including the June 2026 primary, as summaries and election-district files in PDF and spreadsheet form, plus the full cast vote record and an archive back to 2004.",
+     "why": "The source for the June 2026 primary, which no independent map has drawn yet.",
+     "caveat": "Tables and files, no maps.",
+     "quality": {
+      "cadence": "per",
+      "updated": "2026-06",
+      "signals": [
+       "open",
+       "maintained"
+      ]
+     },
+     "agencies": [
+      "Board of Elections"
+     ]
+    },
+    {
+     "id": "cfb-voter-analysis-report-2025",
+     "url": "https://www.nycvotes.org/voter-analysis-report",
+     "maker": "Campaign Finance Board",
+     "maker_type": "watchdog",
+     "name": "2025 Voter Analysis Report",
+     "summary": "The board's annual report on the 2025 elections: turnout by community district, registration and matching-funds figures, with highlights on the web page and the full report as a PDF.",
+     "why": "The best account of who voted in the 2025 mayoral election and where.",
+     "caveat": "A report rather than a tool; sources and method sit in the PDF's footnotes.",
+     "quality": {
+      "cadence": "annual",
+      "updated": "2026-04",
+      "signals": [
+       "method"
+      ]
+     },
+     "agencies": [
+      "Campaign Finance Board",
+      "Board of Elections"
+     ]
     }
    ]
   },
@@ -3264,6 +3486,92 @@
       "signals": [
        "method",
        "open",
+       "maintained"
+      ]
+     },
+     "agencies": [
+      "City Planning"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "immigration",
+   "name": "Immigrants and newcomers",
+   "rail": "Immigration",
+   "dek": "About four in ten New Yorkers were born abroad, and the city's immigration courts carry one of the largest backlogs in the country. The tools here are built on federal court and enforcement records, obtained through public records requests, and on the city's own count of who speaks what. Migrants in the shelter system are covered under Housing.",
+   "picks": [
+    {
+     "id": "trac-immigration-court-backlog",
+     "url": "https://tracreports.org/phptools/immigration/backlog/",
+     "maker": "TRAC, Syracuse University",
+     "maker_type": "academic",
+     "name": "Immigration Court Backlog",
+     "summary": "Pending immigration court cases by court, nationality, charge and year, from 1998 through August 2026. Pick New York, then a court, to see the city's caseload and how long cases wait; companion tools cover new filings, outcomes, asylum and bond decisions.",
+     "why": "The only current, independent count of the city's immigration court backlog, from records the university obtained under the Freedom of Information Act.",
+     "questions": [
+      "How many deportation cases are pending in the city's immigration courts?",
+      "How long do people wait for a hearing at 26 Federal Plaza?"
+     ],
+     "caveat": "A national site; you reach New York City by picking the state and a court. Bulk data cost money, though the query tools are free.",
+     "data": "Immigration court records from the Justice Department, obtained under the Freedom of Information Act",
+     "freshness": "Monthly; data through August 2026",
+     "index": [
+      "How big is the immigration court backlog here?"
+     ],
+     "quality": {
+      "cadence": "monthly",
+      "updated": "2026-08",
+      "signals": [
+       "method",
+       "maintained"
+      ]
+     },
+     "agencies": [
+      "Immigration courts"
+     ]
+    }
+   ],
+   "bench": [
+    {
+     "id": "deportation-data-project-explorer",
+     "url": "https://app.deportationdata.org/",
+     "maker": "UC Berkeley and UCLA law schools",
+     "maker_type": "academic",
+     "name": "Deportation Data Project",
+     "summary": "Individual-level records of immigration arrests, detentions and removals obtained through public records lawsuits, charted by month and filterable by state and enforcement area, with the full datasets downloadable.",
+     "why": "The most detailed public record of federal immigration enforcement, with a codebook and the raw files.",
+     "caveat": "National, and the newest release lacks the field that once identified the New York enforcement area. Data run several months behind.",
+     "quality": {
+      "cadence": "periodic",
+      "updated": "2026-08",
+      "signals": [
+       "method",
+       "open",
+       "maintained",
+       "cited"
+      ]
+     },
+     "agencies": [
+      "Immigration enforcement"
+     ]
+    }
+   ],
+   "official": [
+    {
+     "id": "nyc-language-explorer",
+     "url": "https://experience.arcgis.com/experience/0da08a1596574ec78cbaa5bef6a04b3e",
+     "maker": "Department of City Planning",
+     "maker_type": "official",
+     "name": "NYC Language Explorer",
+     "summary": "Maps and charts of New Yorkers with limited English by language, for the city, each borough and each community district, with margins of error shown.",
+     "why": "The clearest official answer to which languages your neighbors speak, built for the city's language-access law.",
+     "caveat": "The tool does not say which census years it uses.",
+     "quality": {
+      "cadence": "periodic",
+      "updated": "2026-06",
+      "signals": [
+       "method",
        "maintained"
       ]
      },
@@ -3559,7 +3867,7 @@
   },
   {
    "q": "Does my public housing building have heat and hot water today?",
-   "note": "NYCHA's own outage page is the only source. No independent tool tracks daily conditions."
+   "note": "NYCHA's own outage page, listed under Housing, is the only source. No independent tool tracks daily conditions."
   },
   {
    "q": "Did congestion pricing thin out traffic, and is it holding?",
@@ -3571,7 +3879,19 @@
   },
   {
    "q": "How did my election district vote in June?",
-   "note": "The Board of Elections publishes results by election district, but no independent map has drawn the 2026 primary yet."
+   "note": "The Board of Elections publishes results by election district, listed under Civics, but no independent map has drawn the 2026 primary yet."
+  },
+  {
+   "q": "Is my building on track for the city's carbon limits?",
+   "note": "The city's address lookup for Local Law 97 is stuck on 2022 data, and two university energy maps have gone offline."
+  },
+  {
+   "q": "How are the ferries, the commuter railroads and Access-A-Ride doing?",
+   "note": "The MTA publishes some of this, but no independent tool covers transit beyond the subway and buses."
+  },
+  {
+   "q": "How are the libraries and cultural institutions doing?",
+   "note": "Nothing we found tracks branch hours, use or cultural funding."
   }
  ],
  "held_unused": [
@@ -3678,7 +3998,7 @@
   },
   {
    "date": "2026-09-30",
-   "note": "Added Start here, browsing by agency and a list of questions no tool answers well. Fourteen tools that failed one test went on the list by the editor's judgment, each saying what it is missing. Third research round on newsrooms, research institutions and uncovered subjects."
+   "note": "Added Start here, browsing by agency and a list of questions no tool answers well. Fourteen tools that failed one test went on the list by the editor's judgment, each saying what it is missing. A third research round covered newsrooms, research institutions and uncovered subjects, and added two areas, immigration and health."
   }
  ]
 }

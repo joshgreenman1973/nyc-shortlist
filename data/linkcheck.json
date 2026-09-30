@@ -1,6 +1,6 @@
 {
  "checked": "2026-09-30",
- "count": 128,
+ "count": 141,
  "results": {
   "nyc-pulse-mmr": {
    "url": "https://tedalcorn.org/nyc-mmr/",
@@ -362,6 +362,14 @@
    "fails": 0,
    "last": "2026-09-30"
   },
+  "furman-city-owned-leased-land-maps": {
+   "url": "https://furmancenter.shinyapps.io/colp/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-30"
+  },
   "public-advocate-worst-landlord-watchlist": {
    "url": "https://www.landlordwatchlist.com/",
    "code": 200,
@@ -396,6 +404,22 @@
   },
   "dcp-housing-production-snapshot": {
    "url": "https://storymaps.arcgis.com/stories/1c9138dc24064b2e8142ff156345a719",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-30"
+  },
+  "nycha-service-interruptions": {
+   "url": "https://my.nycha.info/Outages/Outages.aspx",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-30"
+  },
+  "lift-tracker": {
+   "url": "https://storymaps.arcgis.com/stories/afce9e93d79847608fc846878e17db8e",
    "code": 200,
    "error": null,
    "ok": true,
@@ -460,6 +484,14 @@
   },
   "mta-performance-metrics": {
    "url": "https://metrics.mta.info/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-30"
+  },
+  "osc-subway-recovery-tracker": {
+   "url": "https://www.osc.ny.gov/osdc/subway-recovery-tracker",
    "code": 200,
    "error": null,
    "ok": true,
@@ -706,6 +738,38 @@
    "fails": 0,
    "last": "2026-09-30"
   },
+  "leapfrog-hospital-safety-grade": {
+   "url": "https://www.hospitalsafetygrade.org/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-30"
+  },
+  "nyc-respiratory-illness-data": {
+   "url": "https://www.nyc.gov/assets/doh/respiratory-illness-data/index.html",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-30"
+  },
+  "nys-maternal-child-health-dashboard": {
+   "url": "https://apps.health.ny.gov/public/tabvis/PHIG_Public/mch/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-30"
+  },
+  "b-heard-data": {
+   "url": "https://mentalhealth.cityofnewyork.us/bheard-data",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-30"
+  },
   "betanyc-nyc-budget-explorer": {
    "url": "https://betanyc.github.io/nyc-budget-viz/",
    "code": 200,
@@ -906,6 +970,22 @@
    "fails": 0,
    "last": "2026-09-30"
   },
+  "boe-election-results-summary": {
+   "url": "https://vote.nyc/page/election-results-summary",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-30"
+  },
+  "cfb-voter-analysis-report-2025": {
+   "url": "https://www.nycvotes.org/voter-analysis-report",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-30"
+  },
   "furman-neighborhood-data-profiles": {
    "url": "https://www.furmancenter.org/neighborhoods",
    "code": 403,
@@ -956,6 +1036,30 @@
   },
   "nyc-population-factfinder": {
    "url": "https://popfactfinder.planning.nyc.gov/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-30"
+  },
+  "trac-immigration-court-backlog": {
+   "url": "https://tracreports.org/phptools/immigration/backlog/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-30"
+  },
+  "deportation-data-project-explorer": {
+   "url": "https://app.deportationdata.org/",
+   "code": 200,
+   "error": null,
+   "ok": true,
+   "fails": 0,
+   "last": "2026-09-30"
+  },
+  "nyc-language-explorer": {
+   "url": "https://experience.arcgis.com/experience/0da08a1596574ec78cbaa5bef6a04b3e",
    "code": 200,
    "error": null,
    "ok": true,
