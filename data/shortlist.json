@@ -304,7 +304,7 @@
      "why": "It goes well beyond the seven major felonies CompStat leads with, down to the precinct, the subway and public housing, with open code and data.",
      "questions": [
       "Is crime up or down in my precinct this year?",
-      "What is happening with misdemeanors, not just major crimes?"
+      "What is happening with misdemeanors and lesser offenses?"
      ],
      "caveat": "Quarterly, so it runs up to three months behind; the CompStat Decoder is fresher for recent weeks.",
      "data": "Police Department complaint data (NYC Open Data)",
@@ -2143,7 +2143,7 @@
      "name": "What New York owes",
      "own": "jg",
      "summary": "A ledger of New York City's five public pension funds: what they hold, what they owe, what the city pays in each year and what the gap works out to per household, fiscal 2013 to 2025. Tabs let you compare the five funds, follow the funded ratio over time, run scenarios and read the method.",
-     "why": "It is the only current independent look at what the city's five pension funds cost taxpayers, not just how their investments did.",
+     "why": "It is the only current independent look at what the city's five pension funds cost taxpayers; other sources cover only how the investments did.",
      "questions": [
       "How much does New York City owe its retired workers, and how much has it set aside?",
       "How much of the city budget goes to pensions each year?"
