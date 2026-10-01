@@ -4,7 +4,7 @@
  "reviewed": 542,
  "mosaic": [
   "justfix-who-owns-what",
-  "vc-compstat-decoder",
+  "furman-neighborhood-data-profiles",
   "subway-now-lite",
   "floodnet",
   "jehiah-311-report-card",
@@ -360,74 +360,8 @@
    "id": "crime",
    "name": "Crime and policing",
    "rail": "Policing",
-   "dek": "The Police Department posts crime numbers every week through CompStat. The tools here put those numbers in context for any precinct or Council district, cover every category of complaint rather than just major felonies, track shootings since 2006 and gather what is on the record for individual officers.",
+   "dek": "The Police Department posts crime numbers every week through CompStat, down to the precinct, and its own site is listed below. The independent tools here track shootings since 2006, gather what is on the record for individual officers and show whether a trend is local or national. We found no current, credible independent map of crime by precinct.",
    "picks": [
-    {
-     "id": "vc-compstat-decoder",
-     "url": "https://vital-city-nyc.github.io/compstat-decoder/",
-     "maker": "Vital City",
-     "maker_type": "newsroom",
-     "name": "CompStat Decoder",
-     "own": "vc",
-     "summary": "The Police Department's weekly CompStat numbers for the past 52 weeks against the year before, for the city, every precinct and every Council district, with the patterns and outliers spelled out in plain sentences.",
-     "why": "It turns the weekly CompStat report into context anyone can read for their own precinct or district, flags which changes stand out and can send updates by email.",
-     "questions": [
-      "How is crime changing near me over the past year?",
-      "Which precincts saw the sharpest increases?"
-     ],
-     "caveat": "It covers the seven major felonies CompStat tracks, and weekly counts are preliminary.",
-     "data": "Police Department weekly CompStat reports",
-     "freshness": "Weekly; 52 weeks ending Sept. 20, 2026",
-     "index": [
-      "How is crime changing near me?"
-     ],
-     "quality": {
-      "cadence": "weekly",
-      "updated": "2026-09",
-      "signals": [
-       "method",
-       "open",
-       "maintained"
-      ]
-     },
-     "agencies": [
-      "Police Department"
-     ],
-     "repo": "vital-city-nyc/compstat-decoder"
-    },
-    {
-     "id": "vc-quarterly-crime-dashboard",
-     "url": "https://vital-city.github.io/quarterly_crime_dashboard/",
-     "maker": "Vital City",
-     "maker_type": "newsroom",
-     "name": "NYC Quarterly Complaints Dashboard",
-     "own": "vc",
-     "summary": "Every category of crime complaint the Police Department records, from murder to petit larceny and harassment, by quarter, for the city, any borough or precinct, the subway or public housing.",
-     "why": "It goes well beyond the seven major felonies CompStat leads with, down to the precinct, the subway and public housing, with open code and data.",
-     "questions": [
-      "Is crime up or down in my precinct this year?",
-      "What is happening with misdemeanors and lesser offenses?"
-     ],
-     "caveat": "Quarterly, so it runs up to three months behind; the CompStat Decoder is fresher for recent weeks.",
-     "data": "Police Department complaint data (NYC Open Data)",
-     "freshness": "Quarterly; data through June 2026, updated Aug. 14, 2026",
-     "index": [
-      "Is crime up in my precinct?"
-     ],
-     "quality": {
-      "cadence": "quarterly",
-      "updated": "2026-08",
-      "signals": [
-       "method",
-       "open",
-       "maintained"
-      ]
-     },
-     "agencies": [
-      "Police Department"
-     ],
-     "repo": "vital-city/quarterly_crime_dashboard"
-    },
     {
      "id": "tedalcorn-nyc-shootings",
      "url": "https://tedalcorn.org/nyc-shootings/",
@@ -460,6 +394,37 @@
       "Police Department"
      ],
      "repo": "tedalcorn/nyc-shootings"
+    },
+    {
+     "id": "fifty-a-org",
+     "url": "https://www.50-a.org/",
+     "maker": "Maker not named on the site",
+     "maker_type": "independent-developer",
+     "name": "50-a.org",
+     "summary": "Search any current or former police officer by name or badge number and get one page with the officer's civilian complaints, department discipline, lawsuits, rank history and pay.",
+     "why": "The simplest way to see an officer's full record on one page, current to this month, with every source listed.",
+     "questions": [
+      "Has the officer who stopped me drawn complaints before?",
+      "Has this officer been sued or disciplined?"
+     ],
+     "caveat": "Included by the editor's judgment: the site does not say who runs it, which is the one test it fails. Complaints still under investigation are missing, and lawsuits list officers who were named even if the claims were later dropped.",
+     "data": "Civilian Complaint Review Board records, Police Department discipline, Law Department lawsuits, city payroll",
+     "freshness": "Updated continuously; complaints through September 2026",
+     "index": [
+      "What is on the record for a particular officer?"
+     ],
+     "quality": {
+      "cadence": "live",
+      "updated": "2026-09",
+      "signals": [
+       "open",
+       "maintained"
+      ]
+     },
+     "agencies": [
+      "Police Department",
+      "Civilian Complaint Review Board"
+     ]
     },
     {
      "id": "legal-aid-lelu",
@@ -531,37 +496,6 @@
      "repo": "AH-Datalytics/rtci"
     },
     {
-     "id": "fifty-a-org",
-     "url": "https://www.50-a.org/",
-     "maker": "Maker not named on the site",
-     "maker_type": "independent-developer",
-     "name": "50-a.org",
-     "summary": "Search any current or former police officer by name or badge number and get one page with the officer's civilian complaints, department discipline, lawsuits, rank history and pay.",
-     "why": "The simplest way to see an officer's full record on one page, current to this month, with every source listed.",
-     "questions": [
-      "Has the officer who stopped me drawn complaints before?",
-      "Has this officer been sued or disciplined?"
-     ],
-     "caveat": "Included by the editor's judgment: the site does not say who runs it, which is the one test it fails. Complaints still under investigation are missing, and lawsuits list officers who were named even if the claims were later dropped.",
-     "data": "Civilian Complaint Review Board records, Police Department discipline and trial decisions, Law Department lawsuits, city payroll",
-     "freshness": "Updated continuously; complaints through September 2026",
-     "index": [
-      "What is on the record for a particular officer?"
-     ],
-     "quality": {
-      "cadence": "live",
-      "updated": "2026-09",
-      "signals": [
-       "open",
-       "maintained"
-      ]
-     },
-     "agencies": [
-      "Police Department",
-      "Civilian Complaint Review Board"
-     ]
-    },
-    {
      "id": "trace-gun-violence-atlas",
      "url": "https://projects.thetrace.org/gun-violence-map/",
      "maker": "The Trace",
@@ -624,30 +558,6 @@
      ]
     },
     {
-     "id": "vc-historical-crime-explorer",
-     "url": "https://historical-crime-explorer.vercel.app/",
-     "maker": "Vital City",
-     "maker_type": "newsroom",
-     "name": "Crime Data Explorer",
-     "own": "vc",
-     "summary": "Every major crime category since 1993 for the city, any borough, precinct or neighborhood, with year-against-year comparisons and complaints or arrests.",
-     "why": "The longest view of crime by precinct anywhere, back to 1993, with 2025 the latest complete year.",
-     "caveat": "Included by the editor's judgment: the tool does not say which datasets its counts come from, the one test it fails.",
-     "quality": {
-      "cadence": "annual",
-      "updated": "2026-09",
-      "signals": [
-       "method",
-       "open",
-       "maintained"
-      ]
-     },
-     "agencies": [
-      "Police Department"
-     ],
-     "repo": "vital-city/Historical_Crime_Explorer"
-    },
-    {
      "id": "jg-precinct-day",
      "name": "A day on the police radio",
      "url": "https://joshgreenman1973.github.io/nyc-precinct-day/",
@@ -668,8 +578,7 @@
      "repo": "joshgreenman1973/nyc-precinct-day",
      "agencies": [
       "Police Department"
-     ],
-     "shot_wait": 12000
+     ]
     }
    ],
    "official": [
@@ -2901,6 +2810,31 @@
       "Contract Services"
      ],
      "repo": "wegovnyc/databook"
+    },
+    {
+     "id": "tr-fiscal-impacts-tracker",
+     "url": "https://data.nycuriosity.com/civic_reference/nyc_council_fiscal_impacts_tracker/overview/",
+     "maker": "Tal Roded (NYCuriosity)",
+     "maker_type": "independent-developer",
+     "name": "Fiscal Impacts Tracker",
+     "own": "tr",
+     "summary": "The Council Finance Division's estimate of what each bill would cost or raise, for every bill since 2014 that carried a price, ranked by agency, sponsor or year, with links to the source documents.",
+     "why": "The only place to see what the Council's laws were expected to cost, sortable by the member who sponsored them.",
+     "caveat": "Pre-passage estimates at full implementation, not actual spending; older statements in odd formats may be missing.",
+     "quality": {
+      "cadence": "monthly",
+      "updated": "2026-09",
+      "signals": [
+       "method",
+       "open",
+       "maintained"
+      ]
+     },
+     "agencies": [
+      "City Council",
+      "Mayor's Office"
+     ],
+     "repo": "TalR24/nycur-data-website"
     }
    ],
    "official": [
@@ -3597,8 +3531,7 @@
       "City Planning",
       "Department of Buildings"
      ],
-     "repo": "joshgreenman1973/nyc-building-age",
-     "shot_wait": 12000
+     "repo": "joshgreenman1973/nyc-building-age"
     }
    ],
    "official": [
@@ -3927,28 +3860,28 @@
  ],
  "start": [
   {
-   "id": "nyc-pulse-mmr",
-   "line": "Whether the city is getting better or worse at each of its jobs, over 29 years."
-  },
-  {
-   "id": "vc-compstat-decoder",
-   "line": "This week's crime numbers for your precinct or Council district, in plain sentences."
-  },
-  {
    "id": "justfix-who-owns-what",
    "line": "Who owns your building, what else they own and how it is kept."
-  },
-  {
-   "id": "dcj-nyc-jail-population-tracker",
-   "line": "How many people are in city jails today and whether Rikers can close on time."
   },
   {
    "id": "jehiah-311-report-card",
    "line": "What people who called 311 think of the city's response, agency by agency."
   },
   {
+   "id": "dcj-nyc-jail-population-tracker",
+   "line": "How many people are in city jails today and whether Rikers can close on time."
+  },
+  {
    "id": "subway-now-lite",
    "line": "Whether your train is running right now, from the trains themselves."
+  },
+  {
+   "id": "nycuriosity-council-legislation-trackers",
+   "line": "What every law since 2014 told an agency to do, and what it was expected to cost."
+  },
+  {
+   "id": "nyc-pulse-mmr",
+   "line": "Whether the city is getting better or worse at each of its jobs, over 29 years."
   },
   {
    "id": "nyc-crash-mapper",
@@ -4126,6 +4059,10 @@
   {
    "date": "2026-09-28",
    "note": "Second cut: every tool re-checked against the two tests. 23 came off, 18 independent tools and Vital City's crime dashboards went on, and government tools moved to their own shelf."
+  },
+  {
+   "date": "2026-10-01",
+   "note": "Vital City's three crime dashboards came off, since this list may live on Vital City's site. 50-a.org moved up to a pick. Tal Roded's Fiscal Impacts Tracker added."
   },
   {
    "date": "2026-09-30",

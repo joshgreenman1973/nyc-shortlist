@@ -271,7 +271,7 @@ button { font: inherit; color: inherit; }
 .start, .agencies { padding: 2.25rem 0 0.5rem; }
 .start h2, .agencies h2, .gaps h2, .held h2 { font-family: var(--serif); font-weight: 200; font-synthesis: none; font-size: clamp(1.9rem, 3.2cqi, 2.5rem); line-height: 1.1; margin: 0 0 0.45rem; }
 .start .sub, .agencies .sub, .gaps .sub, .held .sub { margin: 0 0 1.4rem; max-width: 44rem; color: var(--mute); }
-.startlist { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem 2.5rem; counter-reset: start; }
+.startlist { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(5, auto); grid-auto-flow: column; gap: 1.1rem 2.5rem; counter-reset: start; }
 .startlist li { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: 0 1rem; align-items: start; border-top: 1px solid var(--cloud); padding-top: 0.9rem; counter-increment: start; }
 .startlist .shot { aspect-ratio: 16 / 10; margin: 0; border-width: 1px; }
 .startlist h3 { font-size: 1.1rem; font-weight: 900; line-height: 1.2; margin: 0 0 0.15rem; }
@@ -308,7 +308,7 @@ button { font: inherit; color: inherit; }
 .changes b { font-weight: 700; }
 
 @container (max-width: 760px) {
-  .startlist { grid-template-columns: minmax(0, 1fr); gap: 0.9rem; }
+  .startlist { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; grid-auto-flow: row; gap: 0.9rem; }
   .startlist li { grid-template-columns: 6.5rem minmax(0, 1fr); }
   .heldlist li { grid-template-columns: minmax(0, 1fr); gap: 0.1rem; padding: 0.6rem 0; }
   .shelf .shelfhead { grid-template-columns: auto auto; }
