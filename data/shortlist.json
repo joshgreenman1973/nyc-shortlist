@@ -58,6 +58,40 @@
      "repo": "tedalcorn/nyc-mmr"
     },
     {
+     "id": "jg-overdue-reports",
+     "url": "https://joshgreenman1973.github.io/nyc-overdue-reports/",
+     "maker": "Josh Greenman",
+     "maker_type": "journalist",
+     "name": "Overdue",
+     "own": "jg",
+     "summary": "Every report a city agency is legally required to file, about 2,200 of them, marked never filed, overdue, up to date, completed or waived, from the records department's own lists, refreshed weekly.",
+     "why": "It turns the city's official list of required reports into a scorecard of which agencies file what they owe, with each report linked to its filings page.",
+     "questions": [
+      "Which agencies are late on the reports the law requires?",
+      "Has a report I care about ever been filed?"
+     ],
+     "caveat": "Statuses are computed from stated frequencies and recorded filing dates, so they are estimates; the official record is the records department's portal. Overlaps the Council legislation trackers, which read the laws themselves.",
+     "data": "Required Reports and Government Publications lists, Department of Records (NYC Open Data)",
+     "freshness": "Weekly; data as of Sept. 28, 2026",
+     "index": [
+      "Which agencies are late on required reports?"
+     ],
+     "quality": {
+      "cadence": "weekly",
+      "updated": "2026-09",
+      "signals": [
+       "method",
+       "open",
+       "maintained"
+      ]
+     },
+     "agencies": [
+      "Records",
+      "Every agency"
+     ],
+     "repo": "joshgreenman1973/nyc-overdue-reports"
+    },
+    {
      "id": "nycuriosity-council-legislation-trackers",
      "url": "https://data.nycuriosity.com/civic_reference/nyc_council_legislation_trackers/",
      "maker": "Tal Roded (NYCuriosity)",
@@ -126,40 +160,6 @@
       "Every agency"
      ],
      "repo": "joshgreenman1973/nyc-audit-tracker"
-    },
-    {
-     "id": "jg-overdue-reports",
-     "url": "https://joshgreenman1973.github.io/nyc-overdue-reports/",
-     "maker": "Josh Greenman",
-     "maker_type": "journalist",
-     "name": "Overdue",
-     "own": "jg",
-     "summary": "Every report a city agency is legally required to file, about 2,200 of them, marked never filed, overdue, up to date, completed or waived, from the records department's own lists, refreshed weekly.",
-     "why": "It turns the city's official list of required reports into a scorecard of which agencies file what they owe, with each report linked to its filings page.",
-     "questions": [
-      "Which agencies are late on the reports the law requires?",
-      "Has a report I care about ever been filed?"
-     ],
-     "caveat": "Statuses are computed from stated frequencies and recorded filing dates, so they are estimates; the official record is the records department's portal. Overlaps the Council legislation trackers, which read the laws themselves.",
-     "data": "Required Reports and Government Publications lists, Department of Records (NYC Open Data)",
-     "freshness": "Weekly; data as of Sept. 28, 2026",
-     "index": [
-      "Which agencies are late on required reports?"
-     ],
-     "quality": {
-      "cadence": "weekly",
-      "updated": "2026-09",
-      "signals": [
-       "method",
-       "open",
-       "maintained"
-      ]
-     },
-     "agencies": [
-      "Records",
-      "Every agency"
-     ],
-     "repo": "joshgreenman1973/nyc-overdue-reports"
     }
    ],
    "bench": [
@@ -186,6 +186,29 @@
       "Records"
      ],
      "repo": "MuckRock/muckrock"
+    },
+    {
+     "id": "jg-mamdani-org-chart",
+     "name": "The Mamdani administration",
+     "url": "https://joshgreenman1973.github.io/experiments/mamdani-org-chart/",
+     "maker": "Josh Greenman",
+     "maker_type": "journalist",
+     "own": "jg",
+     "summary": "An organizational chart of the administration: who reports to the mayor, the agencies and offices in each portfolio and who runs them, with 49 departments opening into their own charts. 183 appointees as of Sept. 18, 2026.",
+     "why": "The only chart that shows the whole administration's reporting lines, generated from a tracked list of appointments so names cannot drift from their sources.",
+     "caveat": "Deputy and assistant commissioners appear only where the city's directory publishes them.",
+     "quality": {
+      "cadence": "periodic",
+      "updated": "2026-09",
+      "signals": [
+       "method",
+       "open"
+      ]
+     },
+     "agencies": [
+      "Mayor's Office",
+      "Every agency"
+     ]
     },
     {
      "id": "city-and-state-mamdani-whos-who",
@@ -231,29 +254,6 @@
       "Mayor's Office"
      ],
      "repo": "joshgreenman1973/nyc-mamdani-transcripts"
-    },
-    {
-     "id": "jg-mamdani-org-chart",
-     "name": "The Mamdani administration",
-     "url": "https://joshgreenman1973.github.io/experiments/mamdani-org-chart/",
-     "maker": "Josh Greenman",
-     "maker_type": "journalist",
-     "own": "jg",
-     "summary": "An organizational chart of the administration: who reports to the mayor, the agencies and offices in each portfolio and who runs them, with 49 departments opening into their own charts. 183 appointees as of Sept. 18, 2026.",
-     "why": "The only chart that shows the whole administration's reporting lines, generated from a tracked list of appointments so names cannot drift from their sources.",
-     "caveat": "Deputy and assistant commissioners appear only where the city's directory publishes them.",
-     "quality": {
-      "cadence": "periodic",
-      "updated": "2026-09",
-      "signals": [
-       "method",
-       "open"
-      ]
-     },
-     "agencies": [
-      "Mayor's Office",
-      "Every agency"
-     ]
     }
    ],
    "official": [
@@ -290,27 +290,6 @@
      ]
     },
     {
-     "id": "comptroller-audit-recommendations-tracker",
-     "url": "https://comptroller.nyc.gov/services/for-the-public/audit/audit-recommendations-tracker/",
-     "maker": "New York City Comptroller's Office",
-     "maker_type": "watchdog",
-     "name": "Audit Recommendations Tracker",
-     "summary": "Every recommendation from comptroller audits since January 2022, whether the agency agreed and whether it says it followed through.",
-     "why": "It follows audits past the headline to whether anything changed, which almost no one else tracks.",
-     "caveat": "Status is as reported by the agencies.",
-     "quality": {
-      "cadence": "monthly",
-      "updated": "2026-08",
-      "signals": [
-       "maintained"
-      ]
-     },
-     "agencies": [
-      "Comptroller",
-      "Every agency"
-     ]
-    },
-    {
      "id": "dynamic-mmr",
      "url": "https://dmmr.nyc.gov/",
      "maker": "Mayor's Office of Operations",
@@ -329,6 +308,27 @@
      },
      "agencies": [
       "Mayor's Office",
+      "Every agency"
+     ]
+    },
+    {
+     "id": "comptroller-audit-recommendations-tracker",
+     "url": "https://comptroller.nyc.gov/services/for-the-public/audit/audit-recommendations-tracker/",
+     "maker": "New York City Comptroller's Office",
+     "maker_type": "watchdog",
+     "name": "Audit Recommendations Tracker",
+     "summary": "Every recommendation from comptroller audits since January 2022, whether the agency agreed and whether it says it followed through.",
+     "why": "It follows audits past the headline to whether anything changed, which almost no one else tracks.",
+     "caveat": "Status is as reported by the agencies.",
+     "quality": {
+      "cadence": "monthly",
+      "updated": "2026-08",
+      "signals": [
+       "maintained"
+      ]
+     },
+     "agencies": [
+      "Comptroller",
       "Every agency"
      ]
     },
@@ -945,26 +945,6 @@
      ]
     },
     {
-     "id": "oca-pretrial-release-dashboard",
-     "url": "https://www.nycourts.gov/division-technology-court-research/pretrial-release-data",
-     "maker": "New York State Unified Court System",
-     "maker_type": "state",
-     "name": "Pretrial Release Data",
-     "summary": "Every arraignment release decision in the state since 2020: release, bail or remand, and whether the person was rearrested.",
-     "why": "The official data researchers use to judge the 2019 bail law.",
-     "quality": {
-      "cadence": "semiannual",
-      "updated": "2026-06",
-      "signals": [
-       "method",
-       "open"
-      ]
-     },
-     "agencies": [
-      "Courts"
-     ]
-    },
-    {
      "id": "acs-flash-indicators",
      "url": "https://www.nyc.gov/site/acs/about/flashindicators.page",
      "maker": "Administration for Children's Services",
@@ -982,6 +962,26 @@
      },
      "agencies": [
       "Administration for Children's Services"
+     ]
+    },
+    {
+     "id": "oca-pretrial-release-dashboard",
+     "url": "https://www.nycourts.gov/division-technology-court-research/pretrial-release-data",
+     "maker": "New York State Unified Court System",
+     "maker_type": "state",
+     "name": "Pretrial Release Data",
+     "summary": "Every arraignment release decision in the state since 2020: release, bail or remand, and whether the person was rearrested.",
+     "why": "The official data researchers use to judge the 2019 bail law.",
+     "quality": {
+      "cadence": "semiannual",
+      "updated": "2026-06",
+      "signals": [
+       "method",
+       "open"
+      ]
+     },
+     "agencies": [
+      "Courts"
      ]
     }
    ]
@@ -2922,6 +2922,26 @@
      ]
     },
     {
+     "id": "dof-property-information-portal",
+     "url": "https://propertyinformationportal.nyc.gov/",
+     "maker": "Department of Finance",
+     "maker_type": "official",
+     "name": "Property Information Portal",
+     "summary": "The official lookup for any lot's assessed value, exemptions, abatements and tax map.",
+     "why": "Where every property tax question ends; pair it with the tax map above.",
+     "quality": {
+      "cadence": "live",
+      "updated": "2026-08",
+      "signals": [
+       "open",
+       "maintained"
+      ]
+     },
+     "agencies": [
+      "Department of Finance"
+     ]
+    },
+    {
      "id": "comptroller-late-contracts-dashboard",
      "url": "https://www.checkbooknyc.com/late-contracts",
      "maker": "New York City Comptroller's Office",
@@ -2942,26 +2962,6 @@
      "agencies": [
       "Contract Services",
       "Comptroller"
-     ]
-    },
-    {
-     "id": "dof-property-information-portal",
-     "url": "https://propertyinformationportal.nyc.gov/",
-     "maker": "Department of Finance",
-     "maker_type": "official",
-     "name": "Property Information Portal",
-     "summary": "The official lookup for any lot's assessed value, exemptions, abatements and tax map.",
-     "why": "Where every property tax question ends; pair it with the tax map above.",
-     "quality": {
-      "cadence": "live",
-      "updated": "2026-08",
-      "signals": [
-       "open",
-       "maintained"
-      ]
-     },
-     "agencies": [
-      "Department of Finance"
      ]
     },
     {
@@ -3288,27 +3288,6 @@
      ]
     },
     {
-     "id": "boe-election-results-summary",
-     "url": "https://vote.nyc/page/election-results-summary",
-     "maker": "Board of Elections",
-     "maker_type": "official",
-     "name": "Election Results",
-     "summary": "Certified results for every contest, including the June 2026 primary, as summaries and election-district files in PDF and spreadsheet form, plus the full cast vote record and an archive back to 2004.",
-     "why": "The source for the June 2026 primary, which no independent map has drawn yet.",
-     "caveat": "Tables and files, no maps.",
-     "quality": {
-      "cadence": "per",
-      "updated": "2026-06",
-      "signals": [
-       "open",
-       "maintained"
-      ]
-     },
-     "agencies": [
-      "Board of Elections"
-     ]
-    },
-    {
      "id": "cfb-voter-analysis-report-2025",
      "url": "https://www.nycvotes.org/voter-analysis-report",
      "maker": "Campaign Finance Board",
@@ -3326,6 +3305,27 @@
      },
      "agencies": [
       "Campaign Finance Board",
+      "Board of Elections"
+     ]
+    },
+    {
+     "id": "boe-election-results-summary",
+     "url": "https://vote.nyc/page/election-results-summary",
+     "maker": "Board of Elections",
+     "maker_type": "official",
+     "name": "Election Results",
+     "summary": "Certified results for every contest, including the June 2026 primary, as summaries and election-district files in PDF and spreadsheet form, plus the full cast vote record and an archive back to 2004.",
+     "why": "The source for the June 2026 primary, which no independent map has drawn yet.",
+     "caveat": "Tables and files, no maps.",
+     "quality": {
+      "cadence": "per",
+      "updated": "2026-06",
+      "signals": [
+       "open",
+       "maintained"
+      ]
+     },
+     "agencies": [
       "Board of Elections"
      ]
     }
