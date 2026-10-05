@@ -8,8 +8,11 @@
      <script src="https://joshgreenman1973.github.io/nyc-shortlist/shortlist.js" defer></script>
 
    Optional attributes on the mount:
-     data-sticky-offset="64"   height of a fixed site header, so the search bar sits below it
-     data-standalone           let the page write ?q= searches and #anchors into the address bar
+     data-sticky-offset="72"   height of a fixed site header, so the search bar sits below it;
+                               "auto" measures the host page's fixed or sticky header
+     data-hide-title           leave out the page title and dek, when the host page shows its own
+     data-standalone           let the page write ?q= searches and #anchors into the address bar,
+                               and show the footer
 */
 (function () {
   "use strict";
@@ -154,14 +157,24 @@
   };
   function host(url) { try { return new URL(url).hostname.replace(/^www\./, ""); } catch (e) { return url; } }
 
+  // The font families the host page has declared. On vitalcitynyc.org these
+  // include the site's own Halyard (text and display) and Gascogne, which the
+  // shadow root can use directly.
+  function faces() {
+    var f = {};
+    try { document.fonts.forEach(function (x) { f[x.family.replace(/["']/g, "")] = 1; }); } catch (e) {}
+    return f;
+  }
+
   // Fonts must be declared on the document; a shadow root cannot load them.
   function loadFonts() {
-    if (!document.querySelector('link[href*="use.typekit.net/qqk2vto"]')) {
+    var f = faces();
+    if (!f["halyard-text"] && !document.querySelector('link[href*="use.typekit.net/qqk2vto"]')) {
       var l = document.createElement("link");
       l.rel = "stylesheet"; l.href = "https://use.typekit.net/qqk2vto.css";
       document.head.appendChild(l);
     }
-    if (!document.getElementById("shortlist-fonts")) {
+    if (!f.Gascogne && !document.getElementById("shortlist-fonts")) {
       var s = document.createElement("style");
       s.id = "shortlist-fonts";
       s.textContent = '@font-face{font-family:"GascogneTS";src:url("https://vital-city-nyc.github.io/vital-city-design-system/fonts/GascogneTS-Light.ttf") format("truetype");font-weight:200;font-style:normal;font-display:swap;}';
@@ -172,12 +185,26 @@
   function App(mount) {
     this.mount = mount;
     this.standalone = mount.hasAttribute("data-standalone");
+    this.autoOffset = mount.getAttribute("data-sticky-offset") === "auto";
     this.offset = parseInt(mount.getAttribute("data-sticky-offset") || "0", 10) || 0;
     this.root = mount.attachShadow ? mount.attachShadow({ mode: "open" }) : mount;
     this.data = null; this.checks = {}; this.all = [];
   }
 
   App.prototype.$ = function (s) { return this.root.querySelector(s); };
+
+  // With data-sticky-offset="auto": the bottom edge of whatever fixed or sticky
+  // header sits at the top of the host page (its height changes by screen size).
+  App.prototype.measureOffset = function () {
+    var el = document.elementFromPoint(Math.round(window.innerWidth / 2), 1), h = 0;
+    while (el && el !== document.body && el !== document.documentElement && el !== this.mount) {
+      var pos = getComputedStyle(el).position;
+      if (pos === "fixed" || pos === "sticky") { h = Math.max(0, Math.round(el.getBoundingClientRect().bottom)); break; }
+      el = el.parentElement;
+    }
+    this.offset = h;
+    this.mount.style.setProperty("--sticky", h + "px");
+  };
 
   App.prototype.shotHTML = function (e, big) {
     var inner = e.shot === false
@@ -186,9 +213,21 @@
     return '<a class="shot" href="' + esc(e.url) + '" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">' + inner + "</a>";
   };
 
-  App.prototype.byline = function (e) {
-    var t = typeOf(e.maker_type);
-    return '<p class="by"><span class="sw ' + t[0] + '" aria-hidden="true"></span><span>' + esc(e.maker) + " &middot; " + t[1] + "</span></p>";
+  // The upper-case line over a card's title, as on the site's post cards:
+  // what kind of maker in orange, then how current. In search results the
+  // area leads.
+  App.prototype.tagline = function (e, areaName) {
+    var q = e.quality || {}, when = "";
+    if (q.cadence === "historical") when = "Historical collection";
+    else if (q.cadence === "live") when = "Live data";
+    else if (q.updated) when = "Updated " + fmtMonth(q.updated);
+    return '<p class="tagline">' + (areaName ? '<span class="area">' + esc(areaName) + "</span>" : "") +
+      '<span class="tag">' + esc(typeOf(e.maker_type)[1]) + "</span>" +
+      (when ? "<span>" + esc(when) + "</span>" : "") + "</p>";
+  };
+
+  App.prototype.makerLine = function (e) {
+    return '<p class="maker">' + esc(e.maker) + "</p>";
   };
 
   App.prototype.flag = function (id) {
@@ -196,15 +235,14 @@
     return (c && c.fails >= 2) ? '<p class="flag">Not responding when we last checked, ' + esc(fmtDate(c.last)) + ".</p>" : "";
   };
 
-  // The quality checks a tool passed (see "How we chose"), shown on every card.
+  // The quality signals a tool showed (see "How we chose"), on every card. How
+  // current it is sits in the tag line above the title.
   App.prototype.checksHTML = function (e) {
     var q = e.quality;
     if (!q) return "";
     var items = [];
-    if (q.cadence === "historical") items.push("Historical collection");
-    else if (q.cadence === "live") items.push("Live data");
-    else if (q.updated) items.push("Updated " + fmtMonth(q.updated));
     (q.signals || []).forEach(function (k) { if (SIGNALS[k]) items.push(SIGNALS[k]); });
+    if (!items.length) return "";
     return '<p class="checks"><span class="vh">Quality checks passed: </span>' +
       items.map(function (t) { return "<span>" + esc(t) + "</span>"; }).join("") + "</p>";
   };
@@ -223,12 +261,11 @@
   App.prototype.pickHTML = function (e, areaName) {
     var qs = (e.questions || []).map(function (q) { return "<li>" + esc(q) + "</li>"; }).join("");
     return '<li class="card pick" id="t-' + esc(e.id) + '">' +
-      this.shotHTML(e, true) +
-      (areaName ? '<p class="area-tag">' + esc(areaName) + "</p>" : "") +
+      this.shotHTML(e, true) + this.tagline(e, areaName) +
       '<h3><a href="' + esc(e.url) + '" target="_blank" rel="noopener">' + esc(e.name) + '&nbsp;<span class="arrow" aria-hidden="true">&#8599;</span></a></h3>' +
-      this.byline(e) + this.checksHTML(e) +
+      this.makerLine(e) +
       '<p class="what">' + esc(e.summary) + "</p>" +
-      '<p class="why"><b>Why it\'s here.</b> ' + esc(e.why) + "</p>" + this.ownHTML(e) +
+      '<p class="why"><b>Why it\'s here.</b> ' + esc(e.why) + "</p>" + this.checksHTML(e) + this.ownHTML(e) +
       (qs ? '<div class="asks"><span class="label">Good for questions like</span><ul>' + qs + "</ul></div>" : "") +
       (e.caveat ? '<p class="mind"><b>Keep in mind.</b> ' + esc(e.caveat) + "</p>" : "") +
       this.srcLine(e) + this.flag(e.id) + "</li>";
@@ -236,12 +273,11 @@
 
   App.prototype.miniHTML = function (e, areaName) {
     return '<li class="card mini" id="t-' + esc(e.id) + '">' +
-      this.shotHTML(e, false) +
-      (areaName ? '<p class="area-tag">' + esc(areaName) + "</p>" : "") +
+      this.shotHTML(e, false) + this.tagline(e, areaName) +
       '<h4><a href="' + esc(e.url) + '" target="_blank" rel="noopener">' + esc(e.name) + '&nbsp;<span class="arrow" aria-hidden="true">&#8599;</span></a></h4>' +
-      this.byline(e) + this.checksHTML(e) +
+      this.makerLine(e) +
       '<p class="what">' + esc(e.summary) + "</p>" +
-      '<p class="why"><b>Why it\'s here.</b> ' + esc(e.why) + "</p>" + this.ownHTML(e) +
+      '<p class="why"><b>Why it\'s here.</b> ' + esc(e.why) + "</p>" + this.checksHTML(e) + this.ownHTML(e) +
       (e.caveat ? '<p class="mind"><b>Keep in mind.</b> ' + esc(e.caveat) + "</p>" : "") +
       this.flag(e.id) + "</li>";
   };
@@ -249,55 +285,59 @@
   App.prototype.shell = function () {
     return '<link rel="stylesheet" href="' + BASE + 'style.css">' +
       '<div class="sl">' +
-      '<div class="hero"><div class="wrap">' +
-        '<p class="stamp">Updated <span data-date></span> &middot; every tool checked against the same two tests</p>' +
-        '<div class="grid"><div>' +
-          '<h1>The Shortlist</h1>' +
-          '<p class="finding">We reviewed <span data-count="reviewed"></span> tools and dashboards about New York City. These <span data-count="picks"></span> are the ones to start with.</p>' +
-          '<p class="lede">The city posts more than 2,400 datasets on its open data portal, and nonprofits, universities, newsrooms and independent developers have built dashboards, maps and trackers on top of them. Many are good. Few are seen outside the small world of people who build such things, and there are often five versions of the same idea.</p>' +
-          '<p class="lede">This page picks the best two to four in each of <span data-count="areas"></span> areas of city life, then lists a few more worth knowing and the best tools the government itself publishes. Each entry says what is in the tool, why it made the list and what to watch out for. Start with the ten below, ask a question, or browse by area or by agency.</p>' +
-          '<p class="key"><span><i class="sw indie"></i>Built independently: nonprofits, universities, newsrooms, developers</span>' +
-          '<span><i class="sw watch"></i>Government watchdog offices, such as the comptroller</span>' +
-          '<span><i class="sw city"></i>Government agencies</span></p>' +
-          '<p class="nominate">Know a tool that belongs here? <a href="' + NOMINATE + '">Nominate it</a>.</p>' +
-        '</div><div><div class="mosaic" id="mosaic"></div><p class="mosaic-note">A few of the picks. Select one to jump to it.</p></div></div>' +
-      '</div></div>' +
+      '<header class="phero"><div class="wrap"><div class="phero-in">' +
+        '<h1>The Shortlist</h1>' +
+        '<div class="phero-dek"><p>The best independent tools for understanding New York City and how its government is doing. We reviewed <span data-count="reviewed"></span> tools and dashboards; these <span data-count="picks"></span> are the ones to start with.</p>' +
+        '<p class="meta">Updated <span data-date></span><span class="dot" aria-hidden="true"></span>Every tool checked against the same two tests</p></div>' +
+      '</div></div><hr class="rule"></header>' +
+      '<div class="intro"><div class="wrap"><div class="cols">' +
+        '<p>The city posts more than 2,400 datasets on its open data portal, and nonprofits, universities, newsrooms and independent developers have built dashboards, maps and trackers on top of them. Many are good. Few are seen outside the small world of people who build such things, and there are often five versions of the same idea.</p>' +
+        '<p>This page picks the best two to four in each of <span data-count="areas"></span> areas of city life, then lists a few more worth knowing and the best tools the government itself publishes. Each entry says what is in the tool, why it made the list and what to watch out for. Start with the ten below, ask a question, or browse by area or by agency.</p>' +
+      '</div><p class="nominate">If you know a tool that belongs here, email <a href="' + NOMINATE + '">info@vitalcitynyc.org</a> with “Civic tech tool shortlist” in the subject line.</p></div></div>' +
       '<div class="bar" role="search"><div class="wrap">' +
         '<div class="row"><input id="q" type="search" autocomplete="off" spellcheck="false" aria-label="Ask a question or search the list" placeholder="Ask a question, like: Who owns my building?">' +
-        '<button id="clear" class="clear" type="button" hidden>Clear</button></div>' +
+        '<button id="clear" class="btn" type="button" hidden>Clear</button></div>' +
         '<nav class="jump" id="jump" aria-label="Areas"></nav>' +
       '</div></div>' +
       '<div class="wrap"><section class="results" id="results" hidden aria-live="polite"></section></div>' +
       '<div id="browse">' +
-        '<div class="wrap"><section class="start" id="start"><h2>Start here</h2>' +
-          '<p class="sub">Ten tools that between them cover most of what people ask about the city. Each is the best on the list at its job.</p><ol class="startlist" id="startlist"></ol></section></div>' +
-        '<div class="wrap"><section class="agencies" id="agencies"><h2>Browse by agency</h2>' +
-          '<p class="sub">Every tool is tagged with the parts of government it tells you about. Pick one to see its tools.</p><div class="chips" id="chips"></div></section></div>' +
-        '<div class="wrap"><section class="questions"><h2>Start with a question</h2>' +
-          '<p class="sub">Each question leads to the tool on the list that answers it best.</p><div class="qgrid" id="qgrid"></div></section></div>' +
-        '<div class="wrap" id="areas"><p class="loading">Loading the list&hellip;</p></div>' +
-        '<div class="wrap"><section class="gaps" id="gaps"><h2>Where no good tool exists</h2>' +
-          '<p class="sub">Questions about the city that nothing we found answers well. If you know a tool that does, or you build one, <a href="' + NOMINATE + '">tell us</a>.</p><ul class="gaplist" id="gaplist"></ul></section></div>' +
-        '<div class="wrap"><section class="held" id="held"><h2>Held back</h2>' +
-          '<p class="sub">Tools that would make the list with one fix. We say what it is, so their makers can make it and readers can decide for themselves.</p><ul class="heldlist" id="heldlist"></ul></section></div>' +
-        '<section class="method"><div class="wrap"><h2>How we chose</h2><div class="cols"><div>' +
+        '<section class="sec start" id="start"><div class="wrap"><div class="sechead"><h2>Start here</h2><a class="info" href="#method" data-to="method">How we chose</a></div>' +
+          '<p class="sub">Ten tools that between them cover most of what people ask about the city. Each is the best on the list at its job.</p><ol class="startlist" id="startlist"></ol></div></section>' +
+        '<section class="sec agencies" id="agencies"><div class="wrap"><div class="sechead"><h2>Browse by agency</h2></div>' +
+          '<p class="sub">Every tool is tagged with the parts of government it tells you about. Pick one to see its tools.</p><div class="chips" id="chips"></div></div></section>' +
+        '<section class="sec questions"><div class="wrap"><div class="sechead"><h2>Start with a question</h2></div>' +
+          '<p class="sub">Each question leads to the tool on the list that answers it best.</p><div class="qgrid" id="qgrid"></div></div></section>' +
+        '<div class="areas" id="areas"><p class="loading">Loading the list&hellip;</p></div>' +
+        '<section class="sec gaps" id="gaps"><div class="wrap"><div class="sechead"><h2>Where no good tool exists</h2></div>' +
+          '<p class="sub">Questions about the city that nothing we found answers well. If you know a tool that does, or you build one, <a href="' + NOMINATE + '">tell us</a>.</p><ul class="gaplist" id="gaplist"></ul></div></section>' +
+        '<section class="sec held" id="held"><div class="wrap"><div class="sechead"><h2>Held back</h2></div>' +
+          '<p class="sub">Tools that would make the list with one fix. We say what it is, so their makers can make it and readers can decide for themselves.</p><ul class="heldlist" id="heldlist"></ul></div></section>' +
+        '<div class="wrap"><aside class="highlight" aria-label="Nominate a tool"><div><h2>Know a tool that belongs here?</h2>' +
+          '<p>Email info@vitalcitynyc.org with “Civic tech tool shortlist” in the subject line. Tell us what it is, who made it and what data it uses. If a tool on the list breaks or goes stale, tell us that too.</p>' +
+          '<a class="btn" href="' + NOMINATE + '">Nominate a tool</a></div></aside></div>' +
+        '<section class="method" id="method"><div class="wrap"><div class="sechead"><h2>How we chose</h2></div><div class="cols"><div>' +
           '<h3>Two tests, for every tool</h3>' +
           "<p><b>It has to be current.</b> Its data updates automatically, or its latest edition came out in the past year and uses the newest release of its source data. A tool one release behind still counts if the newest release came out less than three months ago. Collections that are historical by nature, such as archival photographs, are marked that way.</p>" +
           "<p><b>It has to show objective signs of quality.</b> It names its maker and the datasets its numbers come from, and it shows at least two of the following: a published method, open code or downloadable data, updates in the past 90 days, and either the standards of a university, newsroom or watchdog office or citation by news organizations. Each card lists the checks the tool passed.</p>" +
           "<p>It also has to be free, work without an account and give someone who is not a data person an answer in a few minutes.</p>" +
           "<p><b>The exceptions.</b> <span data-count=\"exceptions\"></span> tools failed one of the two tests, most often by not naming who made them or by running a release behind their source, and are on the list anyway by the editor's judgment. Each one says so under \"Keep in mind,\" beginning \"Included by the editor's judgment.\"</p>" +
-          "<h3>Who made what</h3><p>The picks and the tools under \"Also worth knowing\" come from outside government: nonprofits, universities, newsrooms, civic technologists and independent developers, the people with a reason to look hard at the government's numbers. Tools the government builds are listed separately under \"From the government.\" That includes watchdog offices such as the city and state comptrollers, the Independent Budget Office and the Board of Correction, which are independent of the agencies they track but are still part of government; their tools are marked in blue.</p>" +
+          "<h3>Who made what</h3><p>The picks and the tools under \"Also worth knowing\" come from outside government: nonprofits, universities, newsrooms, civic technologists and independent developers, the people with a reason to look hard at the government's numbers. Tools the government builds are listed separately under \"From the government.\" That includes watchdog offices such as the city and state comptrollers, the Independent Budget Office and the Board of Correction, which are independent of the agencies they track but are still part of government; their tools are labeled \"Government watchdog.\"</p>" +
           "<p>Some tools come from Josh Greenman, who assembled this list, from Tal Roded, a Vital City contributor, and from Ted Alcorn, who worked at Vital City until September 2026. They had to pass the same tests as everything else, and each one carries a disclosure. Vital City's own dashboards are left off.</p>" +
         "</div><div>" +
           '<h3>How we checked</h3><p>Every tool on this page was opened and tested on Sept. 28, 2026, and the list was last revised on <span data-date></span>. For each one we read its about or methodology page, noted which datasets it uses, looked for the date of its newest data and for public code or data, and searched for news coverage. We applied the same tests to tools made by Vital City and the people involved in this list; many of them failed, most often for not naming who made them. A script rechecks every link each week and marks any that stop responding.</p>' +
           "<h3>How the question box works</h3><p>It compares the words in your question with each tool's description, the questions it answers and the data it uses, and ranks the closest matches. It knows everyday words (\"cops\" finds police tools, \"scaffolding\" finds sidewalk sheds). It does not use AI, read the tools' data or answer questions itself, and it can miss a tool described in different words. Nothing you type is sent anywhere.</p>" +
           "<h3>What this is not</h3><p>A place on the list is a recommendation, not an audit. We do not vouch for every number in these tools. Where we know of a limit, it is under \"Keep in mind.\"</p>" +
-          '<h3>Nominate a tool</h3><p>If you know a tool that belongs here, or one that has broken or gone stale, email <a href="' + NOMINATE + '">info@vitalcitynyc.org</a> with "Civic tech tool shortlist" in the subject line. Tell us what it is, who made it and what data it uses.</p>' +
           '<h3>What has changed</h3><ul class="changes" id="changes"></ul>' +
           '<h3>Reuse the list</h3><p>The list is a public data file, <a href="' + BASE + 'data/shortlist.json">shortlist.json</a>, and the page can be embedded on any site with two lines of code (see the <a href="https://github.com/joshgreenman1973/nyc-shortlist" target="_blank" rel="noopener">code repository</a>).</p>' +
         "</div></div></div></section>" +
       "</div>" +
-      '<div class="foot"><div class="wrap">The Shortlist. <span data-count="total"></span> tools listed, <span data-count="reviewed"></span> reviewed. <a href="' + NOMINATE + '">Nominate a tool</a>.</div></div>' +
+      (this.standalone ? '<footer class="foot"><div class="wrap"><div class="foot-in">' +
+        '<div class="foot-a"><p class="foot-title">The Shortlist</p><p><span data-count="total"></span> tools listed from <span data-count="reviewed"></span> reviewed. Updated <span data-date></span>.</p></div>' +
+        '<div class="foot-b"><p class="foot-h">Explore</p><p class="foot-links">' +
+          '<a href="#method" data-to="method">How we chose</a><a href="#gaps" data-to="gaps">Where no good tool exists</a>' +
+          '<a href="' + NOMINATE + '">Nominate a tool</a><a href="' + BASE + 'data/shortlist.json">The list as data</a>' +
+          '<a href="https://github.com/joshgreenman1973/nyc-shortlist" target="_blank" rel="noopener">The code</a></p></div>' +
+        '</div></div></footer>' : "") +
       "</div>";
   };
 
@@ -324,8 +364,9 @@
   App.prototype.shelfHTML = function (list, title, sub, key) {
     if (!list || !list.length) return "";
     var names = list.slice(0, 3).map(function (e) { return e.name; }).join(", ") + (list.length > 3 ? " and " + (list.length - 3) + " more" : "");
-    return '<div class="shelf" id="shelf-' + esc(key) + '"><div class="shelfhead"><h3>' + esc(title) + ' <span class="n">(' + list.length + ")</span></h3><p>" + esc(sub) + "</p>" +
-      '<button type="button" class="open" data-shelf="' + esc(key) + '" aria-expanded="false">Show</button></div>' +
+    return '<div class="shelf" id="shelf-' + esc(key) + '"><h3 class="label-head"><span>' + esc(title) + ' <span class="n">' + list.length + "</span></span>" +
+      '<button type="button" class="btn open" data-shelf="' + esc(key) + '" aria-expanded="false">Show</button></h3>' +
+      '<p class="sub">' + esc(sub) + "</p>" +
       '<p class="shelfnames">' + esc(names) + "</p>" +
       '<ul class="minis" hidden>' + list.map(function (e) { return this.miniHTML(e); }, this).join("") + "</ul></div>";
   };
@@ -340,18 +381,21 @@
     btn.setAttribute("aria-expanded", on ? "true" : "false");
   };
 
+  // Start here reads like the site's "Recently published" column: a small
+  // picture, the area as the tag, the name, the maker and one line.
   App.prototype.renderStart = function () {
-    var byId = this.byId();
+    var byId = this.byId(), areaOf = {};
+    this.data.areas.forEach(function (a) { ["picks", "bench", "official"].forEach(function (t) { (a[t] || []).forEach(function (e) { areaOf[e.id] = a; }); }); });
     this.$("#startlist").innerHTML = (this.data.start || []).map(function (it) {
       var e = byId[it.id];
       if (!e) return "";
-      var t = typeOf(e.maker_type);
       var img = e.shot === false ? '<span class="noshot"><span class="d">' + esc(host(e.url)) + "</span></span>"
         : '<img src="' + BASE + "shots/" + esc(e.id) + '.webp" alt="" loading="lazy" decoding="async" width="800" height="500">';
       return '<li><a class="shot" href="' + esc(e.url) + '" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">' + img + "</a>" +
-        '<div><h3><a href="' + esc(e.url) + '" target="_blank" rel="noopener">' + esc(e.name) + '&nbsp;<span class="arrow" aria-hidden="true">&#8599;</span></a></h3>' +
-        '<p class="by"><span class="sw ' + t[0] + '" aria-hidden="true"></span><span>' + esc(e.maker) + "</span></p>" +
-        "<p>" + esc(it.line) + ' <button type="button" class="more" data-go="' + esc(e.id) + '">More</button></p></div></li>';
+        '<div><p class="tagline"><span class="tag">' + esc(areaOf[e.id] ? areaOf[e.id].rail : "") + "</span></p>" +
+        '<h3><a href="' + esc(e.url) + '" target="_blank" rel="noopener">' + esc(e.name) + '&nbsp;<span class="arrow" aria-hidden="true">&#8599;</span></a></h3>' +
+        '<p class="maker">' + esc(e.maker) + "</p>" +
+        '<p class="line">' + esc(it.line) + ' <button type="button" class="more" data-go="' + esc(e.id) + '">More&nbsp;&rarr;</button></p></div></li>';
     }).join("");
   };
 
@@ -395,22 +439,10 @@
       a.picks.forEach(function (e) {
         (e.index || []).forEach(function (q) {
           items.push('<li><button type="button" data-go="' + esc(e.id) + '"><span class="q">' + esc(q) +
-            '</span><span class="to">' + esc(e.name) + "</span></button></li>");
+            '</span><span class="to maker">' + esc(e.name) + "</span></button></li>");
         });
       });
-      return items.length ? '<div class="qgroup"><h3>' + esc(a.name) + "</h3><ul>" + items.join("") + "</ul></div>" : "";
-    }).join("");
-  };
-
-  App.prototype.renderMosaic = function () {
-    var byId = {};
-    this.data.areas.forEach(function (a) { a.picks.forEach(function (e) { byId[e.id] = e; }); });
-    var ids = (this.data.mosaic || []).filter(function (id) { return byId[id] && byId[id].shot !== false; });
-    this.$("#mosaic").innerHTML = ids.slice(0, 12).map(function (id) {
-      var e = byId[id];
-      return '<button type="button" data-go="' + esc(id) + '" aria-label="' + esc(e.name) + '">' +
-        '<img src="' + BASE + "shots/" + esc(id) + '.webp" alt="" decoding="async" width="800" height="500">' +
-        '<span class="cap">' + esc(e.name) + "</span></button>";
+      return items.length ? '<div class="qgroup"><h3 class="label-head">' + esc(a.rail) + "</h3><ul>" + items.join("") + "</ul></div>" : "";
     }).join("");
   };
 
@@ -521,7 +553,7 @@
     box.innerHTML = '<p class="count">' + esc(g) + "</p>" +
       '<p class="limits">' + hits.length + (hits.length === 1 ? " tool on the list is" : " tools on the list are") + " about this part of government. Picks first, then the rest.</p>" +
       (picks.length ? '<ol class="picks results-lead">' + picks.map(function (h) { return self.pickHTML(h.e, h.area.name); }).join("") + "</ol>" : "") +
-      (rest.length ? '<div class="shelfhead"><h3>' + (picks.length ? "Also" : "Tools") + '</h3></div><ul class="minis">' + rest.map(function (h) { return self.miniHTML(h.e, h.area.name); }).join("") + "</ul>" : "");
+      (rest.length ? '<h3 class="label-head">' + (picks.length ? "Also on the list" : "Tools") + '</h3><ul class="minis">' + rest.map(function (h) { return self.miniHTML(h.e, h.area.name); }).join("") + "</ul>" : "");
     window.scrollTo({ top: 0 });
     if (this.standalone) history.replaceState(null, "", "?agency=" + encodeURIComponent(g));
   };
@@ -544,7 +576,7 @@
       '<ol class="picks results-lead">' + lead.map(function (h) {
         return (h.tier === "pick" ? self.pickHTML(h.e, h.area.name) : self.miniHTML(h.e, h.area.name)).replace("</h3>", "</h3>" + match(h)).replace("</h4>", "</h4>" + match(h));
       }).join("") + "</ol>" +
-      (rest.length ? '<div class="shelfhead"><h3>Also related</h3></div><ul class="minis">' +
+      (rest.length ? '<h3 class="label-head">Also related</h3><ul class="minis">' +
         rest.map(function (h) { return self.miniHTML(h.e, h.area.name).replace("</h4>", "</h4>" + match(h)); }).join("") + "</ul>" : "");
   };
 
@@ -597,6 +629,14 @@
       });
     }, { rootMargin: "-35% 0px -60% 0px" });
     this.root.querySelectorAll(".area").forEach(function (s) { io.observe(s); });
+    var nav = this.$("#jump");
+    var edges = function () {
+      nav.classList.toggle("fade-l", nav.scrollLeft > 4);
+      nav.classList.toggle("fade-r", nav.scrollLeft + nav.clientWidth < nav.scrollWidth - 4);
+    };
+    nav.addEventListener("scroll", edges, { passive: true });
+    window.addEventListener("resize", edges);
+    edges();
     var top = this.root.querySelector(".questions");
     if (top) new IntersectionObserver(function (en) {
       if (en[0].isIntersecting && current) { current.classList.remove("on"); current = null; }
@@ -615,6 +655,14 @@
       if (g) { ev.preventDefault(); self.go(g.getAttribute("data-go")); return; }
       var ch = ev.target.closest("[data-agency]");
       if (ch) { ev.preventDefault(); self.showAgency(ch.getAttribute("data-agency")); return; }
+      var to = ev.target.closest("[data-to]");
+      if (to) {
+        ev.preventDefault();
+        if (input.value) self.setQuery("");
+        var tgt = self.$("#" + to.getAttribute("data-to"));
+        if (tgt) self.scrollToEl(tgt);
+        return;
+      }
       var sb = ev.target.closest("[data-shelf]");
       if (sb) { ev.preventDefault(); self.toggleShelf(sb.getAttribute("data-shelf")); return; }
       var j = ev.target.closest(".jump a");
@@ -655,11 +703,22 @@
     var mount = this.mount;
     mount.style.visibility = "hidden";
     this.root.innerHTML = this.shell();
+    var sl = this.$(".sl");
+    if (mount.hasAttribute("data-hide-title")) sl.classList.add("no-title");
+    // Use the site's own display cut for headings where the host page has it.
+    var display = function () { if (faces()["halyard-display"]) sl.classList.add("has-display"); };
+    display();
+    if (document.readyState !== "complete") window.addEventListener("load", display);
     var show = function () { mount.style.visibility = ""; };
     var css = this.root.querySelector("link[rel=stylesheet]");
     if (css) { css.addEventListener("load", show); css.addEventListener("error", show); }
     setTimeout(show, 2500);
     mount.style.setProperty("--sticky", this.offset + "px");
+    if (this.autoOffset) {
+      this.measureOffset();
+      window.addEventListener("resize", function () { self.measureOffset(); });
+      window.addEventListener("load", function () { self.measureOffset(); });
+    }
     Promise.all([
       fetch(BASE + "data/shortlist.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }),
       fetch(BASE + "data/linkcheck.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; })
@@ -672,7 +731,6 @@
       self.renderAgencies();
       self.renderQuestions();
       self.renderGapsHeld();
-      self.renderMosaic();
       self.fillCounts();
       self.buildIndex();
       self.wire();

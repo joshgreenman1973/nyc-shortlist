@@ -9,20 +9,25 @@ Live: https://joshgreenman1973.github.io/nyc-shortlist/
 Paste this into an HTML card (Ghost or anywhere else):
 
 ```html
-<div data-shortlist></div>
+<div data-shortlist data-sticky-offset="auto"></div>
 <script src="https://joshgreenman1973.github.io/nyc-shortlist/shortlist.js" defer></script>
 ```
 
 The page renders inside a shadow root, so the host site's styles cannot change it and its styles cannot leak out. It sizes itself to the width it is given. Optional attributes on the `div`:
 
-- `data-sticky-offset="64"`: the height of a fixed site header, so the search bar sticks below it instead of under it.
-- `data-standalone`: lets the page write searches (`?q=`) and anchors into the address bar. Leave it off when embedding.
+- `data-sticky-offset="auto"`: measures the host page's fixed or sticky header so the search bar sticks below it instead of under it. Use this on vitalcitynyc.org, whose header is 72 pixels on a computer and 62 on a phone. A number (`"72"`) sets the height by hand.
+- `data-hide-title`: leaves out the page's own title and dek, for a host page (such as a Ghost page) that already shows a title and excerpt.
+- `data-standalone`: lets the page write searches (`?q=`) and anchors into the address bar, and shows the orange footer. Leave it off when embedding, since the host site has its own footer.
+
+## Design
+
+The page is built to read as a page of vitalcitynyc.org, with values taken from the live site's computed styles (Oct. 5, 2026): the theme's page hero (Gascogne title, gray dek, black rule), the /data/ page's ruled rail with a vertical Gascogne label, post-card tag lines (orange upper-case tag, gray details), the home page's section headings, the lime highlight box and black buttons, and the orange footer. On vitalcitynyc.org the script finds the site's own fonts and uses Halyard Display for headings, as the site does; elsewhere it loads the shared Halyard Text kit and sets headings in its bold.
 
 ## Edit the list
 
 Everything on the page comes from `data/shortlist.json`. Each area has `picks` (the two to four best), `bench` ("Also worth knowing") and `official` ("From the government," which includes watchdog offices). Every entry needs `id`, `name`, `url`, `maker`, `maker_type`, `summary` (what is in it) and `why` (why it is on the list). Picks also need `questions`, `caveat`, `data`, `freshness` and `index` (the questions that appear in "Start with a question").
 
-`maker_type` sets the colored square: `nonprofit`, `academic`, `newsroom`, `advocacy`, `independent-developer`, `civic-tech` and `commercial` are orange (independent); `watchdog` is blue; `official`, `state` and `federal` are gray.
+`maker_type` sets the orange label above each tool's name: `nonprofit` (Nonprofit), `academic` (University), `newsroom`, `advocacy`, `independent-developer`, `civic-tech`, `journalist`, `commercial`, `watchdog` (Government watchdog), `official` (Government agency), `state` and `federal`. The labels are in `TYPE` in `shortlist.js`.
 
 `agencies` lists the parts of government a tool is about (the "Browse by agency" chips are built from these). `repo` (GitHub owner/name) and `data_url` feed the weekly staleness check; leave them off when the code repository is not where the tool's data updates. `quality` holds the card's checks: `cadence`, `updated` (YYYY-MM) and `signals` (any of `method`, `open`, `maintained`, `cited`). `own` adds a disclosure line (`vc`, `jg`, `tr`, `trt`, `ta`; texts in `shortlist.js`).
 
