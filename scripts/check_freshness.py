@@ -4,12 +4,23 @@
 The weekly link check catches dead pages. This catches quiet decay: for each
 entry with a `repo` (owner/name on GitHub) it reads the last push date, and
 for each entry with a `data_url` it reads the file's Last-Modified header.
-A tool whose newest sign of life is older than STALE_DAYS, and whose cadence
-is not "historical", lands in the report. Writes data/freshness.json and
-exits 1 if anything is stale, so the workflow shows red.
+How long silence is allowed depends on which signal we have, because the two
+measure different things:
 
-Silence is not proof of staleness: a tool can pull live data without any
-push, so this is a review queue for the editor, not a public flag.
+  data_modified  the data file's own Last-Modified -- a direct freshness
+                 signal, so it is held to the tool's declared cadence.
+  repo_pushed    the last commit, which measures code maintenance, not data.
+                 A tool that queries an API at request time can sit without a
+                 commit for a year and still be perfectly live, so a push date
+                 only earns suspicion after MAINTENANCE_DAYS.
+
+Judging a push date against a short cadence is what makes this test lie: it
+would call a live tool dead for not having been edited. Tools that were never
+going to update again ("historical", "one-time") are skipped outright.
+
+Writes data/freshness.json and exits 1 if anything is stale, so the workflow
+shows red. Silence is not proof of staleness: this is a review queue for the
+editor, not a public flag.
 """
 import json
 import os
@@ -21,7 +32,16 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 LIST = ROOT / "data" / "shortlist.json"
 OUT = ROOT / "data" / "freshness.json"
-STALE_DAYS = 180
+# A data file held to its own cadence: roughly two missed cycles, so one late
+# release is not an alarm but a stop is.
+STALE_BY_CADENCE = {
+    "live": 7, "daily": 14, "weekly": 45, "monthly": 90,
+    "quarterly": 240, "semiannual": 420, "annual": 450,
+    "periodic": 365, "irregular": 365,
+}
+STALE_DAYS = 180          # a data file whose cadence is missing or unrecognised
+MAINTENANCE_DAYS = 365    # a commit date, whatever the cadence (see docstring)
+NEVER_UPDATES = {"historical", "one-time"}
 TOKEN = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
 
 
@@ -55,7 +75,8 @@ def main():
         for tier in ("picks", "bench", "official"):
             for e in area.get(tier, []):
                 q = e.get("quality") or {}
-                if q.get("cadence") == "historical":
+                cadence = (q.get("cadence") or "").strip().lower()
+                if cadence in NEVER_UPDATES:
                     continue
                 signs = {}
                 try:
@@ -71,10 +92,23 @@ def main():
                     continue
                 newest = max(dates)
                 age = (today - datetime.fromisoformat(newest.replace("Z", "+00:00"))).days
-                results[e["id"]] = {"newest": newest[:10], "age_days": age, **signs}
-                if age > STALE_DAYS:
-                    stale.append(f"{e['id']}: no sign of an update since {newest[:10]} ({age} days)")
-    OUT.write_text(json.dumps({"checked": date.today().isoformat(), "stale_after_days": STALE_DAYS,
+                if signs.get("data_modified") == newest:
+                    basis = "data file"
+                    limit = STALE_BY_CADENCE.get(cadence, STALE_DAYS)
+                else:
+                    basis = "last commit"
+                    limit = MAINTENANCE_DAYS
+                results[e["id"]] = {"newest": newest[:10], "age_days": age,
+                                    "cadence": cadence or None, "basis": basis,
+                                    "stale_after_days": limit, **signs}
+                if age > limit:
+                    stale.append(f"{e['id']}: no sign of an update since {newest[:10]} "
+                                 f"({age} days; {basis}, {cadence or 'cadence unknown'}, "
+                                 f"allows {limit})")
+    OUT.write_text(json.dumps({"checked": date.today().isoformat(),
+                               "stale_after_days_data_by_cadence": STALE_BY_CADENCE,
+                               "stale_after_days_data_default": STALE_DAYS,
+                               "stale_after_days_last_commit": MAINTENANCE_DAYS,
                                "results": results}, indent=1) + "\n")
     print(f"Checked {len(results)} tools with a repo or data file; {len(stale)} look stale.")
     print("\n".join(stale))
