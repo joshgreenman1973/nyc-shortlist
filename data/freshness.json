@@ -1,5 +1,5 @@
 {
- "checked": "2026-10-19",
+ "checked": "2026-10-26",
  "stale_after_days_data_by_cadence": {
   "live": 7,
   "daily": 14,
@@ -16,63 +16,63 @@
  "results": {
   "nyc-pulse-mmr": {
    "newest": "2026-10-07",
-   "age_days": 12,
+   "age_days": 19,
    "cadence": "annual",
    "basis": "last commit",
    "stale_after_days": 365,
    "repo_pushed": "2026-10-07T13:42:50Z"
   },
   "jg-overdue-reports": {
-   "newest": "2026-10-19",
+   "newest": "2026-10-26",
    "age_days": 0,
    "cadence": "weekly",
    "basis": "last commit",
    "stale_after_days": 365,
-   "repo_pushed": "2026-10-19T17:23:53Z"
+   "repo_pushed": "2026-10-26T17:14:22Z"
   },
   "nycuriosity-council-legislation-trackers": {
-   "newest": "2026-10-19",
+   "newest": "2026-10-26",
    "age_days": 0,
    "cadence": "monthly",
    "basis": "last commit",
    "stale_after_days": 365,
-   "repo_pushed": "2026-10-19T17:29:05Z"
+   "repo_pushed": "2026-10-26T16:17:49Z"
   },
   "jg-audit-tracker": {
-   "newest": "2026-10-15",
-   "age_days": 3,
+   "newest": "2026-10-19",
+   "age_days": 6,
    "cadence": "weekly",
    "basis": "last commit",
    "stale_after_days": 365,
-   "repo_pushed": "2026-10-15T17:34:45Z"
+   "repo_pushed": "2026-10-19T18:25:20Z"
   },
   "muckrock-nyc": {
-   "newest": "2026-10-19",
+   "newest": "2026-10-26",
    "age_days": 0,
    "cadence": "live",
    "basis": "last commit",
    "stale_after_days": 365,
-   "repo_pushed": "2026-10-19T14:01:34Z"
+   "repo_pushed": "2026-10-26T17:20:01Z"
   },
   "jg-mamdani-transcripts": {
-   "newest": "2026-10-19",
+   "newest": "2026-10-26",
    "age_days": 0,
    "cadence": "daily",
    "basis": "last commit",
    "stale_after_days": 365,
-   "repo_pushed": "2026-10-19T12:52:13Z"
+   "repo_pushed": "2026-10-26T13:05:59Z"
   },
   "nyc-openrecords": {
-   "newest": "2026-08-25",
-   "age_days": 55,
+   "newest": "2026-10-26",
+   "age_days": 0,
    "cadence": "live",
    "basis": "last commit",
    "stale_after_days": 365,
-   "repo_pushed": "2026-08-25T16:38:52Z"
+   "repo_pushed": "2026-10-26T16:57:48Z"
   },
   "tedalcorn-nyc-shootings": {
    "newest": "2026-08-26",
-   "age_days": 54,
+   "age_days": 61,
    "cadence": "quarterly",
    "basis": "last commit",
    "stale_after_days": 365,
@@ -80,7 +80,7 @@
   },
   "crime-index-nyc": {
    "newest": "2026-08-21",
-   "age_days": 59,
+   "age_days": 66,
    "cadence": "monthly",
    "basis": "last commit",
    "stale_after_days": 365,
@@ -88,7 +88,7 @@
   },
   "jg-precinct-day": {
    "newest": "2026-09-30",
-   "age_days": 18,
+   "age_days": 25,
    "cadence": "live",
    "basis": "last commit",
    "stale_after_days": 365,
@@ -96,23 +96,23 @@
   },
   "justfix-who-owns-what": {
    "newest": "2026-09-25",
-   "age_days": 24,
+   "age_days": 31,
    "cadence": "live",
    "basis": "last commit",
    "stale_after_days": 365,
    "repo_pushed": "2026-09-25T16:38:19Z"
   },
   "city-limits-shelter-tracker": {
-   "newest": "2026-10-19",
+   "newest": "2026-10-26",
    "age_days": 0,
    "cadence": "daily",
    "basis": "last commit",
    "stale_after_days": 365,
-   "repo_pushed": "2026-10-19T08:02:49Z"
+   "repo_pushed": "2026-10-26T08:02:45Z"
   },
   "anhd-dap-portal": {
    "newest": "2026-10-15",
-   "age_days": 4,
+   "age_days": 11,
    "cadence": "daily",
    "basis": "last commit",
    "stale_after_days": 365,
@@ -120,23 +120,23 @@
   },
   "good-cause-nyc": {
    "newest": "2026-09-21",
-   "age_days": 28,
+   "age_days": 35,
    "cadence": "annual",
    "basis": "last commit",
    "stale_after_days": 365,
    "repo_pushed": "2026-09-21T17:20:20Z"
   },
   "dob-sidewalk-shed-map": {
-   "newest": "2026-10-19",
+   "newest": "2026-10-26",
    "age_days": 0,
    "cadence": "daily",
    "basis": "last commit",
    "stale_after_days": 365,
-   "repo_pushed": "2026-10-19T15:55:47Z"
+   "repo_pushed": "2026-10-26T13:47:46Z"
   },
   "subway-now-lite": {
    "newest": "2026-08-23",
-   "age_days": 56,
+   "age_days": 63,
    "cadence": "live",
    "basis": "last commit",
    "stale_after_days": 365,
@@ -144,31 +144,31 @@
   },
   "nyc-crash-mapper": {
    "newest": "2026-09-01",
-   "age_days": 47,
+   "age_days": 54,
    "cadence": "daily",
    "basis": "last commit",
    "stale_after_days": 365,
    "repo_pushed": "2026-09-01T20:53:09Z"
   },
   "howsmydrivingny": {
-   "newest": "2026-07-09",
-   "age_days": 101,
+   "newest": "2026-10-24",
+   "age_days": 1,
    "cadence": "live",
    "basis": "last commit",
    "stale_after_days": 365,
-   "repo_pushed": "2026-07-09T17:33:34Z"
+   "repo_pushed": "2026-10-24T21:37:00Z"
   },
   "ctbk-dev": {
-   "newest": "2026-10-13",
-   "age_days": 6,
+   "newest": "2026-10-22",
+   "age_days": 3,
    "cadence": "monthly",
    "basis": "last commit",
    "stale_after_days": 365,
-   "repo_pushed": "2026-10-13T02:03:16Z"
+   "repo_pushed": "2026-10-22T22:48:59Z"
   },
   "hows-my-enforcement": {
    "newest": "2026-10-17",
-   "age_days": 2,
+   "age_days": 9,
    "cadence": "monthly",
    "basis": "last commit",
    "stale_after_days": 365,
@@ -176,23 +176,23 @@
   },
   "nyc-public-space-whong": {
    "newest": "2026-09-22",
-   "age_days": 27,
+   "age_days": 34,
    "cadence": "live",
    "basis": "last commit",
    "stale_after_days": 365,
    "repo_pushed": "2026-09-22T05:00:53Z"
   },
   "schools-finder-publicworks": {
-   "newest": "2026-10-19",
+   "newest": "2026-10-26",
    "age_days": 0,
    "cadence": "daily",
    "basis": "last commit",
    "stale_after_days": 365,
-   "repo_pushed": "2026-10-19T16:48:33Z"
+   "repo_pushed": "2026-10-26T16:25:12Z"
   },
   "class-size-matters-utilization-map": {
    "newest": "2026-03-26",
-   "age_days": 207,
+   "age_days": 214,
    "cadence": "annual",
    "basis": "last commit",
    "stale_after_days": 365,
@@ -200,7 +200,7 @@
   },
   "betanyc-nyc-budget-explorer": {
    "newest": "2026-07-16",
-   "age_days": 95,
+   "age_days": 102,
    "cadence": "annual",
    "basis": "last commit",
    "stale_after_days": 365,
@@ -208,7 +208,7 @@
   },
   "sidewalk-chorus-property-tax-map": {
    "newest": "2025-11-01",
-   "age_days": 351,
+   "age_days": 358,
    "cadence": "annual",
    "basis": "last commit",
    "stale_after_days": 365,
@@ -216,7 +216,7 @@
   },
   "jg-pension-dashboard": {
    "newest": "2026-07-29",
-   "age_days": 82,
+   "age_days": 89,
    "cadence": "annual",
    "basis": "last commit",
    "stale_after_days": 365,
@@ -224,39 +224,39 @@
   },
   "the-pay-gap": {
    "newest": "2026-10-09",
-   "age_days": 9,
+   "age_days": 16,
    "cadence": "annual",
    "basis": "last commit",
    "stale_after_days": 365,
    "repo_pushed": "2026-10-09T20:24:26Z"
   },
   "betanyc-council-discretionary-explorer": {
-   "newest": "2026-10-18",
-   "age_days": 1,
+   "newest": "2026-10-26",
+   "age_days": 0,
    "cadence": "annual",
    "basis": "last commit",
    "stale_after_days": 365,
-   "repo_pushed": "2026-10-18T01:20:11Z"
+   "repo_pushed": "2026-10-26T10:45:19Z"
   },
   "databook-nyc": {
    "newest": "2026-09-24",
-   "age_days": 25,
+   "age_days": 32,
    "cadence": "daily",
    "basis": "last commit",
    "stale_after_days": 365,
    "repo_pushed": "2026-09-24T14:59:56Z"
   },
   "tr-fiscal-impacts-tracker": {
-   "newest": "2026-10-19",
+   "newest": "2026-10-26",
    "age_days": 0,
    "cadence": "monthly",
    "basis": "last commit",
    "stale_after_days": 365,
-   "repo_pushed": "2026-10-19T17:29:05Z"
+   "repo_pushed": "2026-10-26T16:17:49Z"
   },
   "intro-nyc": {
    "newest": "2026-09-28",
-   "age_days": 21,
+   "age_days": 28,
    "cadence": "daily",
    "basis": "last commit",
    "stale_after_days": 365,
@@ -264,59 +264,59 @@
   },
   "nyc-civic-calendar": {
    "newest": "2026-10-12",
-   "age_days": 6,
+   "age_days": 13,
    "cadence": "weekly",
    "basis": "last commit",
    "stale_after_days": 365,
    "repo_pushed": "2026-10-12T21:15:35Z"
   },
   "tr-cb-member-tracker": {
-   "newest": "2026-10-19",
+   "newest": "2026-10-26",
    "age_days": 0,
    "cadence": "monthly",
    "basis": "last commit",
    "stale_after_days": 365,
-   "repo_pushed": "2026-10-19T17:29:05Z"
+   "repo_pushed": "2026-10-26T16:17:49Z"
   },
   "cityscroll": {
-   "newest": "2026-10-19",
+   "newest": "2026-10-26",
    "age_days": 0,
    "cadence": "live",
    "basis": "last commit",
    "stale_after_days": 365,
-   "repo_pushed": "2026-10-19T17:14:23Z"
+   "repo_pushed": "2026-10-26T17:22:58Z"
   },
   "cleartext-911-city-records": {
    "newest": "2026-09-17",
-   "age_days": 32,
+   "age_days": 39,
    "cadence": "live",
    "basis": "last commit",
    "stale_after_days": 365,
    "repo_pushed": "2026-09-17T13:42:49Z"
   },
   "census-reporter": {
-   "newest": "2026-10-06",
-   "age_days": 13,
+   "newest": "2026-10-26",
+   "age_days": 0,
    "cadence": "annual",
    "basis": "last commit",
    "stale_after_days": 365,
-   "repo_pushed": "2026-10-06T17:28:50Z"
+   "repo_pushed": "2026-10-26T13:33:54Z"
   },
   "jg-building-age": {
    "newest": "2026-10-02",
-   "age_days": 17,
+   "age_days": 24,
    "cadence": "per",
    "basis": "last commit",
    "stale_after_days": 365,
    "repo_pushed": "2026-10-02T11:51:01Z"
   },
   "nyc-civil-service-exams-publicworks": {
-   "newest": "2026-10-19",
+   "newest": "2026-10-26",
    "age_days": 0,
    "cadence": "daily",
    "basis": "last commit",
    "stale_after_days": 365,
-   "repo_pushed": "2026-10-19T14:45:09Z"
+   "repo_pushed": "2026-10-26T14:21:39Z"
   }
  }
 }
